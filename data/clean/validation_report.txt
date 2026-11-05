@@ -1,0 +1,34 @@
+Coverage China            : 97/97 months
+Coverage Brazil           : 97/97 months
+Coverage India            : 97/97 months
+Coverage Russia           : 97/97 months
+Coverage Grand Total      : 97/97 months
+Coverage Foreign Official : 97/97 months
+
+FRED vs Major Foreign Holders table (USD bn):
+  China        2018-12: FRED   1124.3 | MFH   1124.3 | gap  -0.0%
+  China        2025-12: FRED    684.4 | MFH    684.4 | gap  -0.0%
+  Brazil       2018-12: FRED    303.1 | MFH    303.1 | gap  +0.0%
+  Brazil       2025-12: FRED    168.7 | MFH    168.7 | gap  +0.0%
+  India        2018-12: FRED    141.3 | MFH    141.3 | gap  -0.0%
+  India        2025-12: FRED    182.9 | MFH    182.9 | gap  -0.0%
+  Grand Total  2018-12: FRED   6270.1 | MFH   6270.1 | gap  +0.0%
+  Grand Total  2025-12: FRED   9270.5 | MFH   9269.5 | gap  +0.0%
+
+Decomposition residual (change - net transactions - valuation), USD bn:
+  Brazil            mean abs residual   0.07 | mean abs change   4.37
+  China             mean abs residual   0.70 | mean abs change  11.04
+  Foreign Official  mean abs residual   3.72 | mean abs change  34.81
+  Grand Total       mean abs residual  13.53 | mean abs change  73.86
+  India             mean abs residual   0.01 | mean abs change   4.13
+  Russia            mean abs residual   0.01 | mean abs change   1.34
+
+Returns check (monthly):
+  SPY  n= 96  mean  1.23%  min -12.49%  max  12.70%
+  AGG  n= 96  mean  0.16%  min  -4.15%  max   4.59%
+  IEF  n= 96  mean  0.11%  min  -4.73%  max   4.55%
+  GLD  n= 96  mean  1.30%  min  -7.15%  max  11.76%
+  RF   n= 96  mean  0.21%  min   0.00%  max   0.43%
+
+Russia year-end holdings (bn): {2017: 102.52, 2018: 13.22, 2019: 9.97, 2020: 6.01, 2021: 3.91, 2022: 0.63, 2023: 0.22, 2024: 0.04, 2025: 0.03}
+  -> use absolute change, not % change, once below ~$1bn (see safe_pct_change)

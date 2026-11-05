@@ -1,0 +1,2329 @@
+date,country,measure,usd_bn
+2017-12,China,holdings_total,1184.928
+2018-01,China,holdings_total,1168.206
+2018-02,China,holdings_total,1176.66
+2018-03,China,holdings_total,1187.698
+2018-04,China,holdings_total,1181.899
+2018-05,China,holdings_total,1183.116
+2018-06,China,holdings_total,1191.172
+2018-07,China,holdings_total,1171.028
+2018-08,China,holdings_total,1165.061
+2018-09,China,holdings_total,1151.432
+2018-10,China,holdings_total,1138.931
+2018-11,China,holdings_total,1121.428
+2018-12,China,holdings_total,1124.27
+2019-01,China,holdings_total,1126.695
+2019-02,China,holdings_total,1130.877
+2019-03,China,holdings_total,1120.478
+2019-04,China,holdings_total,1113.032
+2019-05,China,holdings_total,1110.175
+2019-06,China,holdings_total,1112.548
+2019-07,China,holdings_total,1110.3
+2019-08,China,holdings_total,1103.526
+2019-09,China,holdings_total,1102.429
+2019-10,China,holdings_total,1101.545
+2019-11,China,holdings_total,1089.088
+2019-12,China,holdings_total,1069.913
+2020-01,China,holdings_total,1078.601
+2020-02,China,holdings_total,1092.261
+2020-03,China,holdings_total,1081.615
+2020-04,China,holdings_total,1072.804
+2020-05,China,holdings_total,1083.735
+2020-06,China,holdings_total,1074.433
+2020-07,China,holdings_total,1073.407
+2020-08,China,holdings_total,1067.965
+2020-09,China,holdings_total,1061.746
+2020-10,China,holdings_total,1054.018
+2020-11,China,holdings_total,1062.96
+2020-12,China,holdings_total,1072.281
+2021-01,China,holdings_total,1095.18
+2021-02,China,holdings_total,1104.226
+2021-03,China,holdings_total,1100.366
+2021-04,China,holdings_total,1096.08
+2021-05,China,holdings_total,1078.439
+2021-06,China,holdings_total,1061.844
+2021-07,China,holdings_total,1068.347
+2021-08,China,holdings_total,1047.016
+2021-09,China,holdings_total,1047.543
+2021-10,China,holdings_total,1065.403
+2021-11,China,holdings_total,1052.882
+2021-12,China,holdings_total,1040.33
+2022-01,China,holdings_total,1033.804
+2022-02,China,holdings_total,1028.674
+2022-03,China,holdings_total,1013.201
+2022-04,China,holdings_total,976.022
+2022-05,China,holdings_total,951.753
+2022-06,China,holdings_total,938.847
+2022-07,China,holdings_total,939.17
+2022-08,China,holdings_total,938.552
+2022-09,China,holdings_total,901.722
+2022-10,China,holdings_total,877.937
+2022-11,China,holdings_total,870.287
+2022-12,China,holdings_total,867.088
+2023-01,China,holdings_total,859.342
+2023-02,China,holdings_total,848.975
+2023-03,China,holdings_total,869.298
+2023-04,China,holdings_total,868.92
+2023-05,China,holdings_total,846.716
+2023-06,China,holdings_total,835.775
+2023-07,China,holdings_total,821.807
+2023-08,China,holdings_total,805.366
+2023-09,China,holdings_total,778.139
+2023-10,China,holdings_total,769.617
+2023-11,China,holdings_total,781.965
+2023-12,China,holdings_total,816.305
+2024-01,China,holdings_total,797.734
+2024-02,China,holdings_total,774.95
+2024-03,China,holdings_total,767.413
+2024-04,China,holdings_total,770.746
+2024-05,China,holdings_total,768.295
+2024-06,China,holdings_total,780.196
+2024-07,China,holdings_total,776.493
+2024-08,China,holdings_total,774.614
+2024-09,China,holdings_total,771.968
+2024-10,China,holdings_total,760.102
+2024-11,China,holdings_total,768.6
+2024-12,China,holdings_total,759.016
+2025-01,China,holdings_total,760.818
+2025-02,China,holdings_total,784.287
+2025-03,China,holdings_total,765.36
+2025-04,China,holdings_total,743.56
+2025-05,China,holdings_total,732.669
+2025-06,China,holdings_total,731.402
+2025-07,China,holdings_total,695.623
+2025-08,China,holdings_total,699.698
+2025-09,China,holdings_total,699.205
+2025-10,China,holdings_total,687.71
+2025-11,China,holdings_total,683.862
+2025-12,China,holdings_total,684.398
+2017-12,Brazil,holdings_total,256.801
+2018-01,Brazil,holdings_total,265.655
+2018-02,Brazil,holdings_total,272.948
+2018-03,Brazil,holdings_total,285.976
+2018-04,Brazil,holdings_total,294.082
+2018-05,Brazil,holdings_total,299.174
+2018-06,Brazil,holdings_total,300.082
+2018-07,Brazil,holdings_total,299.739
+2018-08,Brazil,holdings_total,317.785
+2018-09,Brazil,holdings_total,316.994
+2018-10,Brazil,holdings_total,313.916
+2018-11,Brazil,holdings_total,311.367
+2018-12,Brazil,holdings_total,303.141
+2019-01,Brazil,holdings_total,305.094
+2019-02,Brazil,holdings_total,307.699
+2019-03,Brazil,holdings_total,311.639
+2019-04,Brazil,holdings_total,306.676
+2019-05,Brazil,holdings_total,305.667
+2019-06,Brazil,holdings_total,311.717
+2019-07,Brazil,holdings_total,309.905
+2019-08,Brazil,holdings_total,313.356
+2019-09,Brazil,holdings_total,302.961
+2019-10,Brazil,holdings_total,298.546
+2019-11,Brazil,holdings_total,293.344
+2019-12,Brazil,holdings_total,281.844
+2020-01,Brazil,holdings_total,283.299
+2020-02,Brazil,holdings_total,285.909
+2020-03,Brazil,holdings_total,264.384
+2020-04,Brazil,holdings_total,259.525
+2020-05,Brazil,holdings_total,264.35
+2020-06,Brazil,holdings_total,264.064
+2020-07,Brazil,holdings_total,265.675
+2020-08,Brazil,holdings_total,265.02
+2020-09,Brazil,holdings_total,265.114
+2020-10,Brazil,holdings_total,262.877
+2020-11,Brazil,holdings_total,262.208
+2020-12,Brazil,holdings_total,258.347
+2021-01,Brazil,holdings_total,260.43
+2021-02,Brazil,holdings_total,259.037
+2021-03,Brazil,holdings_total,255.462
+2021-04,Brazil,holdings_total,255.276
+2021-05,Brazil,holdings_total,251.819
+2021-06,Brazil,holdings_total,249.051
+2021-07,Brazil,holdings_total,248.541
+2021-08,Brazil,holdings_total,248.929
+2021-09,Brazil,holdings_total,248.959
+2021-10,Brazil,holdings_total,247.665
+2021-11,Brazil,holdings_total,244.862
+2021-12,Brazil,holdings_total,240.551
+2022-01,Brazil,holdings_total,236.059
+2022-02,Brazil,holdings_total,237.397
+2022-03,Brazil,holdings_total,233.279
+2022-04,Brazil,holdings_total,229.202
+2022-05,Brazil,holdings_total,228.373
+2022-06,Brazil,holdings_total,226.114
+2022-07,Brazil,holdings_total,232.853
+2022-08,Brazil,holdings_total,227.324
+2022-09,Brazil,holdings_total,221.766
+2022-10,Brazil,holdings_total,220.087
+2022-11,Brazil,holdings_total,225.859
+2022-12,Brazil,holdings_total,217.414
+2023-01,Brazil,holdings_total,213.976
+2023-02,Brazil,holdings_total,215.178
+2023-03,Brazil,holdings_total,224.437
+2023-04,Brazil,holdings_total,229.771
+2023-05,Brazil,holdings_total,230.017
+2023-06,Brazil,holdings_total,227.47
+2023-07,Brazil,holdings_total,224.73
+2023-08,Brazil,holdings_total,223.177
+2023-09,Brazil,holdings_total,222.998
+2023-10,Brazil,holdings_total,219.435
+2023-11,Brazil,holdings_total,224.866
+2023-12,Brazil,holdings_total,230.291
+2024-01,Brazil,holdings_total,226.803
+2024-02,Brazil,holdings_total,225.588
+2024-03,Brazil,holdings_total,227.121
+2024-04,Brazil,holdings_total,223.639
+2024-05,Brazil,holdings_total,223.211
+2024-06,Brazil,holdings_total,226.999
+2024-07,Brazil,holdings_total,229.137
+2024-08,Brazil,holdings_total,233.308
+2024-09,Brazil,holdings_total,234.555
+2024-10,Brazil,holdings_total,228.845
+2024-11,Brazil,holdings_total,228.98
+2024-12,Brazil,holdings_total,201.637
+2025-01,Brazil,holdings_total,199.441
+2025-02,Brazil,holdings_total,207.252
+2025-03,Brazil,holdings_total,208.399
+2025-04,Brazil,holdings_total,212.052
+2025-05,Brazil,holdings_total,212.049
+2025-06,Brazil,holdings_total,215.438
+2025-07,Brazil,holdings_total,201.791
+2025-08,Brazil,holdings_total,184.619
+2025-09,Brazil,holdings_total,172.772
+2025-10,Brazil,holdings_total,167.8
+2025-11,Brazil,holdings_total,168.186
+2025-12,Brazil,holdings_total,168.7
+2017-12,India,holdings_total,144.716
+2018-01,India,holdings_total,148.613
+2018-02,India,holdings_total,152.85
+2018-03,India,holdings_total,156.966
+2018-04,India,holdings_total,152.751
+2018-05,India,holdings_total,148.879
+2018-06,India,holdings_total,147.349
+2018-07,India,holdings_total,142.55
+2018-08,India,holdings_total,140.637
+2018-09,India,holdings_total,143.992
+2018-10,India,holdings_total,138.223
+2018-11,India,holdings_total,138.483
+2018-12,India,holdings_total,141.284
+2019-01,India,holdings_total,144.873
+2019-02,India,holdings_total,144.326
+2019-03,India,holdings_total,152.013
+2019-04,India,holdings_total,155.32
+2019-05,India,holdings_total,156.876
+2019-06,India,holdings_total,162.699
+2019-07,India,holdings_total,159.924
+2019-08,India,holdings_total,162.171
+2019-09,India,holdings_total,160.654
+2019-10,India,holdings_total,161.407
+2019-11,India,holdings_total,159.222
+2019-12,India,holdings_total,162.046
+2020-01,India,holdings_total,164.344
+2020-02,India,holdings_total,177.493
+2020-03,India,holdings_total,156.526
+2020-04,India,holdings_total,157.383
+2020-05,India,holdings_total,169.915
+2020-06,India,holdings_total,182.732
+2020-07,India,holdings_total,194.562
+2020-08,India,holdings_total,196.502
+2020-09,India,holdings_total,213.484
+2020-10,India,holdings_total,222.406
+2020-11,India,holdings_total,220.193
+2020-12,India,holdings_total,216.177
+2021-01,India,holdings_total,211.592
+2021-02,India,holdings_total,204.374
+2021-03,India,holdings_total,199.952
+2021-04,India,holdings_total,208.661
+2021-05,India,holdings_total,215.764
+2021-06,India,holdings_total,220.188
+2021-07,India,holdings_total,219.235
+2021-08,India,holdings_total,217.023
+2021-09,India,holdings_total,218.431
+2021-10,India,holdings_total,210.738
+2021-11,India,holdings_total,205.213
+2021-12,India,holdings_total,198.892
+2022-01,India,holdings_total,198.647
+2022-02,India,holdings_total,199.757
+2022-03,India,holdings_total,199.836
+2022-04,India,holdings_total,199.042
+2022-05,India,holdings_total,203.739
+2022-06,India,holdings_total,208.752
+2022-07,India,holdings_total,212.048
+2022-08,India,holdings_total,221.235
+2022-09,India,holdings_total,212.593
+2022-10,India,holdings_total,213.005
+2022-11,India,holdings_total,219.012
+2022-12,India,holdings_total,224.066
+2023-01,India,holdings_total,232.039
+2023-02,India,holdings_total,231.164
+2023-03,India,holdings_total,237.875
+2023-04,India,holdings_total,238.723
+2023-05,India,holdings_total,238.338
+2023-06,India,holdings_total,235.39
+2023-07,India,holdings_total,233.127
+2023-08,India,holdings_total,232.493
+2023-09,India,holdings_total,229.081
+2023-10,India,holdings_total,222.04
+2023-11,India,holdings_total,224.899
+2023-12,India,holdings_total,233.707
+2024-01,India,holdings_total,236.122
+2024-02,India,holdings_total,234.719
+2024-03,India,holdings_total,240.627
+2024-04,India,holdings_total,233.537
+2024-05,India,holdings_total,237.758
+2024-06,India,holdings_total,241.919
+2024-07,India,holdings_total,238.821
+2024-08,India,holdings_total,245.943
+2024-09,India,holdings_total,247.234
+2024-10,India,holdings_total,241.399
+2024-11,India,holdings_total,234.01
+2024-12,India,holdings_total,219.075
+2025-01,India,holdings_total,225.675
+2025-02,India,holdings_total,228.0
+2025-03,India,holdings_total,239.855
+2025-04,India,holdings_total,232.51
+2025-05,India,holdings_total,235.329
+2025-06,India,holdings_total,227.364
+2025-07,India,holdings_total,219.691
+2025-08,India,holdings_total,219.376
+2025-09,India,holdings_total,202.67
+2025-10,India,holdings_total,190.354
+2025-11,India,holdings_total,186.521
+2025-12,India,holdings_total,182.885
+2017-12,Russia,holdings_total,102.517
+2018-01,Russia,holdings_total,96.898
+2018-02,Russia,holdings_total,93.757
+2018-03,Russia,holdings_total,96.05
+2018-04,Russia,holdings_total,48.724
+2018-05,Russia,holdings_total,14.905
+2018-06,Russia,holdings_total,14.909
+2018-07,Russia,holdings_total,14.907
+2018-08,Russia,holdings_total,14.097
+2018-09,Russia,holdings_total,14.419
+2018-10,Russia,holdings_total,14.629
+2018-11,Russia,holdings_total,12.814
+2018-12,Russia,holdings_total,13.216
+2019-01,Russia,holdings_total,13.18
+2019-02,Russia,holdings_total,14.507
+2019-03,Russia,holdings_total,13.715
+2019-04,Russia,holdings_total,12.134
+2019-05,Russia,holdings_total,12.021
+2019-06,Russia,holdings_total,10.848
+2019-07,Russia,holdings_total,8.5
+2019-08,Russia,holdings_total,9.326
+2019-09,Russia,holdings_total,10.073
+2019-10,Russia,holdings_total,10.695
+2019-11,Russia,holdings_total,11.491
+2019-12,Russia,holdings_total,9.974
+2020-01,Russia,holdings_total,10.51
+2020-02,Russia,holdings_total,12.586
+2020-03,Russia,holdings_total,3.854
+2020-04,Russia,holdings_total,6.853
+2020-05,Russia,holdings_total,5.394
+2020-06,Russia,holdings_total,5.871
+2020-07,Russia,holdings_total,5.879
+2020-08,Russia,holdings_total,5.858
+2020-09,Russia,holdings_total,5.963
+2020-10,Russia,holdings_total,6.155
+2020-11,Russia,holdings_total,4.968
+2020-12,Russia,holdings_total,6.011
+2021-01,Russia,holdings_total,6.145
+2021-02,Russia,holdings_total,5.756
+2021-03,Russia,holdings_total,3.976
+2021-04,Russia,holdings_total,3.957
+2021-05,Russia,holdings_total,3.805
+2021-06,Russia,holdings_total,4.006
+2021-07,Russia,holdings_total,4.006
+2021-08,Russia,holdings_total,4.004
+2021-09,Russia,holdings_total,3.918
+2021-10,Russia,holdings_total,3.72
+2021-11,Russia,holdings_total,2.409
+2021-12,Russia,holdings_total,3.91
+2022-01,Russia,holdings_total,4.503
+2022-02,Russia,holdings_total,3.753
+2022-03,Russia,holdings_total,2.003
+2022-04,Russia,holdings_total,2.003
+2022-05,Russia,holdings_total,2.004
+2022-06,Russia,holdings_total,2.005
+2022-07,Russia,holdings_total,2.007
+2022-08,Russia,holdings_total,2.01
+2022-09,Russia,holdings_total,2.015
+2022-10,Russia,holdings_total,2.034
+2022-11,Russia,holdings_total,2.092
+2022-12,Russia,holdings_total,0.629
+2023-01,Russia,holdings_total,0.067
+2023-02,Russia,holdings_total,0.075
+2023-03,Russia,holdings_total,0.077
+2023-04,Russia,holdings_total,0.035
+2023-05,Russia,holdings_total,0.036
+2023-06,Russia,holdings_total,0.033
+2023-07,Russia,holdings_total,0.029
+2023-08,Russia,holdings_total,0.031
+2023-09,Russia,holdings_total,0.073
+2023-10,Russia,holdings_total,0.031
+2023-11,Russia,holdings_total,0.028
+2023-12,Russia,holdings_total,0.216
+2024-01,Russia,holdings_total,0.21
+2024-02,Russia,holdings_total,0.212
+2024-03,Russia,holdings_total,0.213
+2024-04,Russia,holdings_total,0.221
+2024-05,Russia,holdings_total,0.221
+2024-06,Russia,holdings_total,0.22
+2024-07,Russia,holdings_total,0.202
+2024-08,Russia,holdings_total,0.161
+2024-09,Russia,holdings_total,0.17
+2024-10,Russia,holdings_total,0.028
+2024-11,Russia,holdings_total,0.035
+2024-12,Russia,holdings_total,0.042
+2025-01,Russia,holdings_total,0.038
+2025-02,Russia,holdings_total,0.036
+2025-03,Russia,holdings_total,0.035
+2025-04,Russia,holdings_total,0.031
+2025-05,Russia,holdings_total,0.042
+2025-06,Russia,holdings_total,0.039
+2025-07,Russia,holdings_total,0.038
+2025-08,Russia,holdings_total,0.039
+2025-09,Russia,holdings_total,0.031
+2025-10,Russia,holdings_total,0.03
+2025-11,Russia,holdings_total,0.029
+2025-12,Russia,holdings_total,0.029
+2017-12,Grand Total,holdings_total,6211.279
+2018-01,Grand Total,holdings_total,6194.571
+2018-02,Grand Total,holdings_total,6221.735
+2018-03,Grand Total,holdings_total,6223.434
+2018-04,Grand Total,holdings_total,6179.972
+2018-05,Grand Total,holdings_total,6215.113
+2018-06,Grand Total,holdings_total,6225.015
+2018-07,Grand Total,holdings_total,6254.408
+2018-08,Grand Total,holdings_total,6278.572
+2018-09,Grand Total,holdings_total,6225.896
+2018-10,Grand Total,holdings_total,6200.308
+2018-11,Grand Total,holdings_total,6199.933
+2018-12,Grand Total,holdings_total,6270.13
+2019-01,Grand Total,holdings_total,6324.59
+2019-02,Grand Total,holdings_total,6374.472
+2019-03,Grand Total,holdings_total,6473.999
+2019-04,Grand Total,holdings_total,6433.926
+2019-05,Grand Total,holdings_total,6539.372
+2019-06,Grand Total,holdings_total,6625.86
+2019-07,Grand Total,holdings_total,6800.17
+2019-08,Grand Total,holdings_total,7036.405
+2019-09,Grand Total,holdings_total,6923.485
+2019-10,Grand Total,holdings_total,6946.39
+2019-11,Grand Total,holdings_total,6902.102
+2019-12,Grand Total,holdings_total,6844.212
+2020-01,Grand Total,holdings_total,7027.316
+2020-02,Grand Total,holdings_total,7226.047
+2020-03,Grand Total,holdings_total,6949.484
+2020-04,Grand Total,holdings_total,6903.087
+2020-05,Grand Total,holdings_total,6978.051
+2020-06,Grand Total,holdings_total,7052.125
+2020-07,Grand Total,holdings_total,7096.22
+2020-08,Grand Total,holdings_total,7082.017
+2020-09,Grand Total,holdings_total,7069.204
+2020-10,Grand Total,holdings_total,7070.427
+2020-11,Grand Total,holdings_total,7051.183
+2020-12,Grand Total,holdings_total,7070.737
+2021-01,Grand Total,holdings_total,7128.022
+2021-02,Grand Total,holdings_total,7108.788
+2021-03,Grand Total,holdings_total,7038.287
+2021-04,Grand Total,holdings_total,7078.612
+2021-05,Grand Total,holdings_total,7144.656
+2021-06,Grand Total,holdings_total,7518.88
+2021-07,Grand Total,holdings_total,7567.32
+2021-08,Grand Total,holdings_total,7578.812
+2021-09,Grand Total,holdings_total,7570.896
+2021-10,Grand Total,holdings_total,7660.672
+2021-11,Grand Total,holdings_total,7687.861
+2021-12,Grand Total,holdings_total,7740.37
+2022-01,Grand Total,holdings_total,7655.666
+2022-02,Grand Total,holdings_total,7703.454
+2022-03,Grand Total,holdings_total,7604.215
+2022-04,Grand Total,holdings_total,7443.12
+2022-05,Grand Total,holdings_total,7410.761
+2022-06,Grand Total,holdings_total,7416.943
+2022-07,Grand Total,holdings_total,7485.522
+2022-08,Grand Total,holdings_total,7492.694
+2022-09,Grand Total,holdings_total,7251.508
+2022-10,Grand Total,holdings_total,7133.151
+2022-11,Grand Total,holdings_total,7184.662
+2022-12,Grand Total,holdings_total,7194.684
+2023-01,Grand Total,holdings_total,7305.083
+2023-02,Grand Total,holdings_total,7254.9
+2023-03,Grand Total,holdings_total,7468.642
+2023-04,Grand Total,holdings_total,7505.983
+2023-05,Grand Total,holdings_total,7458.553
+2023-06,Grand Total,holdings_total,7563.215
+2023-07,Grand Total,holdings_total,7595.1
+2023-08,Grand Total,holdings_total,7620.532
+2023-09,Grand Total,holdings_total,7509.115
+2023-10,Grand Total,holdings_total,7476.742
+2023-11,Grand Total,holdings_total,7716.32
+2023-12,Grand Total,holdings_total,7940.008
+2024-01,Grand Total,holdings_total,7953.787
+2024-02,Grand Total,holdings_total,7999.272
+2024-03,Grand Total,holdings_total,8107.871
+2024-04,Grand Total,holdings_total,8036.194
+2024-05,Grand Total,holdings_total,8130.734
+2024-06,Grand Total,holdings_total,8299.265
+2024-07,Grand Total,holdings_total,8428.222
+2024-08,Grand Total,holdings_total,8611.36
+2024-09,Grand Total,holdings_total,8766.252
+2024-10,Grand Total,holdings_total,8693.543
+2024-11,Grand Total,holdings_total,8723.263
+2024-12,Grand Total,holdings_total,8619.302
+2025-01,Grand Total,holdings_total,8617.76
+2025-02,Grand Total,holdings_total,8899.312
+2025-03,Grand Total,holdings_total,9051.957
+2025-04,Grand Total,holdings_total,8998.688
+2025-05,Grand Total,holdings_total,9021.695
+2025-06,Grand Total,holdings_total,9094.545
+2025-07,Grand Total,holdings_total,9110.282
+2025-08,Grand Total,holdings_total,9249.069
+2025-09,Grand Total,holdings_total,9238.161
+2025-10,Grand Total,holdings_total,9231.275
+2025-11,Grand Total,holdings_total,9350.398
+2025-12,Grand Total,holdings_total,9270.477
+2017-12,Foreign Official,holdings_total,4023.954
+2018-01,Foreign Official,holdings_total,4001.401
+2018-02,Foreign Official,holdings_total,4030.955
+2018-03,Foreign Official,holdings_total,4051.69
+2018-04,Foreign Official,holdings_total,4006.228
+2018-05,Foreign Official,holdings_total,3990.894
+2018-06,Foreign Official,holdings_total,3988.634
+2018-07,Foreign Official,holdings_total,4007.759
+2018-08,Foreign Official,holdings_total,4021.072
+2018-09,Foreign Official,holdings_total,4010.108
+2018-10,Foreign Official,holdings_total,3947.139
+2018-11,Foreign Official,holdings_total,3901.219
+2018-12,Foreign Official,holdings_total,3956.774
+2019-01,Foreign Official,holdings_total,3986.303
+2019-02,Foreign Official,holdings_total,4029.714
+2019-03,Foreign Official,holdings_total,4080.853
+2019-04,Foreign Official,holdings_total,4070.902
+2019-05,Foreign Official,holdings_total,4112.132
+2019-06,Foreign Official,holdings_total,4146.061
+2019-07,Foreign Official,holdings_total,4139.302
+2019-08,Foreign Official,holdings_total,4200.166
+2019-09,Foreign Official,holdings_total,4150.909
+2019-10,Foreign Official,holdings_total,4122.871
+2019-11,Foreign Official,holdings_total,4101.247
+2019-12,Foreign Official,holdings_total,4076.906
+2020-01,Foreign Official,holdings_total,4169.878
+2020-02,Foreign Official,holdings_total,4264.909
+2020-03,Foreign Official,holdings_total,4117.857
+2020-04,Foreign Official,holdings_total,4047.365
+2020-05,Foreign Official,holdings_total,4105.945
+2020-06,Foreign Official,holdings_total,4147.116
+2020-07,Foreign Official,holdings_total,4191.213
+2020-08,Foreign Official,holdings_total,4199.285
+2020-09,Foreign Official,holdings_total,4198.868
+2020-10,Foreign Official,holdings_total,4166.76
+2020-11,Foreign Official,holdings_total,4176.189
+2020-12,Foreign Official,holdings_total,4186.538
+2021-01,Foreign Official,holdings_total,4224.513
+2021-02,Foreign Official,holdings_total,4235.327
+2021-03,Foreign Official,holdings_total,4202.077
+2021-04,Foreign Official,holdings_total,4201.533
+2021-05,Foreign Official,holdings_total,4225.981
+2021-06,Foreign Official,holdings_total,4215.874
+2021-07,Foreign Official,holdings_total,4254.057
+2021-08,Foreign Official,holdings_total,4216.265
+2021-09,Foreign Official,holdings_total,4207.931
+2021-10,Foreign Official,holdings_total,4179.437
+2021-11,Foreign Official,holdings_total,4161.033
+2021-12,Foreign Official,holdings_total,4117.652
+2022-01,Foreign Official,holdings_total,4129.999
+2022-02,Foreign Official,holdings_total,4124.382
+2022-03,Foreign Official,holdings_total,4025.302
+2022-04,Foreign Official,holdings_total,3907.479
+2022-05,Foreign Official,holdings_total,3866.292
+2022-06,Foreign Official,holdings_total,3855.274
+2022-07,Foreign Official,holdings_total,3894.989
+2022-08,Foreign Official,holdings_total,3876.879
+2022-09,Foreign Official,holdings_total,3713.699
+2022-10,Foreign Official,holdings_total,3614.042
+2022-11,Foreign Official,holdings_total,3661.97
+2022-12,Foreign Official,holdings_total,3667.449
+2023-01,Foreign Official,holdings_total,3703.848
+2023-02,Foreign Official,holdings_total,3692.667
+2023-03,Foreign Official,holdings_total,3769.907
+2023-04,Foreign Official,holdings_total,3789.724
+2023-05,Foreign Official,holdings_total,3782.698
+2023-06,Foreign Official,holdings_total,3769.207
+2023-07,Foreign Official,holdings_total,3758.78
+2023-08,Foreign Official,holdings_total,3738.159
+2023-09,Foreign Official,holdings_total,3690.999
+2023-10,Foreign Official,holdings_total,3640.409
+2023-11,Foreign Official,holdings_total,3684.071
+2023-12,Foreign Official,holdings_total,3796.439
+2024-01,Foreign Official,holdings_total,3799.148
+2024-02,Foreign Official,holdings_total,3767.587
+2024-03,Foreign Official,holdings_total,3816.873
+2024-04,Foreign Official,holdings_total,3787.246
+2024-05,Foreign Official,holdings_total,3797.68
+2024-06,Foreign Official,holdings_total,3831.011
+2024-07,Foreign Official,holdings_total,3846.436
+2024-08,Foreign Official,holdings_total,3876.375
+2024-09,Foreign Official,holdings_total,3914.13
+2024-10,Foreign Official,holdings_total,3856.251
+2024-11,Foreign Official,holdings_total,3861.856
+2024-12,Foreign Official,holdings_total,3792.493
+2025-01,Foreign Official,holdings_total,3803.794
+2025-02,Foreign Official,holdings_total,3895.853
+2025-03,Foreign Official,holdings_total,3923.394
+2025-04,Foreign Official,holdings_total,3907.385
+2025-05,Foreign Official,holdings_total,3877.089
+2025-06,Foreign Official,holdings_total,3892.526
+2025-07,Foreign Official,holdings_total,3886.47
+2025-08,Foreign Official,holdings_total,3919.787
+2025-09,Foreign Official,holdings_total,3872.555
+2025-10,Foreign Official,holdings_total,3866.433
+2025-11,Foreign Official,holdings_total,3912.314
+2025-12,Foreign Official,holdings_total,3877.654
+2017-12,China,lt_holdings,1180.742
+2018-01,China,lt_holdings,1164.585
+2018-02,China,lt_holdings,1172.64
+2018-03,China,lt_holdings,1183.905
+2018-04,China,lt_holdings,1178.237
+2018-05,China,lt_holdings,1176.237
+2018-06,China,lt_holdings,1187.247
+2018-07,China,lt_holdings,1160.512
+2018-08,China,lt_holdings,1159.163
+2018-09,China,lt_holdings,1144.046
+2018-10,China,lt_holdings,1131.708
+2018-11,China,lt_holdings,1111.196
+2018-12,China,lt_holdings,1117.046
+2019-01,China,lt_holdings,1117.494
+2019-02,China,lt_holdings,1122.548
+2019-03,China,lt_holdings,1110.025
+2019-04,China,lt_holdings,1097.758
+2019-05,China,lt_holdings,1103.632
+2019-06,China,lt_holdings,1108.73
+2019-07,China,lt_holdings,1106.894
+2019-08,China,lt_holdings,1100.915
+2019-09,China,lt_holdings,1095.031
+2019-10,China,lt_holdings,1088.711
+2019-11,China,lt_holdings,1085.331
+2019-12,China,lt_holdings,1067.497
+2020-01,China,lt_holdings,1073.121
+2020-02,China,lt_holdings,1088.85
+2020-03,China,lt_holdings,1048.89
+2020-04,China,lt_holdings,1028.311
+2020-05,China,lt_holdings,1044.888
+2020-06,China,lt_holdings,1040.416
+2020-07,China,lt_holdings,1045.933
+2020-08,China,lt_holdings,1050.447
+2020-09,China,lt_holdings,1041.822
+2020-10,China,lt_holdings,1029.06
+2020-11,China,lt_holdings,1031.023
+2020-12,China,lt_holdings,1032.634
+2021-01,China,lt_holdings,1037.84
+2021-02,China,lt_holdings,1028.184
+2021-03,China,lt_holdings,1044.636
+2021-04,China,lt_holdings,1063.437
+2021-05,China,lt_holdings,1063.114
+2021-06,China,lt_holdings,1058.503
+2021-07,China,lt_holdings,1053.679
+2021-08,China,lt_holdings,1043.989
+2021-09,China,lt_holdings,1045.154
+2021-10,China,lt_holdings,1062.693
+2021-11,China,lt_holdings,1040.769
+2021-12,China,lt_holdings,1036.125
+2022-01,China,lt_holdings,1024.423
+2022-02,China,lt_holdings,1020.152
+2022-03,China,lt_holdings,1010.469
+2022-04,China,lt_holdings,965.072
+2022-05,China,lt_holdings,942.88
+2022-06,China,lt_holdings,936.616
+2022-07,China,lt_holdings,935.598
+2022-08,China,lt_holdings,934.5
+2022-09,China,lt_holdings,898.502
+2022-10,China,lt_holdings,871.654
+2022-11,China,lt_holdings,860.419
+2022-12,China,lt_holdings,862.298
+2023-01,China,lt_holdings,855.031
+2023-02,China,lt_holdings,842.351
+2023-03,China,lt_holdings,854.08
+2023-04,China,lt_holdings,852.529
+2023-05,China,lt_holdings,829.935
+2023-06,China,lt_holdings,830.907
+2023-07,China,lt_holdings,815.559
+2023-08,China,lt_holdings,793.507
+2023-09,China,lt_holdings,773.204
+2023-10,China,lt_holdings,764.558
+2023-11,China,lt_holdings,774.319
+2023-12,China,lt_holdings,799.629
+2024-01,China,lt_holdings,777.13
+2024-02,China,lt_holdings,755.097
+2024-03,China,lt_holdings,750.389
+2024-04,China,lt_holdings,756.042
+2024-05,China,lt_holdings,741.046
+2024-06,China,lt_holdings,752.483
+2024-07,China,lt_holdings,744.041
+2024-08,China,lt_holdings,734.091
+2024-09,China,lt_holdings,731.018
+2024-10,China,lt_holdings,718.413
+2024-11,China,lt_holdings,720.435
+2024-12,China,lt_holdings,698.635
+2025-01,China,lt_holdings,698.635
+2025-02,China,lt_holdings,707.015
+2025-03,China,lt_holdings,679.611
+2025-04,China,lt_holdings,660.674
+2025-05,China,lt_holdings,657.235
+2025-06,China,lt_holdings,655.782
+2025-07,China,lt_holdings,629.847
+2025-08,China,lt_holdings,621.123
+2025-09,China,lt_holdings,627.63
+2025-10,China,lt_holdings,619.838
+2025-11,China,lt_holdings,624.211
+2025-12,China,lt_holdings,624.903
+2017-12,Brazil,lt_holdings,242.458
+2018-01,Brazil,lt_holdings,253.7
+2018-02,Brazil,lt_holdings,263.569
+2018-03,Brazil,lt_holdings,276.705
+2018-04,Brazil,lt_holdings,286.86
+2018-05,Brazil,lt_holdings,291.41
+2018-06,Brazil,lt_holdings,293.838
+2018-07,Brazil,lt_holdings,294.907
+2018-08,Brazil,lt_holdings,309.353
+2018-09,Brazil,lt_holdings,311.948
+2018-10,Brazil,lt_holdings,309.526
+2018-11,Brazil,lt_holdings,305.41
+2018-12,Brazil,lt_holdings,297.592
+2019-01,Brazil,lt_holdings,300.973
+2019-02,Brazil,lt_holdings,305.38
+2019-03,Brazil,lt_holdings,308.137
+2019-04,Brazil,lt_holdings,303.654
+2019-05,Brazil,lt_holdings,303.764
+2019-06,Brazil,lt_holdings,308.82
+2019-07,Brazil,lt_holdings,306.617
+2019-08,Brazil,lt_holdings,310.151
+2019-09,Brazil,lt_holdings,297.401
+2019-10,Brazil,lt_holdings,292.927
+2019-11,Brazil,lt_holdings,286.216
+2019-12,Brazil,lt_holdings,277.606
+2020-01,Brazil,lt_holdings,279.167
+2020-02,Brazil,lt_holdings,280.944
+2020-03,Brazil,lt_holdings,262.663
+2020-04,Brazil,lt_holdings,255.08
+2020-05,Brazil,lt_holdings,255.143
+2020-06,Brazil,lt_holdings,248.341
+2020-07,Brazil,lt_holdings,251.229
+2020-08,Brazil,lt_holdings,250.524
+2020-09,Brazil,lt_holdings,251.759
+2020-10,Brazil,lt_holdings,250.431
+2020-11,Brazil,lt_holdings,255.102
+2020-12,Brazil,lt_holdings,255.158
+2021-01,Brazil,lt_holdings,258.193
+2021-02,Brazil,lt_holdings,255.735
+2021-03,Brazil,lt_holdings,253.932
+2021-04,Brazil,lt_holdings,253.014
+2021-05,Brazil,lt_holdings,250.441
+2021-06,Brazil,lt_holdings,248.445
+2021-07,Brazil,lt_holdings,247.902
+2021-08,Brazil,lt_holdings,248.288
+2021-09,Brazil,lt_holdings,248.313
+2021-10,Brazil,lt_holdings,247.041
+2021-11,Brazil,lt_holdings,244.289
+2021-12,Brazil,lt_holdings,239.989
+2022-01,Brazil,lt_holdings,235.23
+2022-02,Brazil,lt_holdings,236.017
+2022-03,Brazil,lt_holdings,232.374
+2022-04,Brazil,lt_holdings,228.307
+2022-05,Brazil,lt_holdings,227.599
+2022-06,Brazil,lt_holdings,225.343
+2022-07,Brazil,lt_holdings,232.068
+2022-08,Brazil,lt_holdings,226.785
+2022-09,Brazil,lt_holdings,221.166
+2022-10,Brazil,lt_holdings,219.238
+2022-11,Brazil,lt_holdings,224.891
+2022-12,Brazil,lt_holdings,216.212
+2023-01,Brazil,lt_holdings,212.138
+2023-02,Brazil,lt_holdings,212.233
+2023-03,Brazil,lt_holdings,220.434
+2023-04,Brazil,lt_holdings,225.342
+2023-05,Brazil,lt_holdings,225.89
+2023-06,Brazil,lt_holdings,222.729
+2023-07,Brazil,lt_holdings,219.694
+2023-08,Brazil,lt_holdings,218.756
+2023-09,Brazil,lt_holdings,217.858
+2023-10,Brazil,lt_holdings,213.329
+2023-11,Brazil,lt_holdings,215.807
+2023-12,Brazil,lt_holdings,221.588
+2024-01,Brazil,lt_holdings,218.259
+2024-02,Brazil,lt_holdings,217.549
+2024-03,Brazil,lt_holdings,219.862
+2024-04,Brazil,lt_holdings,215.668
+2024-05,Brazil,lt_holdings,218.912
+2024-06,Brazil,lt_holdings,223.851
+2024-07,Brazil,lt_holdings,226.049
+2024-08,Brazil,lt_holdings,230.684
+2024-09,Brazil,lt_holdings,231.939
+2024-10,Brazil,lt_holdings,227.814
+2024-11,Brazil,lt_holdings,227.669
+2024-12,Brazil,lt_holdings,200.72
+2025-01,Brazil,lt_holdings,198.181
+2025-02,Brazil,lt_holdings,202.283
+2025-03,Brazil,lt_holdings,202.976
+2025-04,Brazil,lt_holdings,206.509
+2025-05,Brazil,lt_holdings,208.327
+2025-06,Brazil,lt_holdings,211.446
+2025-07,Brazil,lt_holdings,198.623
+2025-08,Brazil,lt_holdings,183.112
+2025-09,Brazil,lt_holdings,171.487
+2025-10,Brazil,lt_holdings,166.325
+2025-11,Brazil,lt_holdings,166.424
+2025-12,Brazil,lt_holdings,167.019
+2017-12,India,lt_holdings,133.025
+2018-01,India,lt_holdings,136.862
+2018-02,India,lt_holdings,141.085
+2018-03,India,lt_holdings,146.654
+2018-04,India,lt_holdings,144.032
+2018-05,India,lt_holdings,141.58
+2018-06,India,lt_holdings,141.291
+2018-07,India,lt_holdings,137.969
+2018-08,India,lt_holdings,137.263
+2018-09,India,lt_holdings,141.66
+2018-10,India,lt_holdings,136.467
+2018-11,India,lt_holdings,136.905
+2018-12,India,lt_holdings,139.906
+2019-01,India,lt_holdings,143.191
+2019-02,India,lt_holdings,142.758
+2019-03,India,lt_holdings,150.09
+2019-04,India,lt_holdings,153.182
+2019-05,India,lt_holdings,154.812
+2019-06,India,lt_holdings,160.518
+2019-07,India,lt_holdings,158.316
+2019-08,India,lt_holdings,160.775
+2019-09,India,lt_holdings,159.335
+2019-10,India,lt_holdings,160.258
+2019-11,India,lt_holdings,157.955
+2019-12,India,lt_holdings,158.4
+2020-01,India,lt_holdings,152.531
+2020-02,India,lt_holdings,159.161
+2020-03,India,lt_holdings,151.333
+2020-04,India,lt_holdings,149.035
+2020-05,India,lt_holdings,152.121
+2020-06,India,lt_holdings,151.404
+2020-07,India,lt_holdings,156.092
+2020-08,India,lt_holdings,157.258
+2020-09,India,lt_holdings,165.587
+2020-10,India,lt_holdings,174.992
+2020-11,India,lt_holdings,179.98
+2020-12,India,lt_holdings,183.488
+2021-01,India,lt_holdings,180.881
+2021-02,India,lt_holdings,176.486
+2021-03,India,lt_holdings,179.428
+2021-04,India,lt_holdings,194.178
+2021-05,India,lt_holdings,203.871
+2021-06,India,lt_holdings,209.734
+2021-07,India,lt_holdings,214.522
+2021-08,India,lt_holdings,214.529
+2021-09,India,lt_holdings,215.414
+2021-10,India,lt_holdings,208.773
+2021-11,India,lt_holdings,203.828
+2021-12,India,lt_holdings,197.409
+2022-01,India,lt_holdings,196.441
+2022-02,India,lt_holdings,197.941
+2022-03,India,lt_holdings,197.476
+2022-04,India,lt_holdings,196.07
+2022-05,India,lt_holdings,200.824
+2022-06,India,lt_holdings,205.794
+2022-07,India,lt_holdings,209.153
+2022-08,India,lt_holdings,218.025
+2022-09,India,lt_holdings,209.11
+2022-10,India,lt_holdings,210.053
+2022-11,India,lt_holdings,216.039
+2022-12,India,lt_holdings,221.497
+2023-01,India,lt_holdings,228.811
+2023-02,India,lt_holdings,227.527
+2023-03,India,lt_holdings,233.031
+2023-04,India,lt_holdings,234.841
+2023-05,India,lt_holdings,235.447
+2023-06,India,lt_holdings,232.869
+2023-07,India,lt_holdings,231.546
+2023-08,India,lt_holdings,230.82
+2023-09,India,lt_holdings,227.838
+2023-10,India,lt_holdings,218.387
+2023-11,India,lt_holdings,218.662
+2023-12,India,lt_holdings,226.853
+2024-01,India,lt_holdings,226.214
+2024-02,India,lt_holdings,225.166
+2024-03,India,lt_holdings,228.192
+2024-04,India,lt_holdings,222.794
+2024-05,India,lt_holdings,226.81
+2024-06,India,lt_holdings,232.873
+2024-07,India,lt_holdings,228.126
+2024-08,India,lt_holdings,230.652
+2024-09,India,lt_holdings,228.496
+2024-10,India,lt_holdings,230.846
+2024-11,India,lt_holdings,225.446
+2024-12,India,lt_holdings,212.841
+2025-01,India,lt_holdings,210.246
+2025-02,India,lt_holdings,211.43
+2025-03,India,lt_holdings,221.762
+2025-04,India,lt_holdings,218.134
+2025-05,India,lt_holdings,218.184
+2025-06,India,lt_holdings,211.145
+2025-07,India,lt_holdings,203.745
+2025-08,India,lt_holdings,201.612
+2025-09,India,lt_holdings,188.325
+2025-10,India,lt_holdings,175.254
+2025-11,India,lt_holdings,174.071
+2025-12,India,lt_holdings,169.283
+2017-12,Russia,lt_holdings,99.158
+2018-01,Russia,lt_holdings,96.255
+2018-02,Russia,lt_holdings,93.504
+2018-03,Russia,lt_holdings,94.864
+2018-04,Russia,lt_holdings,48.723
+2018-05,Russia,lt_holdings,9.104
+2018-06,Russia,lt_holdings,9.107
+2018-07,Russia,lt_holdings,9.105
+2018-08,Russia,lt_holdings,3.378
+2018-09,Russia,lt_holdings,2.9
+2018-10,Russia,lt_holdings,3.24
+2018-11,Russia,lt_holdings,3.751
+2018-12,Russia,lt_holdings,5.105
+2019-01,Russia,lt_holdings,6.322
+2019-02,Russia,lt_holdings,6.932
+2019-03,Russia,lt_holdings,8.212
+2019-04,Russia,lt_holdings,5.83
+2019-05,Russia,lt_holdings,5.247
+2019-06,Russia,lt_holdings,5.296
+2019-07,Russia,lt_holdings,6.238
+2019-08,Russia,lt_holdings,3.067
+2019-09,Russia,lt_holdings,3.064
+2019-10,Russia,lt_holdings,2.568
+2019-11,Russia,lt_holdings,2.979
+2019-12,Russia,lt_holdings,4.27
+2020-01,Russia,lt_holdings,3.808
+2020-02,Russia,lt_holdings,4.309
+2020-03,Russia,lt_holdings,3.381
+2020-04,Russia,lt_holdings,4.014
+2020-05,Russia,lt_holdings,3.759
+2020-06,Russia,lt_holdings,2.87
+2020-07,Russia,lt_holdings,3.178
+2020-08,Russia,lt_holdings,2.657
+2020-09,Russia,lt_holdings,3.413
+2020-10,Russia,lt_holdings,2.631
+2020-11,Russia,lt_holdings,1.568
+2020-12,Russia,lt_holdings,1.21
+2021-01,Russia,lt_holdings,2.744
+2021-02,Russia,lt_holdings,0.306
+2021-03,Russia,lt_holdings,1.088
+2021-04,Russia,lt_holdings,0.306
+2021-05,Russia,lt_holdings,0.305
+2021-06,Russia,lt_holdings,0.305
+2021-07,Russia,lt_holdings,0.305
+2021-08,Russia,lt_holdings,0.203
+2021-09,Russia,lt_holdings,0.204
+2021-10,Russia,lt_holdings,0.554
+2021-11,Russia,lt_holdings,0.101
+2021-12,Russia,lt_holdings,0.102
+2022-01,Russia,lt_holdings,0.002
+2022-02,Russia,lt_holdings,0.002
+2022-03,Russia,lt_holdings,0.002
+2022-04,Russia,lt_holdings,0.002
+2022-05,Russia,lt_holdings,0.003
+2022-06,Russia,lt_holdings,0.004
+2022-07,Russia,lt_holdings,0.005
+2022-08,Russia,lt_holdings,0.008
+2022-09,Russia,lt_holdings,0.009
+2022-10,Russia,lt_holdings,0.025
+2022-11,Russia,lt_holdings,0.08
+2022-12,Russia,lt_holdings,0.104
+2023-01,Russia,lt_holdings,0.054
+2023-02,Russia,lt_holdings,0.062
+2023-03,Russia,lt_holdings,0.068
+2023-04,Russia,lt_holdings,0.027
+2023-05,Russia,lt_holdings,0.028
+2023-06,Russia,lt_holdings,0.027
+2023-07,Russia,lt_holdings,0.024
+2023-08,Russia,lt_holdings,0.026
+2023-09,Russia,lt_holdings,0.061
+2023-10,Russia,lt_holdings,0.028
+2023-11,Russia,lt_holdings,0.025
+2023-12,Russia,lt_holdings,0.213
+2024-01,Russia,lt_holdings,0.209
+2024-02,Russia,lt_holdings,0.211
+2024-03,Russia,lt_holdings,0.212
+2024-04,Russia,lt_holdings,0.22
+2024-05,Russia,lt_holdings,0.218
+2024-06,Russia,lt_holdings,0.218
+2024-07,Russia,lt_holdings,0.2
+2024-08,Russia,lt_holdings,0.158
+2024-09,Russia,lt_holdings,0.167
+2024-10,Russia,lt_holdings,0.024
+2024-11,Russia,lt_holdings,0.031
+2024-12,Russia,lt_holdings,0.033
+2025-01,Russia,lt_holdings,0.032
+2025-02,Russia,lt_holdings,0.03
+2025-03,Russia,lt_holdings,0.032
+2025-04,Russia,lt_holdings,0.027
+2025-05,Russia,lt_holdings,0.032
+2025-06,Russia,lt_holdings,0.023
+2025-07,Russia,lt_holdings,0.022
+2025-08,Russia,lt_holdings,0.022
+2025-09,Russia,lt_holdings,0.022
+2025-10,Russia,lt_holdings,0.023
+2025-11,Russia,lt_holdings,0.022
+2025-12,Russia,lt_holdings,0.021
+2017-12,Grand Total,lt_holdings,5508.138
+2018-01,Grand Total,lt_holdings,5483.797
+2018-02,Grand Total,lt_holdings,5494.18
+2018-03,Grand Total,lt_holdings,5506.284
+2018-04,Grand Total,lt_holdings,5468.095
+2018-05,Grand Total,lt_holdings,5473.636
+2018-06,Grand Total,lt_holdings,5474.268
+2018-07,Grand Total,lt_holdings,5495.003
+2018-08,Grand Total,lt_holdings,5526.956
+2018-09,Grand Total,lt_holdings,5510.319
+2018-10,Grand Total,lt_holdings,5476.47
+2018-11,Grand Total,lt_holdings,5456.262
+2018-12,Grand Total,lt_holdings,5523.454
+2019-01,Grand Total,lt_holdings,5591.095
+2019-02,Grand Total,lt_holdings,5633.584
+2019-03,Grand Total,lt_holdings,5708.558
+2019-04,Grand Total,lt_holdings,5698.15
+2019-05,Grand Total,lt_holdings,5810.884
+2019-06,Grand Total,lt_holdings,5918.041
+2019-07,Grand Total,lt_holdings,6079.834
+2019-08,Grand Total,lt_holdings,6284.947
+2019-09,Grand Total,lt_holdings,6160.297
+2019-10,Grand Total,lt_holdings,6202.356
+2019-11,Grand Total,lt_holdings,6174.186
+2019-12,Grand Total,lt_holdings,6128.155
+2020-01,Grand Total,lt_holdings,6321.567
+2020-02,Grand Total,lt_holdings,6488.593
+2020-03,Grand Total,lt_holdings,6219.975
+2020-04,Grand Total,lt_holdings,6021.886
+2020-05,Grand Total,lt_holdings,6016.124
+2020-06,Grand Total,lt_holdings,6011.476
+2020-07,Grand Total,lt_holdings,6056.669
+2020-08,Grand Total,lt_holdings,6034.387
+2020-09,Grand Total,lt_holdings,6051.907
+2020-10,Grand Total,lt_holdings,6059.294
+2020-11,Grand Total,lt_holdings,6027.094
+2020-12,Grand Total,lt_holdings,6043.423
+2021-01,Grand Total,lt_holdings,6112.945
+2021-02,Grand Total,lt_holdings,6073.216
+2021-03,Grand Total,lt_holdings,6071.788
+2021-04,Grand Total,lt_holdings,6172.841
+2021-05,Grand Total,lt_holdings,6256.81
+2021-06,Grand Total,lt_holdings,6592.133
+2021-07,Grand Total,lt_holdings,6642.402
+2021-08,Grand Total,lt_holdings,6654.359
+2021-09,Grand Total,lt_holdings,6642.514
+2021-10,Grand Total,lt_holdings,6698.056
+2021-11,Grand Total,lt_holdings,6712.439
+2021-12,Grand Total,lt_holdings,6752.96
+2022-01,Grand Total,lt_holdings,6658.806
+2022-02,Grand Total,lt_holdings,6678.63
+2022-03,Grand Total,lt_holdings,6595.817
+2022-04,Grand Total,lt_holdings,6455.558
+2022-05,Grand Total,lt_holdings,6497.919
+2022-06,Grand Total,lt_holdings,6521.506
+2022-07,Grand Total,lt_holdings,6601.472
+2022-08,Grand Total,lt_holdings,6563.621
+2022-09,Grand Total,lt_holdings,6331.898
+2022-10,Grand Total,lt_holdings,6231.915
+2022-11,Grand Total,lt_holdings,6278.738
+2022-12,Grand Total,lt_holdings,6244.696
+2023-01,Grand Total,lt_holdings,6364.842
+2023-02,Grand Total,lt_holdings,6289.115
+2023-03,Grand Total,lt_holdings,6506.021
+2023-04,Grand Total,lt_holdings,6588.242
+2023-05,Grand Total,lt_holdings,6558.524
+2023-06,Grand Total,lt_holdings,6600.967
+2023-07,Grand Total,lt_holdings,6597.898
+2023-08,Grand Total,lt_holdings,6584.294
+2023-09,Grand Total,lt_holdings,6448.221
+2023-10,Grand Total,lt_holdings,6441.348
+2023-11,Grand Total,lt_holdings,6651.332
+2023-12,Grand Total,lt_holdings,6856.948
+2024-01,Grand Total,lt_holdings,6898.526
+2024-02,Grand Total,lt_holdings,6909.717
+2024-03,Grand Total,lt_holdings,7016.696
+2024-04,Grand Total,lt_holdings,6957.434
+2024-05,Grand Total,lt_holdings,7061.423
+2024-06,Grand Total,lt_holdings,7145.705
+2024-07,Grand Total,lt_holdings,7263.226
+2024-08,Grand Total,lt_holdings,7373.844
+2024-09,Grand Total,lt_holdings,7515.903
+2024-10,Grand Total,lt_holdings,7436.107
+2024-11,Grand Total,lt_holdings,7457.101
+2024-12,Grand Total,lt_holdings,7313.969
+2025-01,Grand Total,lt_holdings,7279.343
+2025-02,Grand Total,lt_holdings,7499.81
+2025-03,Grand Total,lt_holdings,7637.37
+2025-04,Grand Total,lt_holdings,7596.183
+2025-05,Grand Total,lt_holdings,7619.114
+2025-06,Grand Total,lt_holdings,7673.568
+2025-07,Grand Total,lt_holdings,7694.029
+2025-08,Grand Total,lt_holdings,7807.864
+2025-09,Grand Total,lt_holdings,7818.348
+2025-10,Grand Total,lt_holdings,7791.89
+2025-11,Grand Total,lt_holdings,7911.51
+2025-12,Grand Total,lt_holdings,7819.578
+2017-12,Foreign Official,lt_holdings,3706.727
+2018-01,Foreign Official,lt_holdings,3676.372
+2018-02,Foreign Official,lt_holdings,3697.047
+2018-03,Foreign Official,lt_holdings,3733.085
+2018-04,Foreign Official,lt_holdings,3683.049
+2018-05,Foreign Official,lt_holdings,3644.594
+2018-06,Foreign Official,lt_holdings,3652.308
+2018-07,Foreign Official,lt_holdings,3668.145
+2018-08,Foreign Official,lt_holdings,3691.784
+2018-09,Foreign Official,lt_holdings,3693.42
+2018-10,Foreign Official,lt_holdings,3640.491
+2018-11,Foreign Official,lt_holdings,3589.414
+2018-12,Foreign Official,lt_holdings,3641.633
+2019-01,Foreign Official,lt_holdings,3676.289
+2019-02,Foreign Official,lt_holdings,3710.624
+2019-03,Foreign Official,lt_holdings,3762.349
+2019-04,Foreign Official,lt_holdings,3763.056
+2019-05,Foreign Official,lt_holdings,3814.15
+2019-06,Foreign Official,lt_holdings,3858.749
+2019-07,Foreign Official,lt_holdings,3853.474
+2019-08,Foreign Official,lt_holdings,3904.964
+2019-09,Foreign Official,lt_holdings,3860.081
+2019-10,Foreign Official,lt_holdings,3834.786
+2019-11,Foreign Official,lt_holdings,3827.637
+2019-12,Foreign Official,lt_holdings,3808.339
+2020-01,Foreign Official,lt_holdings,3875.058
+2020-02,Foreign Official,lt_holdings,3958.829
+2020-03,Foreign Official,lt_holdings,3834.635
+2020-04,Foreign Official,lt_holdings,3716.351
+2020-05,Foreign Official,lt_holdings,3750.224
+2020-06,Foreign Official,lt_holdings,3764.847
+2020-07,Foreign Official,lt_holdings,3797.649
+2020-08,Foreign Official,lt_holdings,3814.269
+2020-09,Foreign Official,lt_holdings,3827.385
+2020-10,Foreign Official,lt_holdings,3791.349
+2020-11,Foreign Official,lt_holdings,3805.373
+2020-12,Foreign Official,lt_holdings,3825.569
+2021-01,Foreign Official,lt_holdings,3846.444
+2021-02,Foreign Official,lt_holdings,3829.093
+2021-03,Foreign Official,lt_holdings,3841.479
+2021-04,Foreign Official,lt_holdings,3881.321
+2021-05,Foreign Official,lt_holdings,3929.864
+2021-06,Foreign Official,lt_holdings,3946.41
+2021-07,Foreign Official,lt_holdings,3977.691
+2021-08,Foreign Official,lt_holdings,3958.275
+2021-09,Foreign Official,lt_holdings,3952.518
+2021-10,Foreign Official,lt_holdings,3931.721
+2021-11,Foreign Official,lt_holdings,3921.51
+2021-12,Foreign Official,lt_holdings,3870.012
+2022-01,Foreign Official,lt_holdings,3863.278
+2022-02,Foreign Official,lt_holdings,3846.041
+2022-03,Foreign Official,lt_holdings,3765.617
+2022-04,Foreign Official,lt_holdings,3650.869
+2022-05,Foreign Official,lt_holdings,3617.693
+2022-06,Foreign Official,lt_holdings,3616.938
+2022-07,Foreign Official,lt_holdings,3660.973
+2022-08,Foreign Official,lt_holdings,3646.416
+2022-09,Foreign Official,lt_holdings,3493.691
+2022-10,Foreign Official,lt_holdings,3410.226
+2022-11,Foreign Official,lt_holdings,3444.806
+2022-12,Foreign Official,lt_holdings,3428.735
+2023-01,Foreign Official,lt_holdings,3454.251
+2023-02,Foreign Official,lt_holdings,3435.728
+2023-03,Foreign Official,lt_holdings,3517.636
+2023-04,Foreign Official,lt_holdings,3558.378
+2023-05,Foreign Official,lt_holdings,3548.277
+2023-06,Foreign Official,lt_holdings,3548.853
+2023-07,Foreign Official,lt_holdings,3522.207
+2023-08,Foreign Official,lt_holdings,3500.393
+2023-09,Foreign Official,lt_holdings,3456.526
+2023-10,Foreign Official,lt_holdings,3405.622
+2023-11,Foreign Official,lt_holdings,3438.094
+2023-12,Foreign Official,lt_holdings,3546.47
+2024-01,Foreign Official,lt_holdings,3548.834
+2024-02,Foreign Official,lt_holdings,3501.298
+2024-03,Foreign Official,lt_holdings,3549.916
+2024-04,Foreign Official,lt_holdings,3524.531
+2024-05,Foreign Official,lt_holdings,3542.838
+2024-06,Foreign Official,lt_holdings,3562.491
+2024-07,Foreign Official,lt_holdings,3574.584
+2024-08,Foreign Official,lt_holdings,3569.184
+2024-09,Foreign Official,lt_holdings,3595.804
+2024-10,Foreign Official,lt_holdings,3544.208
+2024-11,Foreign Official,lt_holdings,3557.218
+2024-12,Foreign Official,lt_holdings,3485.567
+2025-01,Foreign Official,lt_holdings,3430.359
+2025-02,Foreign Official,lt_holdings,3460.863
+2025-03,Foreign Official,lt_holdings,3503.605
+2025-04,Foreign Official,lt_holdings,3493.506
+2025-05,Foreign Official,lt_holdings,3479.509
+2025-06,Foreign Official,lt_holdings,3489.962
+2025-07,Foreign Official,lt_holdings,3476.476
+2025-08,Foreign Official,lt_holdings,3508.206
+2025-09,Foreign Official,lt_holdings,3501.211
+2025-10,Foreign Official,lt_holdings,3480.439
+2025-11,Foreign Official,lt_holdings,3526.758
+2025-12,Foreign Official,lt_holdings,3489.146
+2017-12,China,lt_net_transactions,7.175
+2018-01,China,lt_net_transactions,-2.486
+2018-02,China,lt_net_transactions,15.719
+2018-03,China,lt_net_transactions,5.296
+2018-04,China,lt_net_transactions,3.286
+2018-05,China,lt_net_transactions,-8.324
+2018-06,China,lt_net_transactions,0.835
+2018-07,China,lt_net_transactions,-9.302
+2018-08,China,lt_net_transactions,-6.336
+2018-09,China,lt_net_transactions,-5.52
+2018-10,China,lt_net_transactions,-7.218
+2018-11,China,lt_net_transactions,-26.366
+2018-12,China,lt_net_transactions,-10.668
+2019-01,China,lt_net_transactions,-1.857
+2019-02,China,lt_net_transactions,8.611
+2019-03,China,lt_net_transactions,-26.707
+2019-04,China,lt_net_transactions,-8.959
+2019-05,China,lt_net_transactions,-11.593
+2019-06,China,lt_net_transactions,-1.489
+2019-07,China,lt_net_transactions,1.558
+2019-08,China,lt_net_transactions,-31.508
+2019-09,China,lt_net_transactions,2.558
+2019-10,China,lt_net_transactions,-6.073
+2019-11,China,lt_net_transactions,0.823
+2019-12,China,lt_net_transactions,-12.715
+2020-01,China,lt_net_transactions,-11.454
+2020-02,China,lt_net_transactions,-4.333
+2020-03,China,lt_net_transactions,-63.447
+2020-04,China,lt_net_transactions,-23.717
+2020-05,China,lt_net_transactions,19.663
+2020-06,China,lt_net_transactions,-3.641
+2020-07,China,lt_net_transactions,-0.94
+2020-08,China,lt_net_transactions,13.581
+2020-09,China,lt_net_transactions,-8.162
+2020-10,China,lt_net_transactions,-4.732
+2020-11,China,lt_net_transactions,0.908
+2020-12,China,lt_net_transactions,4.382
+2021-01,China,lt_net_transactions,12.896
+2021-02,China,lt_net_transactions,4.024
+2021-03,China,lt_net_transactions,28.196
+2021-04,China,lt_net_transactions,14.88
+2021-05,China,lt_net_transactions,-1.7
+2021-06,China,lt_net_transactions,-7.091
+2021-07,China,lt_net_transactions,-13.521
+2021-08,China,lt_net_transactions,-7.196
+2021-09,China,lt_net_transactions,10.094
+2021-10,China,lt_net_transactions,20.459
+2021-11,China,lt_net_transactions,-24.632
+2021-12,China,lt_net_transactions,0.982
+2022-01,China,lt_net_transactions,4.851
+2022-02,China,lt_net_transactions,2.728
+2022-03,China,lt_net_transactions,17.265
+2022-04,China,lt_net_transactions,-22.089
+2022-05,China,lt_net_transactions,-24.009
+2022-06,China,lt_net_transactions,2.488
+2022-07,China,lt_net_transactions,-10.735
+2022-08,China,lt_net_transactions,17.97
+2022-09,China,lt_net_transactions,-9.805
+2022-10,China,lt_net_transactions,-16.908
+2022-11,China,lt_net_transactions,-26.953
+2022-12,China,lt_net_transactions,5.756
+2023-01,China,lt_net_transactions,-21.968
+2023-02,China,lt_net_transactions,6.006
+2023-03,China,lt_net_transactions,-13.816
+2023-04,China,lt_net_transactions,-0.997
+2023-05,China,lt_net_transactions,-13.671
+2023-06,China,lt_net_transactions,8.088
+2023-07,China,lt_net_transactions,-11.204
+2023-08,China,lt_net_transactions,-14.867
+2023-09,China,lt_net_transactions,-1.004
+2023-10,China,lt_net_transactions,1.852
+2023-11,China,lt_net_transactions,-15.046
+2023-12,China,lt_net_transactions,-2.645
+2024-01,China,lt_net_transactions,-21.735
+2024-02,China,lt_net_transactions,-13.154
+2024-03,China,lt_net_transactions,-9.813
+2024-04,China,lt_net_transactions,23.895
+2024-05,China,lt_net_transactions,-23.887
+2024-06,China,lt_net_transactions,5.925
+2024-07,China,lt_net_transactions,-23.106
+2024-08,China,lt_net_transactions,-15.866
+2024-09,China,lt_net_transactions,-12.354
+2024-10,China,lt_net_transactions,3.138
+2024-11,China,lt_net_transactions,-4.132
+2024-12,China,lt_net_transactions,-10.702
+2025-01,China,lt_net_transactions,-3.197
+2025-02,China,lt_net_transactions,-4.541
+2025-03,China,lt_net_transactions,-27.575
+2025-04,China,lt_net_transactions,-20.876
+2025-05,China,lt_net_transactions,2.459
+2025-06,China,lt_net_transactions,-5.389
+2025-07,China,lt_net_transactions,-23.572
+2025-08,China,lt_net_transactions,-21.767
+2025-09,China,lt_net_transactions,-2.966
+2025-10,China,lt_net_transactions,-11.258
+2025-11,China,lt_net_transactions,2.864
+2025-12,China,lt_net_transactions,5.701
+2017-12,Brazil,lt_net_transactions,-7.94
+2018-01,Brazil,lt_net_transactions,14.049
+2018-02,Brazil,lt_net_transactions,11.538
+2018-03,Brazil,lt_net_transactions,11.794
+2018-04,Brazil,lt_net_transactions,12.248
+2018-05,Brazil,lt_net_transactions,3.01
+2018-06,Brazil,lt_net_transactions,2.88
+2018-07,Brazil,lt_net_transactions,2.414
+2018-08,Brazil,lt_net_transactions,13.179
+2018-09,Brazil,lt_net_transactions,5.156
+2018-10,Brazil,lt_net_transactions,-1.026
+2018-11,Brazil,lt_net_transactions,-5.717
+2018-12,Brazil,lt_net_transactions,-12.358
+2019-01,Brazil,lt_net_transactions,2.767
+2019-02,Brazil,lt_net_transactions,5.365
+2019-03,Brazil,lt_net_transactions,-1.102
+2019-04,Brazil,lt_net_transactions,-3.565
+2019-05,Brazil,lt_net_transactions,-4.722
+2019-06,Brazil,lt_net_transactions,3.243
+2019-07,Brazil,lt_net_transactions,-1.258
+2019-08,Brazil,lt_net_transactions,-3.538
+2019-09,Brazil,lt_net_transactions,-10.372
+2019-10,Brazil,lt_net_transactions,-4.407
+2019-11,Brazil,lt_net_transactions,-5.58
+2019-12,Brazil,lt_net_transactions,-7.26
+2020-01,Brazil,lt_net_transactions,-2.88
+2020-02,Brazil,lt_net_transactions,-3.442
+2020-03,Brazil,lt_net_transactions,-24.341
+2020-04,Brazil,lt_net_transactions,-8.369
+2020-05,Brazil,lt_net_transactions,0.828
+2020-06,Brazil,lt_net_transactions,-6.599
+2020-07,Brazil,lt_net_transactions,1.347
+2020-08,Brazil,lt_net_transactions,1.473
+2020-09,Brazil,lt_net_transactions,1.345
+2020-10,Brazil,lt_net_transactions,0.612
+2020-11,Brazil,lt_net_transactions,4.414
+2020-12,Brazil,lt_net_transactions,0.742
+2021-01,Brazil,lt_net_transactions,4.935
+2021-02,Brazil,lt_net_transactions,0.945
+2021-03,Brazil,lt_net_transactions,1.118
+2021-04,Brazil,lt_net_transactions,-1.871
+2021-05,Brazil,lt_net_transactions,-2.901
+2021-06,Brazil,lt_net_transactions,-2.587
+2021-07,Brazil,lt_net_transactions,-2.584
+2021-08,Brazil,lt_net_transactions,0.973
+2021-09,Brazil,lt_net_transactions,2.149
+2021-10,Brazil,lt_net_transactions,-0.578
+2021-11,Brazil,lt_net_transactions,-3.382
+2021-12,Brazil,lt_net_transactions,-2.98
+2022-01,Brazil,lt_net_transactions,-0.925
+2022-02,Brazil,lt_net_transactions,2.394
+2022-03,Brazil,lt_net_transactions,2.591
+2022-04,Brazil,lt_net_transactions,1.293
+2022-05,Brazil,lt_net_transactions,-1.138
+2022-06,Brazil,lt_net_transactions,-0.143
+2022-07,Brazil,lt_net_transactions,4.387
+2022-08,Brazil,lt_net_transactions,-0.553
+2022-09,Brazil,lt_net_transactions,0.738
+2022-10,Brazil,lt_net_transactions,0.519
+2022-11,Brazil,lt_net_transactions,1.7
+2022-12,Brazil,lt_net_transactions,-7.666
+2023-01,Brazil,lt_net_transactions,-7.76
+2023-02,Brazil,lt_net_transactions,3.398
+2023-03,Brazil,lt_net_transactions,3.617
+2023-04,Brazil,lt_net_transactions,4.629
+2023-05,Brazil,lt_net_transactions,2.51
+2023-06,Brazil,lt_net_transactions,-1.412
+2023-07,Brazil,lt_net_transactions,-3.164
+2023-08,Brazil,lt_net_transactions,-0.466
+2023-09,Brazil,lt_net_transactions,1.961
+2023-10,Brazil,lt_net_transactions,-3.753
+2023-11,Brazil,lt_net_transactions,-1.497
+2023-12,Brazil,lt_net_transactions,2.582
+2024-01,Brazil,lt_net_transactions,-2.838
+2024-02,Brazil,lt_net_transactions,1.668
+2024-03,Brazil,lt_net_transactions,1.589
+2024-04,Brazil,lt_net_transactions,-1.189
+2024-05,Brazil,lt_net_transactions,1.375
+2024-06,Brazil,lt_net_transactions,3.728
+2024-07,Brazil,lt_net_transactions,-0.803
+2024-08,Brazil,lt_net_transactions,2.947
+2024-09,Brazil,lt_net_transactions,-0.231
+2024-10,Brazil,lt_net_transactions,-0.405
+2024-11,Brazil,lt_net_transactions,-1.243
+2024-12,Brazil,lt_net_transactions,-26.232
+2025-01,Brazil,lt_net_transactions,-3.214
+2025-02,Brazil,lt_net_transactions,1.848
+2025-03,Brazil,lt_net_transactions,0.418
+2025-04,Brazil,lt_net_transactions,2.215
+2025-05,Brazil,lt_net_transactions,3.229
+2025-06,Brazil,lt_net_transactions,1.645
+2025-07,Brazil,lt_net_transactions,-11.894
+2025-08,Brazil,lt_net_transactions,-16.826
+2025-09,Brazil,lt_net_transactions,-11.82
+2025-10,Brazil,lt_net_transactions,-5.512
+2025-11,Brazil,lt_net_transactions,-0.577
+2025-12,Brazil,lt_net_transactions,0.875
+2017-12,India,lt_net_transactions,4.647
+2018-01,India,lt_net_transactions,5.377
+2018-02,India,lt_net_transactions,5.124
+2018-03,India,lt_net_transactions,4.851
+2018-04,India,lt_net_transactions,-1.513
+2018-05,India,lt_net_transactions,-3.225
+2018-06,India,lt_net_transactions,-0.069
+2018-07,India,lt_net_transactions,-2.675
+2018-08,India,lt_net_transactions,-1.299
+2018-09,India,lt_net_transactions,5.533
+2018-10,India,lt_net_transactions,-4.559
+2018-11,India,lt_net_transactions,-0.268
+2018-12,India,lt_net_transactions,0.966
+2019-01,India,lt_net_transactions,2.996
+2019-02,India,lt_net_transactions,0.023
+2019-03,India,lt_net_transactions,5.528
+2019-04,India,lt_net_transactions,3.539
+2019-05,India,lt_net_transactions,-0.807
+2019-06,India,lt_net_transactions,4.782
+2019-07,India,lt_net_transactions,-1.711
+2019-08,India,lt_net_transactions,-1.192
+2019-09,India,lt_net_transactions,-0.207
+2019-10,India,lt_net_transactions,0.959
+2019-11,India,lt_net_transactions,-1.684
+2019-12,India,lt_net_transactions,1.19
+2020-01,India,lt_net_transactions,-8.403
+2020-02,India,lt_net_transactions,3.778
+2020-03,India,lt_net_transactions,-11.261
+2020-04,India,lt_net_transactions,-2.751
+2020-05,India,lt_net_transactions,3.533
+2020-06,India,lt_net_transactions,-0.596
+2020-07,India,lt_net_transactions,3.748
+2020-08,India,lt_net_transactions,2.519
+2020-09,India,lt_net_transactions,8.398
+2020-10,India,lt_net_transactions,10.681
+2020-11,India,lt_net_transactions,4.809
+2020-12,India,lt_net_transactions,3.992
+2021-01,India,lt_net_transactions,-1.241
+2021-02,India,lt_net_transactions,-2.011
+2021-03,India,lt_net_transactions,4.958
+2021-04,India,lt_net_transactions,14.077
+2021-05,India,lt_net_transactions,9.441
+2021-06,India,lt_net_transactions,5.382
+2021-07,India,lt_net_transactions,3.065
+2021-08,India,lt_net_transactions,0.515
+2021-09,India,lt_net_transactions,2.72
+2021-10,India,lt_net_transactions,-6.039
+2021-11,India,lt_net_transactions,-5.477
+2021-12,India,lt_net_transactions,-5.317
+2022-01,India,lt_net_transactions,2.186
+2022-02,India,lt_net_transactions,2.842
+2022-03,India,lt_net_transactions,4.764
+2022-04,India,lt_net_transactions,3.149
+2022-05,India,lt_net_transactions,4.385
+2022-06,India,lt_net_transactions,6.834
+2022-07,India,lt_net_transactions,1.224
+2022-08,India,lt_net_transactions,13.135
+2022-09,India,lt_net_transactions,-2.804
+2022-10,India,lt_net_transactions,3.256
+2022-11,India,lt_net_transactions,2.198
+2022-12,India,lt_net_transactions,6.431
+2023-01,India,lt_net_transactions,3.538
+2023-02,India,lt_net_transactions,1.867
+2023-03,India,lt_net_transactions,1.322
+2023-04,India,lt_net_transactions,1.077
+2023-05,India,lt_net_transactions,2.182
+2023-06,India,lt_net_transactions,-1.019
+2023-07,India,lt_net_transactions,-1.156
+2023-08,India,lt_net_transactions,-0.427
+2023-09,India,lt_net_transactions,-0.559
+2023-10,India,lt_net_transactions,-8.201
+2023-11,India,lt_net_transactions,-4.03
+2023-12,India,lt_net_transactions,4.239
+2024-01,India,lt_net_transactions,-0.851
+2024-02,India,lt_net_transactions,1.607
+2024-03,India,lt_net_transactions,2.345
+2024-04,India,lt_net_transactions,-1.817
+2024-05,India,lt_net_transactions,1.937
+2024-06,India,lt_net_transactions,4.627
+2024-07,India,lt_net_transactions,-8.484
+2024-08,India,lt_net_transactions,0.625
+2024-09,India,lt_net_transactions,-3.902
+2024-10,India,lt_net_transactions,7.293
+2024-11,India,lt_net_transactions,-6.524
+2024-12,India,lt_net_transactions,-10.278
+2025-01,India,lt_net_transactions,-3.336
+2025-02,India,lt_net_transactions,-1.602
+2025-03,India,lt_net_transactions,9.663
+2025-04,India,lt_net_transactions,-5.459
+2025-05,India,lt_net_transactions,1.712
+2025-06,India,lt_net_transactions,-8.683
+2025-07,India,lt_net_transactions,-6.427
+2025-08,India,lt_net_transactions,-4.234
+2025-09,India,lt_net_transactions,-13.486
+2025-10,India,lt_net_transactions,-13.636
+2025-11,India,lt_net_transactions,-2.031
+2025-12,India,lt_net_transactions,-4.284
+2017-12,Russia,lt_net_transactions,-1.633
+2018-01,Russia,lt_net_transactions,-1.755
+2018-02,Russia,lt_net_transactions,-2.118
+2018-03,Russia,lt_net_transactions,0.884
+2018-04,Russia,lt_net_transactions,-45.424
+2018-05,Russia,lt_net_transactions,-39.881
+2018-06,Russia,lt_net_transactions,0.017
+2018-07,Russia,lt_net_transactions,0.04
+2018-08,Russia,lt_net_transactions,-5.766
+2018-09,Russia,lt_net_transactions,-0.45
+2018-10,Russia,lt_net_transactions,0.353
+2018-11,Russia,lt_net_transactions,0.494
+2018-12,Russia,lt_net_transactions,1.298
+2019-01,Russia,lt_net_transactions,1.206
+2019-02,Russia,lt_net_transactions,0.63
+2019-03,Russia,lt_net_transactions,1.192
+2019-04,Russia,lt_net_transactions,-2.358
+2019-05,Russia,lt_net_transactions,-0.676
+2019-06,Russia,lt_net_transactions,0.018
+2019-07,Russia,lt_net_transactions,0.958
+2019-08,Russia,lt_net_transactions,-3.315
+2019-09,Russia,lt_net_transactions,0.021
+2019-10,Russia,lt_net_transactions,-0.495
+2019-11,Russia,lt_net_transactions,0.421
+2019-12,Russia,lt_net_transactions,1.305
+2020-01,Russia,lt_net_transactions,-0.53
+2020-02,Russia,lt_net_transactions,0.43
+2020-03,Russia,lt_net_transactions,-1.021
+2020-04,Russia,lt_net_transactions,0.623
+2020-05,Russia,lt_net_transactions,-0.243
+2020-06,Russia,lt_net_transactions,-0.886
+2020-07,Russia,lt_net_transactions,0.29
+2020-08,Russia,lt_net_transactions,-0.493
+2020-09,Russia,lt_net_transactions,0.757
+2020-10,Russia,lt_net_transactions,-0.756
+2020-11,Russia,lt_net_transactions,-1.066
+2020-12,Russia,lt_net_transactions,-0.354
+2021-01,Russia,lt_net_transactions,1.543
+2021-02,Russia,lt_net_transactions,-2.402
+2021-03,Russia,lt_net_transactions,0.785
+2021-04,Russia,lt_net_transactions,-0.786
+2021-05,Russia,lt_net_transactions,-0.001
+2021-06,Russia,lt_net_transactions,-0.001
+2021-07,Russia,lt_net_transactions,-0.003
+2021-08,Russia,lt_net_transactions,-0.101
+2021-09,Russia,lt_net_transactions,0.003
+2021-10,Russia,lt_net_transactions,0.351
+2021-11,Russia,lt_net_transactions,-0.454
+2021-12,Russia,lt_net_transactions,0.002
+2022-01,Russia,lt_net_transactions,-0.098
+2022-02,Russia,lt_net_transactions,0.0
+2022-03,Russia,lt_net_transactions,0.0
+2022-04,Russia,lt_net_transactions,0.0
+2022-05,Russia,lt_net_transactions,0.001
+2022-06,Russia,lt_net_transactions,0.001
+2022-07,Russia,lt_net_transactions,0.001
+2022-08,Russia,lt_net_transactions,0.003
+2022-09,Russia,lt_net_transactions,0.001
+2022-10,Russia,lt_net_transactions,0.016
+2022-11,Russia,lt_net_transactions,0.055
+2022-12,Russia,lt_net_transactions,0.024
+2023-01,Russia,lt_net_transactions,-0.052
+2023-02,Russia,lt_net_transactions,0.004
+2023-03,Russia,lt_net_transactions,0.008
+2023-04,Russia,lt_net_transactions,0.005
+2023-05,Russia,lt_net_transactions,0.0
+2023-06,Russia,lt_net_transactions,0.002
+2023-07,Russia,lt_net_transactions,0.001
+2023-08,Russia,lt_net_transactions,0.003
+2023-09,Russia,lt_net_transactions,0.003
+2023-10,Russia,lt_net_transactions,0.001
+2023-11,Russia,lt_net_transactions,0.002
+2023-12,Russia,lt_net_transactions,0.003
+2024-01,Russia,lt_net_transactions,0.002
+2024-02,Russia,lt_net_transactions,0.003
+2024-03,Russia,lt_net_transactions,0.001
+2024-04,Russia,lt_net_transactions,0.002
+2024-05,Russia,lt_net_transactions,0.001
+2024-06,Russia,lt_net_transactions,0.001
+2024-07,Russia,lt_net_transactions,-0.02
+2024-08,Russia,lt_net_transactions,0.001
+2024-09,Russia,lt_net_transactions,0.002
+2024-10,Russia,lt_net_transactions,0.001
+2024-11,Russia,lt_net_transactions,0.002
+2024-12,Russia,lt_net_transactions,0.004
+2025-01,Russia,lt_net_transactions,0.005
+2025-02,Russia,lt_net_transactions,0.0
+2025-03,Russia,lt_net_transactions,0.001
+2025-04,Russia,lt_net_transactions,0.002
+2025-05,Russia,lt_net_transactions,0.004
+2025-06,Russia,lt_net_transactions,0.0
+2025-07,Russia,lt_net_transactions,0.0
+2025-08,Russia,lt_net_transactions,0.001
+2025-09,Russia,lt_net_transactions,0.002
+2025-10,Russia,lt_net_transactions,0.003
+2025-11,Russia,lt_net_transactions,0.001
+2025-12,Russia,lt_net_transactions,0.002
+2017-12,Grand Total,lt_net_transactions,-14.6
+2018-01,Grand Total,lt_net_transactions,39.284
+2018-02,Grand Total,lt_net_transactions,46.469
+2018-03,Grand Total,lt_net_transactions,-15.864
+2018-04,Grand Total,lt_net_transactions,4.023
+2018-05,Grand Total,lt_net_transactions,-24.308
+2018-06,Grand Total,lt_net_transactions,-2.874
+2018-07,Grand Total,lt_net_transactions,57.784
+2018-08,Grand Total,lt_net_transactions,8.34
+2018-09,Grand Total,lt_net_transactions,29.12
+2018-10,Grand Total,lt_net_transactions,-9.189
+2018-11,Grand Total,lt_net_transactions,-48.536
+2018-12,Grand Total,lt_net_transactions,-13.917
+2019-01,Grand Total,lt_net_transactions,56.408
+2019-02,Grand Total,lt_net_transactions,60.284
+2019-03,Grand Total,lt_net_transactions,3.788
+2019-04,Grand Total,lt_net_transactions,6.47
+2019-05,Grand Total,lt_net_transactions,22.068
+2019-06,Grand Total,lt_net_transactions,76.002
+2019-07,Grand Total,lt_net_transactions,22.761
+2019-08,Grand Total,lt_net_transactions,64.892
+2019-09,Grand Total,lt_net_transactions,-76.456
+2019-10,Grand Total,lt_net_transactions,43.451
+2019-11,Grand Total,lt_net_transactions,-4.228
+2019-12,Grand Total,lt_net_transactions,-16.908
+2020-01,Grand Total,lt_net_transactions,96.11
+2020-02,Grand Total,lt_net_transactions,48.845
+2020-03,Grand Total,lt_net_transactions,-408.582
+2020-04,Grand Total,lt_net_transactions,-216.698
+2020-05,Grand Total,lt_net_transactions,12.997
+2020-06,Grand Total,lt_net_transactions,-7.342
+2020-07,Grand Total,lt_net_transactions,13.445
+2020-08,Grand Total,lt_net_transactions,30.221
+2020-09,Grand Total,lt_net_transactions,20.18
+2020-10,Grand Total,lt_net_transactions,54.03
+2020-11,Grand Total,lt_net_transactions,-38.409
+2020-12,Grand Total,lt_net_transactions,31.477
+2021-01,Grand Total,lt_net_transactions,115.577
+2021-02,Grand Total,lt_net_transactions,40.846
+2021-03,Grand Total,lt_net_transactions,62.38
+2021-04,Grand Total,lt_net_transactions,78.263
+2021-05,Grand Total,lt_net_transactions,75.973
+2021-06,Grand Total,lt_net_transactions,13.941
+2021-07,Grand Total,lt_net_transactions,-3.892
+2021-08,Grand Total,lt_net_transactions,27.676
+2021-09,Grand Total,lt_net_transactions,45.067
+2021-10,Grand Total,lt_net_transactions,74.102
+2021-11,Grand Total,lt_net_transactions,-2.687
+2021-12,Grand Total,lt_net_transactions,53.495
+2022-01,Grand Total,lt_net_transactions,13.729
+2022-02,Grand Total,lt_net_transactions,63.223
+2022-03,Grand Total,lt_net_transactions,93.604
+2022-04,Grand Total,lt_net_transactions,11.886
+2022-05,Grand Total,lt_net_transactions,30.209
+2022-06,Grand Total,lt_net_transactions,83.903
+2022-07,Grand Total,lt_net_transactions,12.309
+2022-08,Grand Total,lt_net_transactions,96.69
+2022-09,Grand Total,lt_net_transactions,-47.749
+2022-10,Grand Total,lt_net_transactions,-29.936
+2022-11,Grand Total,lt_net_transactions,-65.556
+2022-12,Grand Total,lt_net_transactions,-5.75
+2023-01,Grand Total,lt_net_transactions,14.654
+2023-02,Grand Total,lt_net_transactions,51.089
+2023-03,Grand Total,lt_net_transactions,94.873
+2023-04,Grand Total,lt_net_transactions,115.903
+2023-05,Grand Total,lt_net_transactions,62.249
+2023-06,Grand Total,lt_net_transactions,78.218
+2023-07,Grand Total,lt_net_transactions,-5.233
+2023-08,Grand Total,lt_net_transactions,3.196
+2023-09,Grand Total,lt_net_transactions,8.403
+2023-10,Grand Total,lt_net_transactions,19.676
+2023-11,Grand Total,lt_net_transactions,105.01
+2023-12,Grand Total,lt_net_transactions,14.29
+2024-01,Grand Total,lt_net_transactions,52.751
+2024-02,Grand Total,lt_net_transactions,92.037
+2024-03,Grand Total,lt_net_transactions,48.413
+2024-04,Grand Total,lt_net_transactions,85.349
+2024-05,Grand Total,lt_net_transactions,52.913
+2024-06,Grand Total,lt_net_transactions,0.582
+2024-07,Grand Total,lt_net_transactions,58.292
+2024-08,Grand Total,lt_net_transactions,19.718
+2024-09,Grand Total,lt_net_transactions,61.791
+2024-10,Grand Total,lt_net_transactions,89.015
+2024-11,Grand Total,lt_net_transactions,-35.135
+2024-12,Grand Total,lt_net_transactions,-35.836
+2025-01,Grand Total,lt_net_transactions,-4.724
+2025-02,Grand Total,lt_net_transactions,105.971
+2025-03,Grand Total,lt_net_transactions,127.977
+2025-04,Grand Total,lt_net_transactions,-58.453
+2025-05,Grand Total,lt_net_transactions,138.693
+2025-06,Grand Total,lt_net_transactions,2.757
+2025-07,Grand Total,lt_net_transactions,43.693
+2025-08,Grand Total,lt_net_transactions,49.014
+2025-09,Grand Total,lt_net_transactions,26.727
+2025-10,Grand Total,lt_net_transactions,-58.158
+2025-11,Grand Total,lt_net_transactions,76.623
+2025-12,Grand Total,lt_net_transactions,-21.677
+2017-12,Foreign Official,lt_net_transactions,-10.498
+2018-01,Foreign Official,lt_net_transactions,12.563
+2018-02,Foreign Official,lt_net_transactions,44.868
+2018-03,Foreign Official,lt_net_transactions,17.218
+2018-04,Foreign Official,lt_net_transactions,-21.801
+2018-05,Foreign Official,lt_net_transactions,-58.225
+2018-06,Foreign Official,lt_net_transactions,13.369
+2018-07,Foreign Official,lt_net_transactions,32.549
+2018-08,Foreign Official,lt_net_transactions,7.876
+2018-09,Foreign Official,lt_net_transactions,32.2
+2018-10,Foreign Official,lt_net_transactions,-36.4
+2018-11,Foreign Official,lt_net_transactions,-69.908
+2018-12,Foreign Official,lt_net_transactions,-1.138
+2019-01,Foreign Official,lt_net_transactions,27.141
+2019-02,Foreign Official,lt_net_transactions,46.036
+2019-03,Foreign Official,lt_net_transactions,4.838
+2019-04,Foreign Official,lt_net_transactions,11.919
+2019-05,Foreign Official,lt_net_transactions,-8.782
+2019-06,Foreign Official,lt_net_transactions,21.834
+2019-07,Foreign Official,lt_net_transactions,6.536
+2019-08,Foreign Official,lt_net_transactions,-37.384
+2019-09,Foreign Official,lt_net_transactions,-14.939
+2019-10,Foreign Official,lt_net_transactions,-24.423
+2019-11,Foreign Official,lt_net_transactions,7.654
+2019-12,Foreign Official,lt_net_transactions,-1.243
+2020-01,Foreign Official,lt_net_transactions,5.791
+2020-02,Foreign Official,lt_net_transactions,11.327
+2020-03,Foreign Official,lt_net_transactions,-209.589
+2020-04,Foreign Official,lt_net_transactions,-129.757
+2020-05,Foreign Official,lt_net_transactions,45.024
+2020-06,Foreign Official,lt_net_transactions,17.607
+2020-07,Foreign Official,lt_net_transactions,9.437
+2020-08,Foreign Official,lt_net_transactions,49.54
+2020-09,Foreign Official,lt_net_transactions,14.798
+2020-10,Foreign Official,lt_net_transactions,23.463
+2020-11,Foreign Official,lt_net_transactions,10.139
+2020-12,Foreign Official,lt_net_transactions,30.423
+2021-01,Foreign Official,lt_net_transactions,49.364
+2021-02,Foreign Official,lt_net_transactions,33.349
+2021-03,Foreign Official,lt_net_transactions,56.122
+2021-04,Foreign Official,lt_net_transactions,25.423
+2021-05,Foreign Official,lt_net_transactions,43.516
+2021-06,Foreign Official,lt_net_transactions,18.655
+2021-07,Foreign Official,lt_net_transactions,-1.143
+2021-08,Foreign Official,lt_net_transactions,-10.003
+2021-09,Foreign Official,lt_net_transactions,28.097
+2021-10,Foreign Official,lt_net_transactions,-9.753
+2021-11,Foreign Official,lt_net_transactions,-20.231
+2021-12,Foreign Official,lt_net_transactions,-30.301
+2022-01,Foreign Official,lt_net_transactions,55.092
+2022-02,Foreign Official,lt_net_transactions,9.157
+2022-03,Foreign Official,lt_net_transactions,21.17
+2022-04,Foreign Official,lt_net_transactions,-27.887
+2022-05,Foreign Official,lt_net_transactions,-40.048
+2022-06,Foreign Official,lt_net_transactions,32.826
+2022-07,Foreign Official,lt_net_transactions,6.511
+2022-08,Foreign Official,lt_net_transactions,60.055
+2022-09,Foreign Official,lt_net_transactions,-50.518
+2022-10,Foreign Official,lt_net_transactions,-44.816
+2022-11,Foreign Official,lt_net_transactions,-26.916
+2022-12,Foreign Official,lt_net_transactions,-0.549
+2023-01,Foreign Official,lt_net_transactions,-32.938
+2023-02,Foreign Official,lt_net_transactions,47.409
+2023-03,Foreign Official,lt_net_transactions,5.217
+2023-04,Foreign Official,lt_net_transactions,35.461
+2023-05,Foreign Official,lt_net_transactions,26.831
+2023-06,Foreign Official,lt_net_transactions,26.054
+2023-07,Foreign Official,lt_net_transactions,-23.47
+2023-08,Foreign Official,lt_net_transactions,-5.348
+2023-09,Foreign Official,lt_net_transactions,15.722
+2023-10,Foreign Official,lt_net_transactions,-20.092
+2023-11,Foreign Official,lt_net_transactions,-32.327
+2023-12,Foreign Official,lt_net_transactions,23.708
+2024-01,Foreign Official,lt_net_transactions,-2.785
+2024-02,Foreign Official,lt_net_transactions,16.701
+2024-03,Foreign Official,lt_net_transactions,31.718
+2024-04,Foreign Official,lt_net_transactions,39.544
+2024-05,Foreign Official,lt_net_transactions,-11.284
+2024-06,Foreign Official,lt_net_transactions,-6.652
+2024-07,Foreign Official,lt_net_transactions,-33.346
+2024-08,Foreign Official,lt_net_transactions,-29.832
+2024-09,Foreign Official,lt_net_transactions,-4.762
+2024-10,Foreign Official,lt_net_transactions,15.093
+2024-11,Foreign Official,lt_net_transactions,-1.064
+2024-12,Foreign Official,lt_net_transactions,-40.087
+2025-01,Foreign Official,lt_net_transactions,-24.464
+2025-02,Foreign Official,lt_net_transactions,-20.685
+2025-03,Foreign Official,lt_net_transactions,43.251
+2025-04,Foreign Official,lt_net_transactions,-5.692
+2025-05,Foreign Official,lt_net_transactions,19.485
+2025-06,Foreign Official,lt_net_transactions,-8.947
+2025-07,Foreign Official,lt_net_transactions,7.226
+2025-08,Foreign Official,lt_net_transactions,-8.684
+2025-09,Foreign Official,lt_net_transactions,-16.845
+2025-10,Foreign Official,lt_net_transactions,-24.504
+2025-11,Foreign Official,lt_net_transactions,32.99
+2025-12,Foreign Official,lt_net_transactions,-21.406
+2017-12,China,lt_valuation_change,0.454
+2018-01,China,lt_valuation_change,-13.671
+2018-02,China,lt_valuation_change,-7.664
+2018-03,China,lt_valuation_change,5.969
+2018-04,China,lt_valuation_change,-8.954
+2018-05,China,lt_valuation_change,6.324
+2018-06,China,lt_valuation_change,-1.825
+2018-07,China,lt_valuation_change,-5.433
+2018-08,China,lt_valuation_change,4.987
+2018-09,China,lt_valuation_change,-9.597
+2018-10,China,lt_valuation_change,-5.12
+2018-11,China,lt_valuation_change,5.854
+2018-12,China,lt_valuation_change,16.518
+2019-01,China,lt_valuation_change,2.305
+2019-02,China,lt_valuation_change,-3.557
+2019-03,China,lt_valuation_change,14.184
+2019-04,China,lt_valuation_change,-3.308
+2019-05,China,lt_valuation_change,17.467
+2019-06,China,lt_valuation_change,6.587
+2019-07,China,lt_valuation_change,-3.394
+2019-08,China,lt_valuation_change,25.529
+2019-09,China,lt_valuation_change,-8.442
+2019-10,China,lt_valuation_change,-0.247
+2019-11,China,lt_valuation_change,-4.203
+2019-12,China,lt_valuation_change,-5.119
+2020-01,China,lt_valuation_change,17.078
+2020-02,China,lt_valuation_change,20.062
+2020-03,China,lt_valuation_change,23.487
+2020-04,China,lt_valuation_change,3.138
+2020-05,China,lt_valuation_change,-3.086
+2020-06,China,lt_valuation_change,-0.831
+2020-07,China,lt_valuation_change,6.457
+2020-08,China,lt_valuation_change,-9.067
+2020-09,China,lt_valuation_change,-0.463
+2020-10,China,lt_valuation_change,-8.03
+2020-11,China,lt_valuation_change,1.055
+2020-12,China,lt_valuation_change,-2.771
+2021-01,China,lt_valuation_change,-7.69
+2021-02,China,lt_valuation_change,-13.68
+2021-03,China,lt_valuation_change,-11.744
+2021-04,China,lt_valuation_change,3.921
+2021-05,China,lt_valuation_change,1.377
+2021-06,China,lt_valuation_change,2.511
+2021-07,China,lt_valuation_change,8.697
+2021-08,China,lt_valuation_change,-2.494
+2021-09,China,lt_valuation_change,-8.929
+2021-10,China,lt_valuation_change,-2.92
+2021-11,China,lt_valuation_change,2.708
+2021-12,China,lt_valuation_change,-5.626
+2022-01,China,lt_valuation_change,-16.553
+2022-02,China,lt_valuation_change,-6.999
+2022-03,China,lt_valuation_change,-26.948
+2022-04,China,lt_valuation_change,-23.308
+2022-05,China,lt_valuation_change,1.817
+2022-06,China,lt_valuation_change,-8.752
+2022-07,China,lt_valuation_change,9.717
+2022-08,China,lt_valuation_change,-19.068
+2022-09,China,lt_valuation_change,-26.193
+2022-10,China,lt_valuation_change,-9.94
+2022-11,China,lt_valuation_change,15.718
+2022-12,China,lt_valuation_change,-3.877
+2023-01,China,lt_valuation_change,14.701
+2023-02,China,lt_valuation_change,-19.615
+2023-03,China,lt_valuation_change,25.384
+2023-04,China,lt_valuation_change,1.586
+2023-05,China,lt_valuation_change,-11.709
+2023-06,China,lt_valuation_change,-7.873
+2023-07,China,lt_valuation_change,-4.427
+2023-08,China,lt_valuation_change,-7.447
+2023-09,China,lt_valuation_change,-18.892
+2023-10,China,lt_valuation_change,-10.665
+2023-11,China,lt_valuation_change,25.091
+2023-12,China,lt_valuation_change,25.191
+2024-01,China,lt_valuation_change,-3.342
+2024-02,China,lt_valuation_change,-9.668
+2024-03,China,lt_valuation_change,5.918
+2024-04,China,lt_valuation_change,-18.842
+2024-05,China,lt_valuation_change,8.861
+2024-06,China,lt_valuation_change,5.219
+2024-07,China,lt_valuation_change,12.851
+2024-08,China,lt_valuation_change,7.263
+2024-09,China,lt_valuation_change,7.213
+2024-10,China,lt_valuation_change,-16.159
+2024-11,China,lt_valuation_change,4.446
+2024-12,China,lt_valuation_change,-11.384
+2025-01,China,lt_valuation_change,4.225
+2025-02,China,lt_valuation_change,13.205
+2025-03,China,lt_valuation_change,1.938
+2025-04,China,lt_valuation_change,2.514
+2025-05,China,lt_valuation_change,-6.442
+2025-06,China,lt_valuation_change,6.217
+2025-07,China,lt_valuation_change,-2.825
+2025-08,China,lt_valuation_change,5.421
+2025-09,China,lt_valuation_change,8.062
+2025-10,China,lt_valuation_change,2.387
+2025-11,China,lt_valuation_change,3.198
+2025-12,China,lt_valuation_change,-5.834
+2017-12,Brazil,lt_valuation_change,0.097
+2018-01,Brazil,lt_valuation_change,-2.807
+2018-02,Brazil,lt_valuation_change,-1.669
+2018-03,Brazil,lt_valuation_change,1.342
+2018-04,Brazil,lt_valuation_change,-2.093
+2018-05,Brazil,lt_valuation_change,1.54
+2018-06,Brazil,lt_valuation_change,-0.452
+2018-07,Brazil,lt_valuation_change,-1.345
+2018-08,Brazil,lt_valuation_change,1.267
+2018-09,Brazil,lt_valuation_change,-2.561
+2018-10,Brazil,lt_valuation_change,-1.396
+2018-11,Brazil,lt_valuation_change,1.601
+2018-12,Brazil,lt_valuation_change,4.54
+2019-01,Brazil,lt_valuation_change,0.614
+2019-02,Brazil,lt_valuation_change,-0.958
+2019-03,Brazil,lt_valuation_change,3.859
+2019-04,Brazil,lt_valuation_change,-0.918
+2019-05,Brazil,lt_valuation_change,4.832
+2019-06,Brazil,lt_valuation_change,1.813
+2019-07,Brazil,lt_valuation_change,-0.945
+2019-08,Brazil,lt_valuation_change,7.072
+2019-09,Brazil,lt_valuation_change,-2.378
+2019-10,Brazil,lt_valuation_change,-0.067
+2019-11,Brazil,lt_valuation_change,-1.131
+2019-12,Brazil,lt_valuation_change,-1.35
+2020-01,Brazil,lt_valuation_change,4.441
+2020-02,Brazil,lt_valuation_change,5.219
+2020-03,Brazil,lt_valuation_change,6.06
+2020-04,Brazil,lt_valuation_change,0.786
+2020-05,Brazil,lt_valuation_change,-0.765
+2020-06,Brazil,lt_valuation_change,-0.203
+2020-07,Brazil,lt_valuation_change,1.541
+2020-08,Brazil,lt_valuation_change,-2.178
+2020-09,Brazil,lt_valuation_change,-0.11
+2020-10,Brazil,lt_valuation_change,-1.94
+2020-11,Brazil,lt_valuation_change,0.257
+2020-12,Brazil,lt_valuation_change,-0.686
+2021-01,Brazil,lt_valuation_change,-1.9
+2021-02,Brazil,lt_valuation_change,-3.403
+2021-03,Brazil,lt_valuation_change,-2.921
+2021-04,Brazil,lt_valuation_change,0.953
+2021-05,Brazil,lt_valuation_change,0.328
+2021-06,Brazil,lt_valuation_change,0.591
+2021-07,Brazil,lt_valuation_change,2.041
+2021-08,Brazil,lt_valuation_change,-0.587
+2021-09,Brazil,lt_valuation_change,-2.124
+2021-10,Brazil,lt_valuation_change,-0.694
+2021-11,Brazil,lt_valuation_change,0.63
+2021-12,Brazil,lt_valuation_change,-1.32
+2022-01,Brazil,lt_valuation_change,-3.834
+2022-02,Brazil,lt_valuation_change,-1.607
+2022-03,Brazil,lt_valuation_change,-6.234
+2022-04,Brazil,lt_valuation_change,-5.36
+2022-05,Brazil,lt_valuation_change,0.43
+2022-06,Brazil,lt_valuation_change,-2.113
+2022-07,Brazil,lt_valuation_change,2.338
+2022-08,Brazil,lt_valuation_change,-4.73
+2022-09,Brazil,lt_valuation_change,-6.357
+2022-10,Brazil,lt_valuation_change,-2.447
+2022-11,Brazil,lt_valuation_change,3.953
+2022-12,Brazil,lt_valuation_change,-1.013
+2023-01,Brazil,lt_valuation_change,3.686
+2023-02,Brazil,lt_valuation_change,-2.974
+2023-03,Brazil,lt_valuation_change,4.442
+2023-04,Brazil,lt_valuation_change,0.399
+2023-05,Brazil,lt_valuation_change,-1.976
+2023-06,Brazil,lt_valuation_change,-1.944
+2023-07,Brazil,lt_valuation_change,0.081
+2023-08,Brazil,lt_valuation_change,-0.286
+2023-09,Brazil,lt_valuation_change,-1.925
+2023-10,Brazil,lt_valuation_change,-0.823
+2023-11,Brazil,lt_valuation_change,3.554
+2023-12,Brazil,lt_valuation_change,3.436
+2024-01,Brazil,lt_valuation_change,0.469
+2024-02,Brazil,lt_valuation_change,-2.099
+2024-03,Brazil,lt_valuation_change,0.493
+2024-04,Brazil,lt_valuation_change,-2.769
+2024-05,Brazil,lt_valuation_change,1.684
+2024-06,Brazil,lt_valuation_change,1.195
+2024-07,Brazil,lt_valuation_change,3.004
+2024-08,Brazil,lt_valuation_change,1.726
+2024-09,Brazil,lt_valuation_change,1.56
+2024-10,Brazil,lt_valuation_change,-3.489
+2024-11,Brazil,lt_valuation_change,0.873
+2024-12,Brazil,lt_valuation_change,-0.551
+2025-01,Brazil,lt_valuation_change,0.662
+2025-02,Brazil,lt_valuation_change,2.264
+2025-03,Brazil,lt_valuation_change,0.424
+2025-04,Brazil,lt_valuation_change,1.371
+2025-05,Brazil,lt_valuation_change,-1.348
+2025-06,Brazil,lt_valuation_change,1.292
+2025-07,Brazil,lt_valuation_change,-0.791
+2025-08,Brazil,lt_valuation_change,1.2
+2025-09,Brazil,lt_valuation_change,0.251
+2025-10,Brazil,lt_valuation_change,0.466
+2025-11,Brazil,lt_valuation_change,0.699
+2025-12,Brazil,lt_valuation_change,-0.494
+2017-12,India,lt_valuation_change,0.05
+2018-01,India,lt_valuation_change,-1.54
+2018-02,India,lt_valuation_change,-0.901
+2018-03,India,lt_valuation_change,0.718
+2018-04,India,lt_valuation_change,-1.109
+2018-05,India,lt_valuation_change,0.773
+2018-06,India,lt_valuation_change,-0.22
+2018-07,India,lt_valuation_change,-0.647
+2018-08,India,lt_valuation_change,0.593
+2018-09,India,lt_valuation_change,-1.136
+2018-10,India,lt_valuation_change,-0.634
+2018-11,India,lt_valuation_change,0.706
+2018-12,India,lt_valuation_change,2.035
+2019-01,India,lt_valuation_change,0.289
+2019-02,India,lt_valuation_change,-0.456
+2019-03,India,lt_valuation_change,1.804
+2019-04,India,lt_valuation_change,-0.447
+2019-05,India,lt_valuation_change,2.437
+2019-06,India,lt_valuation_change,0.924
+2019-07,India,lt_valuation_change,-0.491
+2019-08,India,lt_valuation_change,3.651
+2019-09,India,lt_valuation_change,-1.233
+2019-10,India,lt_valuation_change,-0.036
+2019-11,India,lt_valuation_change,-0.619
+2019-12,India,lt_valuation_change,-0.745
+2020-01,India,lt_valuation_change,2.534
+2020-02,India,lt_valuation_change,2.852
+2020-03,India,lt_valuation_change,3.433
+2020-04,India,lt_valuation_change,0.453
+2020-05,India,lt_valuation_change,-0.447
+2020-06,India,lt_valuation_change,-0.121
+2020-07,India,lt_valuation_change,0.94
+2020-08,India,lt_valuation_change,-1.353
+2020-09,India,lt_valuation_change,-0.069
+2020-10,India,lt_valuation_change,-1.276
+2020-11,India,lt_valuation_change,0.179
+2020-12,India,lt_valuation_change,-0.484
+2021-01,India,lt_valuation_change,-1.366
+2021-02,India,lt_valuation_change,-2.384
+2021-03,India,lt_valuation_change,-2.016
+2021-04,India,lt_valuation_change,0.673
+2021-05,India,lt_valuation_change,0.252
+2021-06,India,lt_valuation_change,0.481
+2021-07,India,lt_valuation_change,1.723
+2021-08,India,lt_valuation_change,-0.508
+2021-09,India,lt_valuation_change,-1.835
+2021-10,India,lt_valuation_change,-0.602
+2021-11,India,lt_valuation_change,0.532
+2021-12,India,lt_valuation_change,-1.102
+2022-01,India,lt_valuation_change,-3.154
+2022-02,India,lt_valuation_change,-1.342
+2022-03,India,lt_valuation_change,-5.229
+2022-04,India,lt_valuation_change,-4.555
+2022-05,India,lt_valuation_change,0.369
+2022-06,India,lt_valuation_change,-1.864
+2022-07,India,lt_valuation_change,2.135
+2022-08,India,lt_valuation_change,-4.263
+2022-09,India,lt_valuation_change,-6.111
+2022-10,India,lt_valuation_change,-2.313
+2022-11,India,lt_valuation_change,3.788
+2022-12,India,lt_valuation_change,-0.973
+2023-01,India,lt_valuation_change,3.776
+2023-02,India,lt_valuation_change,-3.129
+2023-03,India,lt_valuation_change,4.183
+2023-04,India,lt_valuation_change,0.743
+2023-05,India,lt_valuation_change,-1.505
+2023-06,India,lt_valuation_change,-1.531
+2023-07,India,lt_valuation_change,-0.139
+2023-08,India,lt_valuation_change,-0.306
+2023-09,India,lt_valuation_change,-2.412
+2023-10,India,lt_valuation_change,-1.247
+2023-11,India,lt_valuation_change,4.29
+2023-12,India,lt_valuation_change,3.902
+2024-01,India,lt_valuation_change,0.206
+2024-02,India,lt_valuation_change,-2.637
+2024-03,India,lt_valuation_change,0.685
+2024-04,India,lt_valuation_change,-3.533
+2024-05,India,lt_valuation_change,2.077
+2024-06,India,lt_valuation_change,1.412
+2024-07,India,lt_valuation_change,3.719
+2024-08,India,lt_valuation_change,1.911
+2024-09,India,lt_valuation_change,1.712
+2024-10,India,lt_valuation_change,-4.944
+2024-11,India,lt_valuation_change,1.126
+2024-12,India,lt_valuation_change,-2.334
+2025-01,India,lt_valuation_change,0.747
+2025-02,India,lt_valuation_change,2.8
+2025-03,India,lt_valuation_change,0.664
+2025-04,India,lt_valuation_change,1.842
+2025-05,India,lt_valuation_change,-1.684
+2025-06,India,lt_valuation_change,1.646
+2025-07,India,lt_valuation_change,-0.977
+2025-08,India,lt_valuation_change,2.11
+2025-09,India,lt_valuation_change,0.191
+2025-10,India,lt_valuation_change,0.521
+2025-11,India,lt_valuation_change,0.821
+2025-12,India,lt_valuation_change,-0.53
+2017-12,Russia,lt_valuation_change,0.039
+2018-01,Russia,lt_valuation_change,-1.148
+2018-02,Russia,lt_valuation_change,-0.633
+2018-03,Russia,lt_valuation_change,0.476
+2018-04,Russia,lt_valuation_change,-0.717
+2018-05,Russia,lt_valuation_change,0.262
+2018-06,Russia,lt_valuation_change,-0.014
+2018-07,Russia,lt_valuation_change,-0.042
+2018-08,Russia,lt_valuation_change,0.039
+2018-09,Russia,lt_valuation_change,-0.028
+2018-10,Russia,lt_valuation_change,-0.013
+2018-11,Russia,lt_valuation_change,0.017
+2018-12,Russia,lt_valuation_change,0.056
+2019-01,Russia,lt_valuation_change,0.011
+2019-02,Russia,lt_valuation_change,-0.02
+2019-03,Russia,lt_valuation_change,0.088
+2019-04,Russia,lt_valuation_change,-0.024
+2019-05,Russia,lt_valuation_change,0.093
+2019-06,Russia,lt_valuation_change,0.031
+2019-07,Russia,lt_valuation_change,-0.016
+2019-08,Russia,lt_valuation_change,0.144
+2019-09,Russia,lt_valuation_change,-0.024
+2019-10,Russia,lt_valuation_change,-0.001
+2019-11,Russia,lt_valuation_change,-0.01
+2019-12,Russia,lt_valuation_change,-0.014
+2020-01,Russia,lt_valuation_change,0.068
+2020-02,Russia,lt_valuation_change,0.071
+2020-03,Russia,lt_valuation_change,0.093
+2020-04,Russia,lt_valuation_change,0.01
+2020-05,Russia,lt_valuation_change,-0.012
+2020-06,Russia,lt_valuation_change,-0.003
+2020-07,Russia,lt_valuation_change,0.018
+2020-08,Russia,lt_valuation_change,-0.028
+2020-09,Russia,lt_valuation_change,-0.001
+2020-10,Russia,lt_valuation_change,-0.026
+2020-11,Russia,lt_valuation_change,0.003
+2020-12,Russia,lt_valuation_change,-0.004
+2021-01,Russia,lt_valuation_change,-0.009
+2021-02,Russia,lt_valuation_change,-0.036
+2021-03,Russia,lt_valuation_change,-0.003
+2021-04,Russia,lt_valuation_change,0.004
+2021-05,Russia,lt_valuation_change,0.0
+2021-06,Russia,lt_valuation_change,0.001
+2021-07,Russia,lt_valuation_change,0.003
+2021-08,Russia,lt_valuation_change,-0.001
+2021-09,Russia,lt_valuation_change,-0.002
+2021-10,Russia,lt_valuation_change,-0.001
+2021-11,Russia,lt_valuation_change,0.001
+2021-12,Russia,lt_valuation_change,-0.001
+2022-01,Russia,lt_valuation_change,-0.002
+2022-02,Russia,lt_valuation_change,0.0
+2022-03,Russia,lt_valuation_change,0.0
+2022-04,Russia,lt_valuation_change,0.0
+2022-05,Russia,lt_valuation_change,0.0
+2022-06,Russia,lt_valuation_change,0.0
+2022-07,Russia,lt_valuation_change,0.0
+2022-08,Russia,lt_valuation_change,0.0
+2022-09,Russia,lt_valuation_change,0.0
+2022-10,Russia,lt_valuation_change,0.0
+2022-11,Russia,lt_valuation_change,0.0
+2022-12,Russia,lt_valuation_change,0.0
+2023-01,Russia,lt_valuation_change,0.002
+2023-02,Russia,lt_valuation_change,0.004
+2023-03,Russia,lt_valuation_change,-0.001
+2023-04,Russia,lt_valuation_change,0.001
+2023-05,Russia,lt_valuation_change,0.0
+2023-06,Russia,lt_valuation_change,-0.002
+2023-07,Russia,lt_valuation_change,0.0
+2023-08,Russia,lt_valuation_change,0.0
+2023-09,Russia,lt_valuation_change,0.0
+2023-10,Russia,lt_valuation_change,0.0
+2023-11,Russia,lt_valuation_change,0.0
+2023-12,Russia,lt_valuation_change,0.0
+2024-01,Russia,lt_valuation_change,-0.002
+2024-02,Russia,lt_valuation_change,0.0
+2024-03,Russia,lt_valuation_change,0.0
+2024-04,Russia,lt_valuation_change,0.0
+2024-05,Russia,lt_valuation_change,-0.002
+2024-06,Russia,lt_valuation_change,0.001
+2024-07,Russia,lt_valuation_change,0.002
+2024-08,Russia,lt_valuation_change,0.0
+2024-09,Russia,lt_valuation_change,0.01
+2024-10,Russia,lt_valuation_change,-0.002
+2024-11,Russia,lt_valuation_change,0.0
+2024-12,Russia,lt_valuation_change,0.0
+2025-01,Russia,lt_valuation_change,0.0
+2025-02,Russia,lt_valuation_change,0.0
+2025-03,Russia,lt_valuation_change,0.0
+2025-04,Russia,lt_valuation_change,0.0
+2025-05,Russia,lt_valuation_change,0.0
+2025-06,Russia,lt_valuation_change,0.0
+2025-07,Russia,lt_valuation_change,0.0
+2025-08,Russia,lt_valuation_change,0.0
+2025-09,Russia,lt_valuation_change,0.0
+2025-10,Russia,lt_valuation_change,0.0
+2025-11,Russia,lt_valuation_change,0.0
+2025-12,Russia,lt_valuation_change,0.0
+2017-12,Grand Total,lt_valuation_change,2.164
+2018-01,Grand Total,lt_valuation_change,-63.775
+2018-02,Grand Total,lt_valuation_change,-36.086
+2018-03,Grand Total,lt_valuation_change,27.968
+2018-04,Grand Total,lt_valuation_change,-41.646
+2018-05,Grand Total,lt_valuation_change,29.351
+2018-06,Grand Total,lt_valuation_change,-8.494
+2018-07,Grand Total,lt_valuation_change,-25.049
+2018-08,Grand Total,lt_valuation_change,23.613
+2018-09,Grand Total,lt_valuation_change,-45.757
+2018-10,Grand Total,lt_valuation_change,-24.66
+2018-11,Grand Total,lt_valuation_change,28.328
+2018-12,Grand Total,lt_valuation_change,81.109
+2019-01,Grand Total,lt_valuation_change,11.398
+2019-02,Grand Total,lt_valuation_change,-17.795
+2019-03,Grand Total,lt_valuation_change,71.186
+2019-04,Grand Total,lt_valuation_change,-17.011
+2019-05,Grand Total,lt_valuation_change,90.666
+2019-06,Grand Total,lt_valuation_change,34.682
+2019-07,Grand Total,lt_valuation_change,-18.114
+2019-08,Grand Total,lt_valuation_change,140.221
+2019-09,Grand Total,lt_valuation_change,-48.194
+2019-10,Grand Total,lt_valuation_change,-1.392
+2019-11,Grand Total,lt_valuation_change,-23.942
+2019-12,Grand Total,lt_valuation_change,-29.123
+2020-01,Grand Total,lt_valuation_change,98.042
+2020-02,Grand Total,lt_valuation_change,118.181
+2020-03,Grand Total,lt_valuation_change,139.964
+2020-04,Grand Total,lt_valuation_change,18.609
+2020-05,Grand Total,lt_valuation_change,-18.069
+2020-06,Grand Total,lt_valuation_change,-4.787
+2020-07,Grand Total,lt_valuation_change,37.308
+2020-08,Grand Total,lt_valuation_change,-52.503
+2020-09,Grand Total,lt_valuation_change,-2.66
+2020-10,Grand Total,lt_valuation_change,-46.643
+2020-11,Grand Total,lt_valuation_change,6.209
+2020-12,Grand Total,lt_valuation_change,-16.198
+2021-01,Grand Total,lt_valuation_change,-45.005
+2021-02,Grand Total,lt_valuation_change,-80.575
+2021-03,Grand Total,lt_valuation_change,-69.368
+2021-04,Grand Total,lt_valuation_change,22.79
+2021-05,Grand Total,lt_valuation_change,7.996
+2021-06,Grand Total,lt_valuation_change,14.777
+2021-07,Grand Total,lt_valuation_change,54.161
+2021-08,Grand Total,lt_valuation_change,-15.719
+2021-09,Grand Total,lt_valuation_change,-56.912
+2021-10,Grand Total,lt_valuation_change,-18.56
+2021-11,Grand Total,lt_valuation_change,17.07
+2021-12,Grand Total,lt_valuation_change,-36.282
+2022-01,Grand Total,lt_valuation_change,-107.883
+2022-02,Grand Total,lt_valuation_change,-45.493
+2022-03,Grand Total,lt_valuation_change,-176.417
+2022-04,Grand Total,lt_valuation_change,-152.145
+2022-05,Grand Total,lt_valuation_change,12.152
+2022-06,Grand Total,lt_valuation_change,-60.316
+2022-07,Grand Total,lt_valuation_change,67.657
+2022-08,Grand Total,lt_valuation_change,-134.541
+2022-09,Grand Total,lt_valuation_change,-183.974
+2022-10,Grand Total,lt_valuation_change,-70.047
+2022-11,Grand Total,lt_valuation_change,112.379
+2022-12,Grand Total,lt_valuation_change,-28.292
+2023-01,Grand Total,lt_valuation_change,106.461
+2023-02,Grand Total,lt_valuation_change,-108.122
+2023-03,Grand Total,lt_valuation_change,123.457
+2023-04,Grand Total,lt_valuation_change,19.324
+2023-05,Grand Total,lt_valuation_change,-68.066
+2023-06,Grand Total,lt_valuation_change,-46.032
+2023-07,Grand Total,lt_valuation_change,-17.937
+2023-08,Grand Total,lt_valuation_change,-27.756
+2023-09,Grand Total,lt_valuation_change,-143.02
+2023-10,Grand Total,lt_valuation_change,-51.273
+2023-11,Grand Total,lt_valuation_change,160.892
+2023-12,Grand Total,lt_valuation_change,139.45
+2024-01,Grand Total,lt_valuation_change,4.974
+2024-02,Grand Total,lt_valuation_change,-61.99
+2024-03,Grand Total,lt_valuation_change,39.736
+2024-04,Grand Total,lt_valuation_change,-112.207
+2024-05,Grand Total,lt_valuation_change,51.399
+2024-06,Grand Total,lt_valuation_change,80.76
+2024-07,Grand Total,lt_valuation_change,92.543
+2024-08,Grand Total,lt_valuation_change,74.81
+2024-09,Grand Total,lt_valuation_change,53.859
+2024-10,Grand Total,lt_valuation_change,-113.718
+2024-11,Grand Total,lt_valuation_change,43.994
+2024-12,Grand Total,lt_valuation_change,-100.142
+2025-01,Grand Total,lt_valuation_change,-0.95
+2025-02,Grand Total,lt_valuation_change,114.832
+2025-03,Grand Total,lt_valuation_change,-4.527
+2025-04,Grand Total,lt_valuation_change,23.464
+2025-05,Grand Total,lt_valuation_change,-84.61
+2025-06,Grand Total,lt_valuation_change,49.21
+2025-07,Grand Total,lt_valuation_change,-49.164
+2025-08,Grand Total,lt_valuation_change,38.015
+2025-09,Grand Total,lt_valuation_change,33.966
+2025-10,Grand Total,lt_valuation_change,9.364
+2025-11,Grand Total,lt_valuation_change,16.528
+2025-12,Grand Total,lt_valuation_change,-59.968
+2017-12,Foreign Official,lt_valuation_change,1.436
+2018-01,Foreign Official,lt_valuation_change,-42.918
+2018-02,Foreign Official,lt_valuation_change,-24.193
+2018-03,Foreign Official,lt_valuation_change,18.82
+2018-04,Foreign Official,lt_valuation_change,-28.235
+2018-05,Foreign Official,lt_valuation_change,19.77
+2018-06,Foreign Official,lt_valuation_change,-5.655
+2018-07,Foreign Official,lt_valuation_change,-16.712
+2018-08,Foreign Official,lt_valuation_change,15.763
+2018-09,Foreign Official,lt_valuation_change,-30.564
+2018-10,Foreign Official,lt_valuation_change,-16.529
+2018-11,Foreign Official,lt_valuation_change,18.831
+2018-12,Foreign Official,lt_valuation_change,53.357
+2019-01,Foreign Official,lt_valuation_change,7.515
+2019-02,Foreign Official,lt_valuation_change,-11.701
+2019-03,Foreign Official,lt_valuation_change,46.887
+2019-04,Foreign Official,lt_valuation_change,-11.212
+2019-05,Foreign Official,lt_valuation_change,59.876
+2019-06,Foreign Official,lt_valuation_change,22.765
+2019-07,Foreign Official,lt_valuation_change,-11.811
+2019-08,Foreign Official,lt_valuation_change,88.874
+2019-09,Foreign Official,lt_valuation_change,-29.944
+2019-10,Foreign Official,lt_valuation_change,-0.872
+2019-11,Foreign Official,lt_valuation_change,-14.803
+2019-12,Foreign Official,lt_valuation_change,-18.055
+2020-01,Foreign Official,lt_valuation_change,60.928
+2020-02,Foreign Official,lt_valuation_change,72.444
+2020-03,Foreign Official,lt_valuation_change,85.395
+2020-04,Foreign Official,lt_valuation_change,11.473
+2020-05,Foreign Official,lt_valuation_change,-11.151
+2020-06,Foreign Official,lt_valuation_change,-2.984
+2020-07,Foreign Official,lt_valuation_change,23.365
+2020-08,Foreign Official,lt_valuation_change,-32.92
+2020-09,Foreign Official,lt_valuation_change,-1.682
+2020-10,Foreign Official,lt_valuation_change,-29.499
+2020-11,Foreign Official,lt_valuation_change,3.885
+2020-12,Foreign Official,lt_valuation_change,-10.227
+2021-01,Foreign Official,lt_valuation_change,-28.489
+2021-02,Foreign Official,lt_valuation_change,-50.7
+2021-03,Foreign Official,lt_valuation_change,-43.736
+2021-04,Foreign Official,lt_valuation_change,14.419
+2021-05,Foreign Official,lt_valuation_change,5.027
+2021-06,Foreign Official,lt_valuation_change,9.281
+2021-07,Foreign Official,lt_valuation_change,32.424
+2021-08,Foreign Official,lt_valuation_change,-9.413
+2021-09,Foreign Official,lt_valuation_change,-33.854
+2021-10,Foreign Official,lt_valuation_change,-11.044
+2021-11,Foreign Official,lt_valuation_change,10.02
+2021-12,Foreign Official,lt_valuation_change,-21.197
+2022-01,Foreign Official,lt_valuation_change,-61.826
+2022-02,Foreign Official,lt_valuation_change,-26.394
+2022-03,Foreign Official,lt_valuation_change,-101.594
+2022-04,Foreign Official,lt_valuation_change,-86.861
+2022-05,Foreign Official,lt_valuation_change,6.872
+2022-06,Foreign Official,lt_valuation_change,-33.581
+2022-07,Foreign Official,lt_valuation_change,37.524
+2022-08,Foreign Official,lt_valuation_change,-74.612
+2022-09,Foreign Official,lt_valuation_change,-102.207
+2022-10,Foreign Official,lt_valuation_change,-38.649
+2022-11,Foreign Official,lt_valuation_change,61.496
+2022-12,Foreign Official,lt_valuation_change,-15.522
+2023-01,Foreign Official,lt_valuation_change,58.454
+2023-02,Foreign Official,lt_valuation_change,-54.607
+2023-03,Foreign Official,lt_valuation_change,71.382
+2023-04,Foreign Official,lt_valuation_change,13.98
+2023-05,Foreign Official,lt_valuation_change,-33.497
+2023-06,Foreign Official,lt_valuation_change,-26.749
+2023-07,Foreign Official,lt_valuation_change,-7.015
+2023-08,Foreign Official,lt_valuation_change,-10.919
+2023-09,Foreign Official,lt_valuation_change,-55.922
+2023-10,Foreign Official,lt_valuation_change,-21.765
+2023-11,Foreign Official,lt_valuation_change,84.776
+2023-12,Foreign Official,lt_valuation_change,82.706
+2024-01,Foreign Official,lt_valuation_change,9.554
+2024-02,Foreign Official,lt_valuation_change,-36.606
+2024-03,Foreign Official,lt_valuation_change,21.739
+2024-04,Foreign Official,lt_valuation_change,-54.758
+2024-05,Foreign Official,lt_valuation_change,31.622
+2024-06,Foreign Official,lt_valuation_change,34.458
+2024-07,Foreign Official,lt_valuation_change,49.482
+2024-08,Foreign Official,lt_valuation_change,34.379
+2024-09,Foreign Official,lt_valuation_change,29.905
+2024-10,Foreign Official,lt_valuation_change,-56.526
+2024-11,Foreign Official,lt_valuation_change,27.781
+2024-12,Foreign Official,lt_valuation_change,-36.234
+2025-01,Foreign Official,lt_valuation_change,-1.654
+2025-02,Foreign Official,lt_valuation_change,61.57
+2025-03,Foreign Official,lt_valuation_change,9.404
+2025-04,Foreign Official,lt_valuation_change,19.74
+2025-05,Foreign Official,lt_valuation_change,-23.057
+2025-06,Foreign Official,lt_valuation_change,30.869
+2025-07,Foreign Official,lt_valuation_change,-8.999
+2025-08,Foreign Official,lt_valuation_change,30.324
+2025-09,Foreign Official,lt_valuation_change,15.874
+2025-10,Foreign Official,lt_valuation_change,12.998
+2025-11,Foreign Official,lt_valuation_change,18.626
+2025-12,Foreign Official,lt_valuation_change,-18.548
