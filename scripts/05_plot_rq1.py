@@ -150,8 +150,11 @@ def label_line_ends(ax, df, fmt="{:,.0f}"):
     for name, y in last.items():
         y_text = max(y, placed[-1] + gap) if placed else y
         placed.append(y_text)
+        value = (
+            f"{y:,.2f}" if abs(y) < 1 else fmt.format(y)
+        )  # tiny values: show 0.03, not 0
         ax.annotate(
-            f"{name}  {fmt.format(y)}",
+            f"{name}  {value}",
             xy=(x_end, y),
             xytext=(x_text, y_text),
             textcoords="data",
@@ -315,7 +318,7 @@ def fig_decomposition():
                 label=col if c == countries[0] else None,
             )
         ax.axhline(0, color=INK2, lw=0.8)
-        ax.set_xticks(list(x), [str(y)[2:] for y in a.index])
+        ax.set_xticks(list(x), [str(y) for y in a.index], fontsize=7)
         ax.set_title(c, loc="left", fontsize=10, fontweight="bold")
         ax.yaxis.set_major_formatter(mtick.StrMethodFormatter("{x:,.0f}"))
     axes[0].set_ylabel("USD billions")
@@ -324,7 +327,7 @@ def fig_decomposition():
     finish(
         fig,
         "fig_rq1_04_flow_vs_valuation",
-        "Not every fall in holdings was a sale",
+        "Most of China’s decline was real selling, not price effects",
         "Annual net purchases (+) / sales (−) vs price-driven valuation change, long-term Treasuries, 2018–2025",
         "U.S. Treasury TIC via FRED (FORLTTREASNET, FORLTTREASVALCHG series).",
         "Each panel has its own scale. Long-term securities only (notes and bonds); bills are excluded.",
@@ -430,12 +433,15 @@ def fig_cofer_usd():
     ax.set_ylim(50, 65)
     ax.yaxis.set_major_formatter(mtick.PercentFormatter(decimals=0))
     year_axis(ax)
+    ax.set_xlim(
+        pd.Timestamp("2018-10-01"), pd.Timestamp("2026-01-15")
+    )  # data starts Q4 2018
     mark_events(ax)
     finish(
         fig,
         "fig_rq1_07_cofer_usd_share",
         "The dollar is still the main reserve currency, but its share is slipping",
-        "U.S. dollar share of world allocated FX reserves, quarterly (%). Axis starts at 50%",
+        "U.S. dollar share of world allocated FX reserves, quarterly, Q4 2018 – Q4 2025 (%). Axis starts at 50%",
         "IMF COFER (world, allocated reserves), 30 Sep 2026 release.",
         "Shares are valued at end-quarter exchange rates, so a weaker dollar lowers the share without any selling.",
     )
@@ -552,6 +558,7 @@ def fig_india():
             color=INK,
         )
     ax.set_ylim(0, d["gold_tonnes"].max() * 1.15)
+    ax.yaxis.set_major_formatter(mtick.StrMethodFormatter("{x:,.0f}"))
     ax.grid(axis="x", visible=False)
     ax.legend(loc="upper left")
     finish(
