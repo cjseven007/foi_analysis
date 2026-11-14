@@ -26,6 +26,7 @@ import seaborn as sns
 
 from config import (
     CLEAN,
+    END,
     FIG_RQ3,
     TABLES_RQ3,
     RQ3_MULTI_START,
@@ -36,7 +37,16 @@ from config import (
 )
 
 # ---------------------------------------------------------------------------
-# 1) Visual Style (Aligned with 05_plot_rq1.py with extra label spacing)
+# 1) Derived Date Boundaries from config.py
+# ---------------------------------------------------------------------------
+PRE_FREEZE_END = str(pd.Period(FREEZE_DATE, freq="M") - 1)  # "2022-01"
+ROLL_24M_START = str(
+    pd.Period(RQ3_MAIN_START, freq="M") - 23
+)  # "2016-02" (23-month warm-up)
+FREEZE_TS = pd.Period(FREEZE_DATE, freq="M").to_timestamp(how="end").normalize()
+
+# ---------------------------------------------------------------------------
+# 2) Visual Style (Aligned with 05_plot_rq1.py with extra label spacing)
 # ---------------------------------------------------------------------------
 INK, INK2, MUTED = "#0b0b0b", "#52514e", "#898781"
 GRID, AXIS = "#e1e0d9", "#c3c2b7"
@@ -133,7 +143,7 @@ def finish(fig, name, title, subtitle, source, note=None, bottom_offset=-18):
 
 
 # ---------------------------------------------------------------------------
-# 2) Load & Align Cleaned Data
+# 3) Load & Align Cleaned Data
 # ---------------------------------------------------------------------------
 def load_aligned_data():
     rets = pd.read_csv(CLEAN / "returns_monthly.csv")
@@ -156,7 +166,7 @@ def load_aligned_data():
 
 
 # ---------------------------------------------------------------------------
-# 3) Portfolio Rebalancing & Metric Engines
+# 4) Portfolio Rebalancing & Metric Engines
 # ---------------------------------------------------------------------------
 def simulate_portfolio(sub_df, w_dict, rule="annual"):
     """
@@ -226,82 +236,82 @@ def compute_metrics(s, rf):
 
 
 # ---------------------------------------------------------------------------
-# 4) Export Summary Tables (CSV)
+# 5) Export Summary Tables (CSV)
 # ---------------------------------------------------------------------------
 def generate_tables(df):
     assets = list(TICKERS.keys())
-    df_18 = df.loc["2018-01-01":"2025-12-31"]
-    df_08 = df.loc["2008-01-01":"2025-12-31"]
-    df_pre = df.loc["2018-01-01":"2022-01-31"]
-    df_post = df.loc["2022-02-01":"2025-12-31"]
+    df_main = df.loc[RQ3_MAIN_START:END]
+    df_multi = df.loc[RQ3_MULTI_START:END]
+    df_pre = df.loc[RQ3_MAIN_START:PRE_FREEZE_END]
+    df_post = df.loc[FREEZE_DATE:END]
 
-    # Table 1: Standalone Assets (2018-2025 & 2008-2025 + USD Sensitivity)
+    # Table 1: Standalone Assets (Main & Extended Horizons + USD Sensitivity)
     sa_rows = {}
     for a in assets:
-        m18 = compute_metrics(df_18[a], df_18["RF"])
-        mpost = compute_metrics(df_post[a], df_post["RF"])
-        m08 = compute_metrics(df_08[a], df_08["RF"])
-        m18["PostFreeze_CAGR(%)"] = mpost["CAGR(%)"]
-        m18["PostFreeze_Sharpe"] = mpost["Sharpe"]
-        m18["Corr_vs_USD_Index"] = df_18[a].corr(df_18["usd_ret"])
-        m18["CAGR_2008_2025(%)"] = m08["CAGR(%)"]
-        m18["Sharpe_2008_2025"] = m08["Sharpe"]
-        sa_rows[a] = m18
+        m_main = compute_metrics(df_main[a], df_main["RF"])
+        m_post = compute_metrics(df_post[a], df_post["RF"])
+        m_multi = compute_metrics(df_multi[a], df_multi["RF"])
+        m_main["PostFreeze_CAGR(%)"] = m_post["CAGR(%)"]
+        m_main["PostFreeze_Sharpe"] = m_post["Sharpe"]
+        m_main["Corr_vs_USD_Index"] = df_main[a].corr(df_main["usd_ret"])
+        m_main["CAGR_Extended(%)"] = m_multi["CAGR(%)"]
+        m_main["Sharpe_Extended"] = m_multi["Sharpe"]
+        sa_rows[a] = m_main
     t1 = pd.DataFrame(sa_rows).T.round(2)
     t1.to_csv(TABLES_RQ3 / "table_3_3_1_standalone_assets.csv")
 
-    # Table 2: Portfolios 2018-2025 (Annual Main vs Monthly & Buy-and-Hold Robustness)
-    p18_rows = {}
+    # Table 2: Portfolios Main Window (Annual Main vs Monthly & Buy-and-Hold Robustness)
+    p_main_rows = {}
     for pname, wdict in RQ3_PORTFOLIOS.items():
-        s_ann, _ = simulate_portfolio(df_18, wdict, rule="annual")
-        s_mon, _ = simulate_portfolio(df_18, wdict, rule="monthly")
-        s_bh, _ = simulate_portfolio(df_18, wdict, rule="buy_and_hold")
+        s_ann, _ = simulate_portfolio(df_main, wdict, rule="annual")
+        s_mon, _ = simulate_portfolio(df_main, wdict, rule="monthly")
+        s_bh, _ = simulate_portfolio(df_main, wdict, rule="buy_and_hold")
         s_pre, _ = simulate_portfolio(df_pre, wdict, rule="annual")
         s_post, _ = simulate_portfolio(df_post, wdict, rule="annual")
 
-        m = compute_metrics(s_ann, df_18["RF"])
-        m_mon = compute_metrics(s_mon, df_18["RF"])
-        m_bh = compute_metrics(s_bh, df_18["RF"])
+        m = compute_metrics(s_ann, df_main["RF"])
+        m_mon = compute_metrics(s_mon, df_main["RF"])
+        m_bh = compute_metrics(s_bh, df_main["RF"])
         m["PreFreeze_Sharpe"] = compute_metrics(s_pre, df_pre["RF"])["Sharpe"]
         m["PostFreeze_Sharpe"] = compute_metrics(s_post, df_post["RF"])["Sharpe"]
         m["Monthly_CAGR(%)"] = m_mon["CAGR(%)"]
         m["Monthly_Sharpe"] = m_mon["Sharpe"]
         m["BuyHold_CAGR(%)"] = m_bh["CAGR(%)"]
         m["BuyHold_Sharpe"] = m_bh["Sharpe"]
-        p18_rows[pname] = m
-    t2 = pd.DataFrame(p18_rows).T.round(2)
+        p_main_rows[pname] = m
+    t2 = pd.DataFrame(p_main_rows).T.round(2)
     t2.to_csv(TABLES_RQ3 / "table_3_3_2_portfolios_2018_2025.csv")
 
-    # Table 3: Multi-Crisis Robustness 2008-2025 (GFC 2008, COVID 2020, Freeze 2022)
-    p08_rows = {}
+    # Table 3: Multi-Crisis Robustness (GFC 2008, COVID 2020, Freeze 2022)
+    p_multi_rows = {}
     for pname, wdict in RQ3_PORTFOLIOS.items():
-        s_08, _ = simulate_portfolio(df_08, wdict, rule="annual")
-        m08 = compute_metrics(s_08, df_08["RF"])
-        m08["GFC_2008_Ret(%)"] = (
-            (1 + s_08.loc["2008-01-01":"2008-12-31"]).prod() - 1
+        s_multi, _ = simulate_portfolio(df_multi, wdict, rule="annual")
+        m_multi = compute_metrics(s_multi, df_multi["RF"])
+        m_multi["GFC_2008_Ret(%)"] = (
+            (1 + s_multi.loc["2008-01":"2008-12"]).prod() - 1
         ) * 100
-        m08["COVID_2020_Ret(%)"] = (
-            (1 + s_08.loc["2020-01-01":"2020-12-31"]).prod() - 1
+        m_multi["COVID_2020_Ret(%)"] = (
+            (1 + s_multi.loc["2020-01":"2020-12"]).prod() - 1
         ) * 100
-        m08["Freeze_2022_Ret(%)"] = (
-            (1 + s_08.loc["2022-01-01":"2022-12-31"]).prod() - 1
+        m_multi["Freeze_2022_Ret(%)"] = (
+            (1 + s_multi.loc["2022-01":"2022-12"]).prod() - 1
         ) * 100
-        p08_rows[pname] = m08
-    t3 = pd.DataFrame(p08_rows).T.round(2)
+        p_multi_rows[pname] = m_multi
+    t3 = pd.DataFrame(p_multi_rows).T.round(2)
     t3.to_csv(TABLES_RQ3 / "table_3_3_3_multicrisis_2008_2025.csv")
 
-    # Table 4: Real (CPI-Adjusted) & Malaysian Ringgit (MYR) Perspectives (2018-2025)
+    # Table 4: Real (CPI-Adjusted) & Malaysian Ringgit (MYR) Perspectives
     real_myr_rows = {}
     for pname, wdict in RQ3_PORTFOLIOS.items():
-        s_ann, _ = simulate_portfolio(df_18, wdict, rule="annual")
-        m_nom = compute_metrics(s_ann, df_18["RF"])
+        s_ann, _ = simulate_portfolio(df_main, wdict, rule="annual")
+        m_nom = compute_metrics(s_ann, df_main["RF"])
 
-        s_real = (1 + s_ann) / (1 + df_18["cpi_inf"]) - 1
-        rf_real = (1 + df_18["RF"]) / (1 + df_18["cpi_inf"]) - 1
+        s_real = (1 + s_ann) / (1 + df_main["cpi_inf"]) - 1
+        rf_real = (1 + df_main["RF"]) / (1 + df_main["cpi_inf"]) - 1
         m_real = compute_metrics(s_real, rf_real)
 
-        s_myr = (1 + s_ann) * (1 + df_18["myr_ret"]) - 1
-        m_myr = compute_metrics(s_myr, df_18["RF"])
+        s_myr = (1 + s_ann) * (1 + df_main["myr_ret"]) - 1
+        m_myr = compute_metrics(s_myr, df_main["RF"])
 
         real_myr_rows[pname] = pd.Series(
             {
@@ -320,10 +330,10 @@ def generate_tables(df):
 
 
 # ---------------------------------------------------------------------------
-# 5) Figures (Saved to fig_rq3/ without 'fig_rq1' prefix)
+# 6) Figures (Saved to fig_rq3/ without 'fig_rq1' prefix)
 # ---------------------------------------------------------------------------
 def fig_01_wealth_drawdown(df):
-    df_18 = df.loc["2018-01-01":"2025-12-31"]
+    df_main = df.loc[RQ3_MAIN_START:END]
     selected = [
         "P1: Pure USD 60/40 (60% SPY / 40% AGG)",
         "P3: Aggressive Gold (60% SPY / 20% AGG / 20% GLD)",
@@ -335,21 +345,20 @@ def fig_01_wealth_drawdown(df):
     fig, (ax1, ax2) = plt.subplots(
         2, 1, figsize=(8.5, 5.8), gridspec_kw={"height_ratios": [1.8, 1]}, sharex=True
     )
-    freeze_dt = pd.Timestamp("2022-02-28")
 
     for pname in selected:
-        s_ann, _ = simulate_portfolio(df_18, RQ3_PORTFOLIOS[pname], rule="annual")
+        s_ann, _ = simulate_portfolio(df_main, RQ3_PORTFOLIOS[pname], rule="annual")
         wealth = 100 * (1 + s_ann).cumprod()
         dd = ((wealth - wealth.cummax()) / wealth.cummax()) * 100
-        ax1.plot(df_18.index, wealth, color=PALETTE[pname], label=SHORT_LABELS[pname])
-        ax2.plot(df_18.index, dd, color=PALETTE[pname], lw=1.6)
+        ax1.plot(df_main.index, wealth, color=PALETTE[pname], label=SHORT_LABELS[pname])
+        ax2.plot(df_main.index, dd, color=PALETTE[pname], lw=1.6)
 
     for ax in (ax1, ax2):
-        ax.axvline(freeze_dt, color=MUTED, lw=0.9, ls=(0, (3, 3)), zorder=1)
+        ax.axvline(FREEZE_TS, color=MUTED, lw=0.9, ls=(0, (3, 3)), zorder=1)
 
     ax1.annotate(
         "Russian reserves\nfrozen (Feb 2022)",
-        xy=(mdates.date2num(freeze_dt), 0.94),
+        xy=(mdates.date2num(FREEZE_TS), 0.94),
         xycoords=ax1.get_xaxis_transform(),
         xytext=(5, 0),
         textcoords="offset points",
@@ -362,7 +371,10 @@ def fig_01_wealth_drawdown(df):
     ax1.yaxis.set_major_formatter(mtick.StrMethodFormatter("${x:,.0f}"))
     ax2.set_ylabel("Drawdown (%)")
     ax2.yaxis.set_major_formatter(mtick.PercentFormatter(decimals=0))
-    ax2.set_xticks([pd.Timestamp(f"{y}-01-01") for y in range(2018, 2026)])
+
+    start_yr = pd.Period(RQ3_MAIN_START, freq="M").year
+    end_yr = pd.Period(END, freq="M").year
+    ax2.set_xticks([pd.Timestamp(f"{y}-01-01") for y in range(start_yr, end_yr + 1)])
     ax2.xaxis.set_major_formatter(mdates.DateFormatter("%Y"))
 
     ax1.legend(loc="upper left", ncol=1, fontsize=8)
@@ -371,7 +383,7 @@ def fig_01_wealth_drawdown(df):
         fig,
         "01_wealth_drawdown",
         "Gold reallocation boosted wealth and cushioned drawdowns; fiat alternatives lagged",
-        "Cumulative growth of $100 (top) and drawdown from peak (bottom), annually rebalanced, Jan 2018 – Dec 2025",
+        f"Cumulative growth of $100 (top) and drawdown from peak (bottom), annually rebalanced, {RQ3_MAIN_START} to {END}",
         "Author calculations from Yahoo Finance (SPY, AGG, GLD, FXF, FXY, BWX) via returns_monthly.csv.",
         "Portfolios are rebalanced annually every January; transaction costs and taxes are excluded.",
         bottom_offset=-14,
@@ -379,10 +391,10 @@ def fig_01_wealth_drawdown(df):
 
 
 def fig_02_rolling_correlations(df):
-    sub = df.loc["2016-02-01":"2025-12-31"]
-    roll_agg = sub["SPY"].rolling(24).corr(sub["AGG"]).loc["2018-01-01":]
-    roll_ief = sub["SPY"].rolling(24).corr(sub["IEF"]).loc["2018-01-01":]
-    roll_gld = sub["SPY"].rolling(24).corr(sub["GLD"]).loc["2018-01-01":]
+    sub = df.loc[ROLL_24M_START:END]
+    roll_agg = sub["SPY"].rolling(24).corr(sub["AGG"]).loc[RQ3_MAIN_START:]
+    roll_ief = sub["SPY"].rolling(24).corr(sub["IEF"]).loc[RQ3_MAIN_START:]
+    roll_gld = sub["SPY"].rolling(24).corr(sub["GLD"]).loc[RQ3_MAIN_START:]
 
     fig, ax = plt.subplots(figsize=(8.0, 3.8))
     ax.plot(
@@ -404,11 +416,10 @@ def fig_02_rolling_correlations(df):
     )
 
     ax.axhline(0, color=INK2, lw=0.8)
-    freeze_dt = pd.Timestamp("2022-02-28")
-    ax.axvline(freeze_dt, color=MUTED, lw=0.9, ls=(0, (3, 3)))
+    ax.axvline(FREEZE_TS, color=MUTED, lw=0.9, ls=(0, (3, 3)))
     ax.annotate(
         "Feb 2022 reserve freeze &\nFed rate-hiking cycle",
-        xy=(mdates.date2num(freeze_dt), 0.94),
+        xy=(mdates.date2num(FREEZE_TS), 0.94),
         xycoords=ax.get_xaxis_transform(),
         xytext=(5, 0),
         textcoords="offset points",
@@ -419,15 +430,19 @@ def fig_02_rolling_correlations(df):
     )
     ax.set_ylim(-0.75, 0.90)
     ax.set_ylabel("24-Month Rolling Correlation (r)")
-    ax.set_xticks([pd.Timestamp(f"{y}-01-01") for y in range(2018, 2026)])
+
+    start_yr = pd.Period(RQ3_MAIN_START, freq="M").year
+    end_yr = pd.Period(END, freq="M").year
+    ax.set_xticks([pd.Timestamp(f"{y}-01-01") for y in range(start_yr, end_yr + 1)])
     ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y"))
+
     ax.legend(loc="upper center", ncol=3, bbox_to_anchor=(0.5, -0.12))
     fig.tight_layout()
     finish(
         fig,
         "02_rolling_correlations",
         "Stock–bond correlations flipped strongly positive after 2022, eroding bond hedging power",
-        "Rolling 24-month Pearson correlation with U.S. equities (SPY), Jan 2018 – Dec 2025",
+        f"Rolling 24-month Pearson correlation with U.S. equities (SPY), {RQ3_MAIN_START} to {END}",
         "Author calculations from returns_monthly.csv (SPY, AGG, IEF, GLD).",
         "Values above zero indicate assets move in the same direction as U.S. stocks, reducing diversification.",
         bottom_offset=-28,
@@ -435,9 +450,9 @@ def fig_02_rolling_correlations(df):
 
 
 def fig_03_dollar_sensitivity(df):
-    df_18 = df.loc["2018-01-01":"2025-12-31"]
-    weak = df_18[df_18["usd_ret"] < 0]
-    strong = df_18[df_18["usd_ret"] >= 0]
+    df_main = df.loc[RQ3_MAIN_START:END]
+    weak = df_main[df_main["usd_ret"] < 0]
+    strong = df_main[df_main["usd_ret"] >= 0]
 
     assets = ["GLD", "EEM", "EFA", "SPY", "BWX", "FXF", "AGG", "FXY", "IEF"]
     weak_means = [weak[a].mean() * 100 for a in assets]
@@ -451,14 +466,14 @@ def fig_03_dollar_sensitivity(df):
         weak_means,
         width=w,
         color="#2a78d6",
-        label="Months when USD Index weakens (n = 50)",
+        label=f"Months when USD Index weakens (n = {len(weak)})",
     )
     b2 = ax.bar(
         x + w / 2,
         strong_means,
         width=w,
         color="#e34948",
-        label="Months when USD Index strengthens (n = 46)",
+        label=f"Months when USD Index strengthens (n = {len(strong)})",
     )
 
     ax.axhline(0, color=INK2, lw=0.8)
@@ -497,7 +512,7 @@ def fig_03_dollar_sensitivity(df):
         fig,
         "03_dollar_sensitivity",
         "Gold captured upside when the U.S. dollar weakened without suffering severe strong-dollar drag",
-        "Average monthly total return (%) during weakening vs. strengthening Broad U.S. Dollar Index (DTWEXBGS) months, 2018–2025",
+        f"Average monthly total return (%) during weakening vs. strengthening Broad U.S. Dollar Index (DTWEXBGS) months, {RQ3_MAIN_START} to {END}",
         "Author calculations from returns_monthly.csv and FRED DTWEXBGS (macro_monthly.csv).",
         "Non-USD fiat assets (EEM, EFA, BWX, FXY, FXF) gained when the dollar fell but suffered heavy losses when the dollar rose.",
         bottom_offset=-28,
@@ -505,11 +520,11 @@ def fig_03_dollar_sensitivity(df):
 
 
 def fig_04_efficient_frontier(df):
-    df_18 = df.loc["2018-01-01":"2025-12-31"]
+    df_main = df.loc[RQ3_MAIN_START:END]
 
     def trace_frontier(asset_list, n_pts=45):
-        mu = df_18[asset_list].mean() * 12
-        cov = df_18[asset_list].cov() * 12
+        mu = df_main[asset_list].mean() * 12
+        cov = df_main[asset_list].cov() * 12
         n = len(asset_list)
         targets = np.linspace(mu.min(), mu.max(), n_pts)
         vols, rets = [], []
@@ -560,8 +575,8 @@ def fig_04_efficient_frontier(df):
         ("P7: Equal-Weight Safe-Haven (33.3% SPY / 33.3% AGG / 33.3% GLD)", (-8, 8)),
     ]
     for pname, offset in pts:
-        s_ann, _ = simulate_portfolio(df_18, RQ3_PORTFOLIOS[pname], rule="annual")
-        m = compute_metrics(s_ann, df_18["RF"])
+        s_ann, _ = simulate_portfolio(df_main, RQ3_PORTFOLIOS[pname], rule="annual")
+        m = compute_metrics(s_ann, df_main["RF"])
         ax.scatter(m["AnnVol(%)"], m["CAGR(%)"], color=PALETTE[pname], s=55, zorder=5)
         ax.annotate(
             SHORT_LABELS[pname].split("(")[0].strip(),
@@ -583,7 +598,7 @@ def fig_04_efficient_frontier(df):
         fig,
         "04_efficient_frontier",
         "Allocating to physical gold shifts the Markowitz Efficient Frontier upward and leftward",
-        "Mean-variance efficient frontiers and annually rebalanced model portfolios, Jan 2018 – Dec 2025",
+        f"Mean-variance efficient frontiers and annually rebalanced model portfolios, {RQ3_MAIN_START} to {END}",
         "Author Markowitz quadratic optimization from returns_monthly.csv.",
         "Short-selling is constrained (weights >= 0, sum of weights = 1).",
         bottom_offset=-14,
@@ -591,7 +606,7 @@ def fig_04_efficient_frontier(df):
 
 
 def fig_05_multi_crisis_2008_2025(df):
-    df_08 = df.loc["2008-01-01":"2025-12-31"]
+    df_multi = df.loc[RQ3_MULTI_START:END]
     selected = [
         "P1: Pure USD 60/40 (60% SPY / 40% AGG)",
         "P1b: Treasury 60/40 (60% SPY / 40% IEF)",
@@ -602,10 +617,10 @@ def fig_05_multi_crisis_2008_2025(df):
 
     crisis_data = []
     for pname in selected:
-        s_08, _ = simulate_portfolio(df_08, RQ3_PORTFOLIOS[pname], rule="annual")
-        r08 = ((1 + s_08.loc["2008-01-01":"2008-12-31"]).prod() - 1) * 100
-        r20 = ((1 + s_08.loc["2020-01-01":"2020-12-31"]).prod() - 1) * 100
-        r22 = ((1 + s_08.loc["2022-01-01":"2022-12-31"]).prod() - 1) * 100
+        s_multi, _ = simulate_portfolio(df_multi, RQ3_PORTFOLIOS[pname], rule="annual")
+        r08 = ((1 + s_multi.loc["2008-01":"2008-12"]).prod() - 1) * 100
+        r20 = ((1 + s_multi.loc["2020-01":"2020-12"]).prod() - 1) * 100
+        r22 = ((1 + s_multi.loc["2022-01":"2022-12"]).prod() - 1) * 100
         crisis_data.append(
             {
                 "Portfolio": SHORT_LABELS[pname],
@@ -670,15 +685,15 @@ def fig_05_multi_crisis_2008_2025(df):
         fig,
         "05_multi_crisis_2008_2025",
         "Treasuries cushioned the 2008 GFC, but only gold protected portfolios in the 2022 shock",
-        "Calendar-year portfolio total returns (%) across three distinct macroeconomic crises (2008–2025 sample)",
-        "Author calculations from returns_monthly.csv (Jan 2008 – Dec 2025, annually rebalanced).",
+        f"Calendar-year portfolio total returns (%) across three distinct macroeconomic crises ({RQ3_MULTI_START} to {END} sample)",
+        f"Author calculations from returns_monthly.csv ({RQ3_MULTI_START} to {END}, annually rebalanced).",
         "In 2008 (deflationary crash), U.S. Treasuries (IEF) rallied; in 2022 (inflation/sanction shock), both stocks and bonds fell together.",
         bottom_offset=-30,
     )
 
 
 def fig_06_real_vs_myr_returns(df):
-    df_18 = df.loc["2018-01-01":"2025-12-31"]
+    df_main = df.loc[RQ3_MAIN_START:END]
     selected = [
         "P1: Pure USD 60/40 (60% SPY / 40% AGG)",
         "P2: Moderate Gold (60% SPY / 30% AGG / 10% GLD)",
@@ -691,18 +706,18 @@ def fig_06_real_vs_myr_returns(df):
 
     rows = []
     for pname in selected:
-        s_ann, _ = simulate_portfolio(df_18, RQ3_PORTFOLIOS[pname], rule="annual")
-        s_real = (1 + s_ann) / (1 + df_18["cpi_inf"]) - 1
-        s_myr = (1 + s_ann) * (1 + df_18["myr_ret"]) - 1
+        s_ann, _ = simulate_portfolio(df_main, RQ3_PORTFOLIOS[pname], rule="annual")
+        s_real = (1 + s_ann) / (1 + df_main["cpi_inf"]) - 1
+        s_myr = (1 + s_ann) * (1 + df_main["myr_ret"]) - 1
         rows.append(
             {
                 "Portfolio": SHORT_LABELS[pname].split("(")[0].strip(),
-                "Nominal USD": compute_metrics(s_ann, df_18["RF"])["CAGR(%)"],
-                "Real USD (CPI-Adjusted)": compute_metrics(s_real, df_18["RF"])[
+                "Nominal USD": compute_metrics(s_ann, df_main["RF"])["CAGR(%)"],
+                "Real USD (CPI-Adjusted)": compute_metrics(s_real, df_main["RF"])[
                     "CAGR(%)"
                 ],
-                "MYR MaxDD": abs(compute_metrics(s_myr, df_18["RF"])["MaxDD(%)"]),
-                "USD MaxDD": abs(compute_metrics(s_ann, df_18["RF"])["MaxDD(%)"]),
+                "MYR MaxDD": abs(compute_metrics(s_myr, df_main["RF"])["MaxDD(%)"]),
+                "USD MaxDD": abs(compute_metrics(s_ann, df_main["RF"])["MaxDD(%)"]),
             }
         )
     res = pd.DataFrame(rows).set_index("Portfolio")
@@ -775,7 +790,7 @@ def fig_06_real_vs_myr_returns(df):
         fig,
         "06_real_vs_myr_returns",
         "Gold preserved real purchasing power and compressed drawdowns for Malaysian Ringgit investors",
-        "Nominal vs. U.S. CPI-adjusted real CAGR (left) and USD vs. MYR maximum drawdown magnitude (right), 2018–2025",
+        f"Nominal vs. U.S. CPI-adjusted real CAGR (left) and USD vs. MYR maximum drawdown magnitude (right), {RQ3_MAIN_START} to {END}",
         "Author calculations from returns_monthly.csv and FRED CPIAUCSL / DEXMAUS (macro_monthly.csv).",
         "U.S. CPI inflation averaged 3.49% p.a. (2018–2025). USD appreciation during global sell-offs cushioned drawdowns in MYR terms.",
         bottom_offset=-16,
