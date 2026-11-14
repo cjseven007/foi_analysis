@@ -185,7 +185,7 @@ def year_axis(ax):
 # 2) Load clean data
 # ---------------------------------------------------------------------------
 H = month_index(pd.read_csv(CLEAN / "holdings_monthly_bn.csv", index_col=0))
-H = H.loc["2018-01":]  # Dec 2017 is only needed for changes
+H = H.loc["2017-12":]  # Dec 2017 is only needed for changes
 BRICS = [c for c in ["China", "Brazil", "India", "Russia"] if c in H]
 
 
@@ -206,14 +206,14 @@ def fig_holdings_levels():
         fig,
         "fig_rq1_01_holdings_levels",
         "BRICS Treasury holdings fell unevenly",
-        "U.S. Treasury securities held, end of month, Jan 2018 – Dec 2025 (USD billions)",
+        "U.S. Treasury securities held, end of month, Dec 2017 – Dec 2025 (USD billions)",
         "U.S. Treasury TIC via FRED (FORTREASPOS series).",
         "Country attribution is by custodian location; values include private holders and are at market value.",
     )
 
 
 def fig_holdings_indexed():
-    base = H.loc["2018-01"].iloc[0]
+    base = H.loc["2017-12"].iloc[0]
     cols = [c for c in ["China", "Brazil", "India"] if c in H] + ["Grand Total"]
     idx = H[cols] / base[cols] * 100
     fig, ax = plt.subplots(figsize=(7.5, 3.8))
@@ -240,7 +240,7 @@ def fig_holdings_indexed():
         fig,
         "fig_rq1_02_holdings_indexed",
         "Others kept buying while China and Brazil cut back",
-        "Treasury holdings indexed to January 2018 = 100",
+        "Treasury holdings indexed to December 2017 = 100",
         "Author calculations from U.S. Treasury TIC via FRED.",
         "Russia is omitted: its holdings fell to near zero, so an index is not meaningful.",
     )
@@ -280,7 +280,7 @@ def fig_share_of_foreign():
         fig,
         "fig_rq1_03_share_of_foreign",
         "The BRICS share of foreign-held Treasuries more than halved",
-        "Share of all foreign holdings of U.S. Treasury securities (%), stacked",
+        "Share of all foreign holdings of U.S. Treasury securities (%), stacked, Dec 2017 – Dec 2025",
         "Author calculations from U.S. Treasury TIC via FRED (FORTREASPOS99996 as denominator).",
     )
 

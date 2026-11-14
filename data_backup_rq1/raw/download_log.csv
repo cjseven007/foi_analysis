@@ -1,0 +1,32 @@
+source,series_id,url,retrieved_utc,status,rows,first_date,last_date
+FRED,FORTREASPOS41408,https://fred.stlouisfed.org/graph/fredgraph.csv?id=FORTREASPOS41408,2026-11-05 18:40,ok,283,2003-02-01,2026-08-01
+FRED,FORTREASPOS30309,https://fred.stlouisfed.org/graph/fredgraph.csv?id=FORTREASPOS30309,2026-11-05 18:40,ok,283,2003-02-01,2026-08-01
+FRED,FORTREASPOS42102,https://fred.stlouisfed.org/graph/fredgraph.csv?id=FORTREASPOS42102,2026-11-05 18:40,ok,283,2003-02-01,2026-08-01
+FRED,FORTREASPOS16101,https://fred.stlouisfed.org/graph/fredgraph.csv?id=FORTREASPOS16101,2026-11-05 18:40,ok,283,2003-02-01,2026-08-01
+FRED,FORTREASPOS99996,https://fred.stlouisfed.org/graph/fredgraph.csv?id=FORTREASPOS99996,2026-11-05 18:40,ok,501,1984-12-01,2026-08-01
+FRED,FORTREASPOS99990,https://fred.stlouisfed.org/graph/fredgraph.csv?id=FORTREASPOS99990,2026-11-05 18:40,ok,501,1984-12-01,2026-08-01
+FRED,FORLTTREASPOS41408,https://fred.stlouisfed.org/graph/fredgraph.csv?id=FORLTTREASPOS41408,2026-11-05 18:40,ok,501,1984-12-01,2026-08-01
+FRED,FORLTTREASPOS30309,https://fred.stlouisfed.org/graph/fredgraph.csv?id=FORLTTREASPOS30309,2026-11-05 18:40,ok,501,1984-12-01,2026-08-01
+FRED,FORLTTREASPOS42102,https://fred.stlouisfed.org/graph/fredgraph.csv?id=FORLTTREASPOS42102,2026-11-05 18:40,ok,501,1984-12-01,2026-08-01
+FRED,FORLTTREASPOS16101,https://fred.stlouisfed.org/graph/fredgraph.csv?id=FORLTTREASPOS16101,2026-11-05 18:40,ok,501,1984-12-01,2026-08-01
+FRED,FORLTTREASPOS99996,https://fred.stlouisfed.org/graph/fredgraph.csv?id=FORLTTREASPOS99996,2026-11-05 18:40,ok,501,1984-12-01,2026-08-01
+FRED,FORLTTREASPOS99990,https://fred.stlouisfed.org/graph/fredgraph.csv?id=FORLTTREASPOS99990,2026-11-05 18:40,ok,501,1984-12-01,2026-08-01
+FRED,FORLTTREASNET41408,https://fred.stlouisfed.org/graph/fredgraph.csv?id=FORLTTREASNET41408,2026-11-05 18:40,ok,500,1985-01-01,2026-08-01
+FRED,FORLTTREASNET30309,https://fred.stlouisfed.org/graph/fredgraph.csv?id=FORLTTREASNET30309,2026-11-05 18:40,ok,500,1985-01-01,2026-08-01
+FRED,FORLTTREASNET42102,https://fred.stlouisfed.org/graph/fredgraph.csv?id=FORLTTREASNET42102,2026-11-05 18:41,ok,500,1985-01-01,2026-08-01
+FRED,FORLTTREASNET16101,https://fred.stlouisfed.org/graph/fredgraph.csv?id=FORLTTREASNET16101,2026-11-05 18:41,ok,500,1985-01-01,2026-08-01
+FRED,FORLTTREASNET99996,https://fred.stlouisfed.org/graph/fredgraph.csv?id=FORLTTREASNET99996,2026-11-05 18:41,ok,500,1985-01-01,2026-08-01
+FRED,FORLTTREASNET99990,https://fred.stlouisfed.org/graph/fredgraph.csv?id=FORLTTREASNET99990,2026-11-05 18:41,ok,500,1985-01-01,2026-08-01
+FRED,FORLTTREASVALCHG41408,https://fred.stlouisfed.org/graph/fredgraph.csv?id=FORLTTREASVALCHG41408,2026-11-05 18:41,ok,500,1985-01-01,2026-08-01
+FRED,FORLTTREASVALCHG30309,https://fred.stlouisfed.org/graph/fredgraph.csv?id=FORLTTREASVALCHG30309,2026-11-05 18:41,ok,500,1985-01-01,2026-08-01
+FRED,FORLTTREASVALCHG42102,https://fred.stlouisfed.org/graph/fredgraph.csv?id=FORLTTREASVALCHG42102,2026-11-05 18:41,ok,500,1985-01-01,2026-08-01
+FRED,FORLTTREASVALCHG16101,https://fred.stlouisfed.org/graph/fredgraph.csv?id=FORLTTREASVALCHG16101,2026-11-05 18:41,ok,500,1985-01-01,2026-08-01
+FRED,FORLTTREASVALCHG99996,https://fred.stlouisfed.org/graph/fredgraph.csv?id=FORLTTREASVALCHG99996,2026-11-05 18:41,ok,500,1985-01-01,2026-08-01
+FRED,FORLTTREASVALCHG99990,https://fred.stlouisfed.org/graph/fredgraph.csv?id=FORLTTREASVALCHG99990,2026-11-05 18:41,ok,500,1985-01-01,2026-08-01
+FRED,GS10,https://fred.stlouisfed.org/graph/fredgraph.csv?id=GS10,2026-11-05 18:41,ok,883,1953-04-01,2026-10-01
+FRED,DGS10,https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS10,2026-11-05 18:41,ok,16916,1962-01-02,2026-11-03
+FRED,FEDFUNDS,https://fred.stlouisfed.org/graph/fredgraph.csv?id=FEDFUNDS,2026-11-05 18:41,ok,868,1954-07-01,2026-10-01
+FRED,T10YIE,https://fred.stlouisfed.org/graph/fredgraph.csv?id=T10YIE,2026-11-05 18:41,ok,6220,2003-01-02,2026-11-04
+FRED,THREEFYTP10,https://fred.stlouisfed.org/graph/fredgraph.csv?id=THREEFYTP10,2026-11-05 18:41,ok,9609,1990-01-02,2026-10-30
+FRED,TB3MS,https://fred.stlouisfed.org/graph/fredgraph.csv?id=TB3MS,2026-11-05 18:41,ok,1114,1934-01-01,2026-10-01
+yfinance,"SPY,AGG,IEF,GLD",Yahoo Finance via yfinance,2026-11-05 18:41,ok,98,2017-11-01,2025-12-01

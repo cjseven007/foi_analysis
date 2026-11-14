@@ -4,11 +4,25 @@ then run validation checks. Never edits anything in data/raw/.
 
 Run from the project folder:   python scripts/02_clean.py
 """
+
 import numpy as np
 import pandas as pd
 
-from config import (RAW_FRED, RAW_MARKET, MANUAL, CLEAN, START, END,
-                    COUNTRIES, TIC_MEASURES, MACRO, DAILY_SERIES, TICKERS, MFH_CHECK)
+from config import (
+    RAW_FRED,
+    RAW_MARKET,
+    MANUAL,
+    CLEAN,
+    START,
+    END,
+    RQ3_START,
+    COUNTRIES,
+    TIC_MEASURES,
+    MACRO,
+    DAILY_SERIES,
+    TICKERS,
+    MFH_CHECK,
+)
 
 
 # ---------------------------------------------------------------------------
@@ -65,17 +79,25 @@ def clean_tic():
             if s is None:
                 continue
             s = window(to_month(s)) / 1000  # USD millions -> USD billions
-            long_rows.append(pd.DataFrame({
-                "date": s.index, "country": country, "measure": measure, "usd_bn": s.values,
-            }))
+            long_rows.append(
+                pd.DataFrame(
+                    {
+                        "date": s.index,
+                        "country": country,
+                        "measure": measure,
+                        "usd_bn": s.values,
+                    }
+                )
+            )
     tidy = pd.concat(long_rows, ignore_index=True)
 
     # Tidy ("long") format: one row per date x country x measure. Easiest for seaborn.
     tidy.to_csv(CLEAN / "tic_long.csv", index=False)
 
     # Wide headline table: rows = months, columns = countries. Easiest for tables.
-    holdings = (tidy[tidy.measure == "holdings_total"]
-                .pivot(index="date", columns="country", values="usd_bn"))
+    holdings = tidy[tidy.measure == "holdings_total"].pivot(
+        index="date", columns="country", values="usd_bn"
+    )
     holdings = holdings[[c for c in COUNTRIES if c in holdings.columns]]
     holdings.to_csv(CLEAN / "holdings_monthly_bn.csv")
 
@@ -87,14 +109,18 @@ def clean_tic():
 
     # Decomposition table (long-term securities only):
     #   change in holdings  vs  net transactions + valuation change
-    lt = (tidy[tidy.measure.str.startswith("lt_")]
-          .pivot_table(index=["country", "date"], columns="measure", values="usd_bn")
-          .reset_index())
+    lt = (
+        tidy[tidy.measure.str.startswith("lt_")]
+        .pivot_table(index=["country", "date"], columns="measure", values="usd_bn")
+        .reset_index()
+    )
     if {"lt_holdings", "lt_net_transactions", "lt_valuation_change"} <= set(lt.columns):
         lt = lt.sort_values(["country", "date"])
         lt["lt_change"] = lt.groupby("country")["lt_holdings"].diff()
         # whatever is not explained by trading or price moves (redemptions, reclassification, rounding)
-        lt["other_residual"] = lt["lt_change"] - lt["lt_net_transactions"] - lt["lt_valuation_change"]
+        lt["other_residual"] = (
+            lt["lt_change"] - lt["lt_net_transactions"] - lt["lt_valuation_change"]
+        )
         lt.to_csv(CLEAN / "lt_decomposition_monthly_bn.csv", index=False)
     return holdings, year_end, lt
 
@@ -108,11 +134,13 @@ def clean_macro():
     for sid in MACRO:
         s = read_raw_fred(sid)
         if s is not None:
-            cols[sid] = window(to_month(s, daily=sid in DAILY_SERIES))
+            cols[sid] = to_month(s, daily=sid in DAILY_SERIES).loc[RQ3_START:END]
     macro = pd.DataFrame(cols)
     macro.index.name = "date"
     # Rename daily-derived series so nobody mistakes them for monthly averages.
-    macro = macro.rename(columns={c: f"{c}_monthend" for c in macro.columns if c in DAILY_SERIES})
+    macro = macro.rename(
+        columns={c: f"{c}_monthend" for c in macro.columns if c in DAILY_SERIES}
+    )
     macro.to_csv(CLEAN / "macro_monthly.csv")
     return macro
 
@@ -128,7 +156,7 @@ def clean_market(macro):
         return None
     px = pd.read_csv(path, index_col=0, parse_dates=True)
     px.index = px.index.to_period("M")
-    px = px.loc[START:END]
+    px = px.loc[RQ3_START:END]
 
     # Simple monthly return: r_t = P_t / P_{t-1} - 1. Adjusted prices -> total return.
     rets = px.pct_change().iloc[1:]  # first row has no previous month -> dropped
@@ -149,13 +177,45 @@ def clean_market(macro):
 # 4) Manual (hand-entered) files
 # ---------------------------------------------------------------------------
 MANUAL_SPECS = {
-    "gold_tonnes.csv": ["country", "as_of_date", "tonnes", "source", "page_or_table", "retrieved"],
-    "fx_reserves.csv": ["country", "as_of_date", "usd_bn", "source", "page_or_table", "retrieved"],
-    "russia_currency_shares.csv": ["as_of_date", "currency", "share_pct", "source", "page_or_table"],
-    "india_rbi.csv": ["as_of_date", "gold_tonnes", "gold_domestic_tonnes", "gold_share_pct",
-                      "total_reserves_usd_bn", "source", "page_or_table"],
-    "cofer_usd_share.csv": ["quarter", "usd_share_pct", "total_fx_reserves_usd_bn",
-                            "source", "retrieved"],
+    "gold_tonnes.csv": [
+        "country",
+        "as_of_date",
+        "tonnes",
+        "source",
+        "page_or_table",
+        "retrieved",
+    ],
+    "fx_reserves.csv": [
+        "country",
+        "as_of_date",
+        "usd_bn",
+        "source",
+        "page_or_table",
+        "retrieved",
+    ],
+    "russia_currency_shares.csv": [
+        "as_of_date",
+        "currency",
+        "share_pct",
+        "source",
+        "page_or_table",
+    ],
+    "india_rbi.csv": [
+        "as_of_date",
+        "gold_tonnes",
+        "gold_domestic_tonnes",
+        "gold_share_pct",
+        "total_reserves_usd_bn",
+        "source",
+        "page_or_table",
+    ],
+    "cofer_usd_share.csv": [
+        "quarter",
+        "usd_share_pct",
+        "total_fx_reserves_usd_bn",
+        "source",
+        "retrieved",
+    ],
 }
 
 
@@ -176,7 +236,15 @@ def clean_manual():
             print(f"  {fname}: empty (fill it in by hand)")
             continue
         for c in df.columns:  # numbers stored as text -> numbers
-            if c not in ("country", "currency", "source", "page_or_table", "retrieved", "quarter", "as_of_date"):
+            if c not in (
+                "country",
+                "currency",
+                "source",
+                "page_or_table",
+                "retrieved",
+                "quarter",
+                "as_of_date",
+            ):
                 df[c] = pd.to_numeric(df[c], errors="coerce")
         if "as_of_date" in df.columns:
             df["as_of_date"] = pd.to_datetime(df["as_of_date"], errors="coerce")
@@ -209,7 +277,9 @@ def validate(holdings, year_end, lt, rets):
     expected = pd.period_range(START, END, freq="M")
     for c in holdings.columns:
         n_missing = holdings[c].reindex(expected).isna().sum()
-        lines.append(f"Coverage {c:<17}: {len(expected) - n_missing}/{len(expected)} months")
+        lines.append(
+            f"Coverage {c:<17}: {len(expected) - n_missing}/{len(expected)} months"
+        )
 
     # (b) FRED vs Treasury 'Major Foreign Holders' table
     lines.append("\nFRED vs Major Foreign Holders table (USD bn):")
@@ -217,14 +287,20 @@ def validate(holdings, year_end, lt, rets):
         p = pd.Period(month, "M")
         if country in holdings.columns and p in holdings.index:
             val = holdings.loc[p, country]
-            lines.append(f"  {country:<12} {month}: FRED {val:8.1f} | MFH {ref:8.1f} | gap {val/ref*100-100:+5.1f}%")
+            lines.append(
+                f"  {country:<12} {month}: FRED {val:8.1f} | MFH {ref:8.1f} | gap {val/ref*100-100:+5.1f}%"
+            )
 
     # (c) Decomposition identity: is the residual small?
     if lt is not None and "other_residual" in lt.columns:
-        lines.append("\nDecomposition residual (change - net transactions - valuation), USD bn:")
+        lines.append(
+            "\nDecomposition residual (change - net transactions - valuation), USD bn:"
+        )
         for c, g in lt.dropna(subset=["other_residual"]).groupby("country"):
-            lines.append(f"  {c:<17} mean abs residual {g.other_residual.abs().mean():6.2f} | "
-                         f"mean abs change {g.lt_change.abs().mean():6.2f}")
+            lines.append(
+                f"  {c:<17} mean abs residual {g.other_residual.abs().mean():6.2f} | "
+                f"mean abs change {g.lt_change.abs().mean():6.2f}"
+            )
 
     # (d) Returns: obviously wrong values usually mean a units or date bug
     if rets is not None:
@@ -232,13 +308,19 @@ def validate(holdings, year_end, lt, rets):
         for c in rets.columns:
             r = rets[c].dropna()
             flag = "  <-- CHECK" if (r.abs() > 0.30).any() else ""
-            lines.append(f"  {c:<4} n={len(r):3d}  mean {r.mean()*100:5.2f}%  "
-                         f"min {r.min()*100:6.2f}%  max {r.max()*100:6.2f}%{flag}")
+            lines.append(
+                f"  {c:<4} n={len(r):3d}  mean {r.mean()*100:5.2f}%  "
+                f"min {r.min()*100:6.2f}%  max {r.max()*100:6.2f}%{flag}"
+            )
 
     # (e) Russia note
     if "Russia" in year_end.columns:
-        lines.append(f"\nRussia year-end holdings (bn): {year_end['Russia'].round(2).to_dict()}")
-        lines.append("  -> use absolute change, not % change, once below ~$1bn (see safe_pct_change)")
+        lines.append(
+            f"\nRussia year-end holdings (bn): {year_end['Russia'].round(2).to_dict()}"
+        )
+        lines.append(
+            "  -> use absolute change, not % change, once below ~$1bn (see safe_pct_change)"
+        )
 
     report = "\n".join(lines)
     print(report)

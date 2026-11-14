@@ -2,6 +2,7 @@
 Shared settings for every script: folder paths, sample period and series codes.
 Change things here once instead of editing every script.
 """
+
 import os
 from pathlib import Path
 
@@ -18,7 +19,9 @@ for p in (RAW_FRED, RAW_MARKET, MANUAL, CLEAN, FIGURES):
     p.mkdir(parents=True, exist_ok=True)
 
 # Sample period. Dec 2017 is included so that January 2018 has a return / change.
-START = "2017-12"
+RQ1_START = "2017-12"  # Treasury holdings, gold, COFER (frozen)
+RQ3_START = "2004-12"  # portfolio backtest: longer sample for robustness
+START = RQ1_START  # kept so older code still works
 END = "2025-12"
 
 # ---------------------------------------------------------------------------
@@ -29,7 +32,7 @@ COUNTRIES = {
     "Brazil": "30309",
     "India": "42102",
     "Russia": "16101",
-    "Grand Total": "99996",       # all foreign holders, private + official
+    "Grand Total": "99996",  # all foreign holders, private + official
     "Foreign Official": "99990",  # central banks, governments, sovereign funds
 }
 
@@ -53,8 +56,11 @@ MACRO = {
     "T10YIE": "10-year breakeven inflation, daily, %",
     "THREEFYTP10": "10-year term premium (Kim-Wright model), daily, %",
     "TB3MS": "3-month Treasury bill, secondary market, monthly average, % p.a.",
+    "DTWEXBGS": "Nominal broad U.S. dollar index, daily",
+    "DEXMAUS": "Malaysian ringgit per U.S. dollar, daily",
+    "CPIAUCSL": "U.S. CPI, all urban consumers, monthly",
 }
-DAILY_SERIES = {"DGS10", "T10YIE", "THREEFYTP10"}
+DAILY_SERIES = {"DGS10", "T10YIE", "THREEFYTP10", "DTWEXBGS", "DEXMAUS"}
 
 # ---------------------------------------------------------------------------
 # Market data (yfinance) for the RQ3 portfolio backtest
@@ -64,6 +70,11 @@ TICKERS = {
     "AGG": "US aggregate bonds ETF",
     "IEF": "7-10 year Treasury ETF (robustness check)",
     "GLD": "Gold ETF",
+    "EFA": "International developed equities ETF",
+    "EEM": "Emerging market equities ETF",
+    "BWX": "International government bonds ETF (unhedged)",
+    "FXF": "Swiss franc ETF",
+    "FXY": "Japanese yen ETF",
 }
 
 # Reference values from the Treasury 'Major Foreign Holders' table (USD bn),
