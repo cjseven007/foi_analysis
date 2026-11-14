@@ -46,7 +46,7 @@ ROLL_24M_START = str(
 FREEZE_TS = pd.Period(FREEZE_DATE, freq="M").to_timestamp(how="end").normalize()
 
 # ---------------------------------------------------------------------------
-# 2) Visual Style (Aligned with 05_plot_rq1.py with extra label spacing)
+# 2) Visual Style
 # ---------------------------------------------------------------------------
 INK, INK2, MUTED = "#0b0b0b", "#52514e", "#898781"
 GRID, AXIS = "#e1e0d9", "#c3c2b7"
@@ -330,7 +330,7 @@ def generate_tables(df):
 
 
 # ---------------------------------------------------------------------------
-# 6) Figures (Saved to fig_rq3/ without 'fig_rq1' prefix)
+# 6) Figures (Saved to fig_rq3/)
 # ---------------------------------------------------------------------------
 def fig_01_wealth_drawdown(df):
     df_main = df.loc[RQ3_MAIN_START:END]
