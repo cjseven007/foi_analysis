@@ -15,6 +15,7 @@ RAW_MARKET = ROOT / "data" / "raw" / "market"
 MANUAL = ROOT / "data" / "manual"
 CLEAN = ROOT / "data" / "clean"
 FIGURES = ROOT / "figures"
+TABLES = ROOT / "tables"
 for p in (RAW_FRED, RAW_MARKET, MANUAL, CLEAN, FIGURES):
     p.mkdir(parents=True, exist_ok=True)
 
@@ -88,4 +89,58 @@ MFH_CHECK = {
     ("India", "2025-12"): 182.9,
     ("Grand Total", "2018-12"): 6270.1,
     ("Grand Total", "2025-12"): 9269.5,
+}
+
+# ---------------------------------------------------------------------------
+# RQ3 Specific Directories, Windows & Portfolio Definitions
+# ---------------------------------------------------------------------------
+FIG_RQ3 = FIGURES / "fig_rq3"
+TABLES_RQ3 = TABLES / "table_rq3"
+for p in (FIG_RQ3, TABLES_RQ3):
+    p.mkdir(parents=True, exist_ok=True)
+
+# Key RQ3 analytical windows
+RQ3_MULTI_START = (
+    "2008-01"  # Earliest full year where all 9 ETFs (incl. BWX, FXY, FXF) exist
+)
+RQ3_MAIN_START = "2018-01"  # Primary BRICS de-dollarization window matching RQ1 & RQ2
+FREEZE_DATE = "2022-02"  # G7 freeze of Russian central bank reserves
+
+RQ3_PORTFOLIOS = {
+    "P1: Pure USD 60/40 (60% SPY / 40% AGG)": {"SPY": 0.60, "AGG": 0.40},
+    "P1b: Treasury 60/40 (60% SPY / 40% IEF)": {"SPY": 0.60, "IEF": 0.40},
+    "P2: Moderate Gold (60% SPY / 30% AGG / 10% GLD)": {
+        "SPY": 0.60,
+        "AGG": 0.30,
+        "GLD": 0.10,
+    },
+    "P3: Aggressive Gold (60% SPY / 20% AGG / 20% GLD)": {
+        "SPY": 0.60,
+        "AGG": 0.20,
+        "GLD": 0.20,
+    },
+    "P4: Currency Safe-Haven (60% SPY / 20% AGG / 10% FXF / 10% FXY)": {
+        "SPY": 0.60,
+        "AGG": 0.20,
+        "FXF": 0.10,
+        "FXY": 0.10,
+    },
+    "P5: Non-USD Bond Shift (60% SPY / 20% AGG / 20% BWX)": {
+        "SPY": 0.60,
+        "AGG": 0.20,
+        "BWX": 0.20,
+    },
+    "P6: Global De-dollarized (40% SPY / 10% EFA / 10% EEM / 15% AGG / 10% BWX / 15% GLD)": {
+        "SPY": 0.40,
+        "EFA": 0.10,
+        "EEM": 0.10,
+        "AGG": 0.15,
+        "BWX": 0.10,
+        "GLD": 0.15,
+    },
+    "P7: Equal-Weight Safe-Haven (33.3% SPY / 33.3% AGG / 33.3% GLD)": {
+        "SPY": 1 / 3,
+        "AGG": 1 / 3,
+        "GLD": 1 / 3,
+    },
 }
