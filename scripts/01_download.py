@@ -74,14 +74,18 @@ def main():
         tickers = list(TICKERS)
         # interval='1mo' -> one row per month. auto_adjust=True -> prices are
         # adjusted for dividends/splits, so % changes are TOTAL returns.
-        px = yf.download(
+        # Download DAILY prices, then take the last trading day of each month.
+        # yfinance's ready-made monthly bars occasionally repeat a month
+        # (e.g. SPY Oct/Nov 2010); building month-ends from daily data avoids that.
+        daily = yf.download(
             tickers,
             start="2004-11-01",
             end="2026-01-01",
-            interval="1mo",
+            interval="1d",
             auto_adjust=True,
             progress=False,
         )["Close"]
+        px = daily.resample("ME").last()
         px = px[tickers]  # fixed column order
         px.columns.name = None  # avoid an extra header row in the CSV
         px.index.name = "date"
