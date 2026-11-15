@@ -111,7 +111,8 @@ def finish(fig, name, title, subtitle, source, note=None):
         fontsize=7,
         color=MUTED,
     )
-    out = FIGURES / f"{name}.png"
+    out = FIGURES / "figs_rq1" / f"{name}.png"
+    out.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(out, dpi=300, bbox_inches="tight")
     plt.close(fig)
     print(f"  saved {out.name}")
@@ -205,7 +206,7 @@ def fig_holdings_levels():
     finish(
         fig,
         "fig_rq1_01_holdings_levels",
-        "BRICS Treasury holdings fell unevenly",
+        "U.S. Treasury Holdings of BRICS Countries",
         "U.S. Treasury securities held, end of month, Dec 2017 – Dec 2025 (USD billions)",
         "U.S. Treasury TIC via FRED (FORTREASPOS series).",
         "Country attribution is by custodian location; values include private holders and are at market value.",
@@ -239,7 +240,7 @@ def fig_holdings_indexed():
     finish(
         fig,
         "fig_rq1_02_holdings_indexed",
-        "Others kept buying while China and Brazil cut back",
+        "Indexed U.S. Treasury Holdings: China, Brazil and India vs All Foreign Holders",
         "Treasury holdings indexed to December 2017 = 100",
         "Author calculations from U.S. Treasury TIC via FRED.",
         "Russia is omitted: its holdings fell to near zero, so an index is not meaningful.",
@@ -279,7 +280,7 @@ def fig_share_of_foreign():
     finish(
         fig,
         "fig_rq1_03_share_of_foreign",
-        "The BRICS share of foreign-held Treasuries more than halved",
+        "BRICS Share of Foreign-Held U.S. Treasury Securities",
         "Share of all foreign holdings of U.S. Treasury securities (%), stacked, Dec 2017 – Dec 2025",
         "Author calculations from U.S. Treasury TIC via FRED (FORTREASPOS99996 as denominator).",
     )
@@ -327,7 +328,7 @@ def fig_decomposition():
     finish(
         fig,
         "fig_rq1_04_flow_vs_valuation",
-        "Most of China’s decline was real selling, not price effects",
+        "Net Transactions vs Valuation Changes in Long-Term Treasury Holdings",
         "Annual net purchases (+) / sales (−) vs price-driven valuation change, long-term Treasuries, 2018–2025",
         "U.S. Treasury TIC via FRED (FORLTTREASNET, FORLTTREASVALCHG series).",
         "Each panel has its own scale. Long-term securities only (notes and bonds); bills are excluded.",
@@ -367,7 +368,7 @@ def fig_gold():
     finish(
         fig,
         "fig_rq1_05_gold_tonnes",
-        "Gold accumulation: large, but not uniform",
+        "Official Gold Holdings of BRICS Central Banks",
         "Official gold holdings, quarterly, Q4 2018 – Q4 2025 (tonnes). Dashed line: Feb 2022 reserve freeze",
         "World Gold Council, Gold reserves by country (based on IMF IFS).",
         "Each panel has its own scale. Tonnes measure physical holdings and are unaffected by the gold price.",
@@ -399,7 +400,7 @@ def fig_cofer_change():
     finish(
         fig,
         "fig_rq1_06_cofer_change",
-        "The dollar's lost share went to 'other' currencies, not the yuan",
+        "Change in Currency Shares of World FX Reserves",
         f"Change in share of world FX reserves, {w.index[0]:%Y} Q4 to {w.index[-1]:%Y} Q4 (percentage points)",
         "IMF COFER (world, allocated reserves), 30 Sep 2026 release; author calculations.",
         "'Other currencies' is the IMF residual for currencies not listed separately. Gold is not part of COFER.",
@@ -440,8 +441,8 @@ def fig_cofer_usd():
     finish(
         fig,
         "fig_rq1_07_cofer_usd_share",
-        "The dollar is still the main reserve currency, but its share is slipping",
-        "U.S. dollar share of world allocated FX reserves, quarterly, Q4 2018 – Q4 2025 (%). Axis starts at 50%",
+        "U.S. Dollar Share of World FX Reserves",
+        "Quarterly, Q4 2018 – Q4 2025 (%). Axis starts at 50%",
         "IMF COFER (world, allocated reserves), 30 Sep 2026 release.",
         "Shares are valued at end-quarter exchange rates, so a weaker dollar lowers the share without any selling.",
     )
@@ -507,9 +508,9 @@ def fig_russia():
     finish(
         fig,
         "fig_rq1_08_russia_composition",
-        "Russia had largely left the dollar before the 2022 freeze",
-        "Bank of Russia foreign currency and gold assets by currency (% of market value)",
-        "Bank of Russia Annual Reports 2018 and 2021, Chart 32.",
+        "Currency Composition of Bank of Russia Reserves",
+        "Foreign currency and gold assets by currency, end-2017 to end-2021 (% of market value)",
+        "Bank of Russia Annual Reports 2018, 2019 and 2021, Chart 32.",
         "Shares include gold in the total, unlike IMF COFER. Values below 5% are not printed.",
     )
 
@@ -564,8 +565,8 @@ def fig_india():
     finish(
         fig,
         "fig_rq1_09_india_gold_location",
-        "India bought gold and brought it home",
-        "Reserve Bank of India gold holdings by location (tonnes)",
+        "Reserve Bank of India Gold Holdings by Location",
+        "Gold held in India vs abroad, March 2019 and September 2025 (tonnes)",
         "RBI Half Yearly Reports on Management of Foreign Exchange Reserves (Mar 2019; Sep 2025), Sec. I.6.",
         "Mar 2019 domestic figure derived as total minus gold held overseas.",
     )
