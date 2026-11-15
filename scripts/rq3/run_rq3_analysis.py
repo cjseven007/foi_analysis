@@ -372,7 +372,7 @@ def fig_01_wealth_drawdown(df):
         frameon=False,
         fontsize=7.8,
     )
-    fig.subplots_adjust(bottom=0.17)
+    fig.subplots_adjust(top=0.95, bottom=0.17)
 
     finish(
         fig,
@@ -440,7 +440,7 @@ def fig_02_rolling_correlations(df):
         frameon=False,
         fontsize=8.2,
     )
-    fig.subplots_adjust(bottom=0.28)
+    fig.subplots_adjust(top=0.95, bottom=0.28)
 
     finish(
         fig,
@@ -517,7 +517,7 @@ def fig_03_dollar_sensitivity(df):
         frameon=False,
         fontsize=8,
     )
-    fig.subplots_adjust(bottom=0.25)
+    fig.subplots_adjust(top=0.95, bottom=0.25)
 
     finish(
         fig,
@@ -646,7 +646,7 @@ def fig_04_efficient_frontier(df):
         frameon=False,
         fontsize=7.5,
     )
-    fig.subplots_adjust(bottom=0.26)
+    fig.subplots_adjust(top=0.95, bottom=0.26)
 
     finish(
         fig,
@@ -736,7 +736,7 @@ def fig_05_multi_crisis_2008_2025(df):
         frameon=False,
         fontsize=8,
     )
-    fig.subplots_adjust(bottom=0.29)
+    fig.subplots_adjust(top=0.95, bottom=0.29)
 
     finish(
         fig,
