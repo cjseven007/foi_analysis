@@ -39,10 +39,8 @@ from config import (
 # ---------------------------------------------------------------------------
 # 1) Derived Date Boundaries from config.py
 # ---------------------------------------------------------------------------
-PRE_FREEZE_END = str(pd.Period(FREEZE_DATE, freq="M") - 1)  # "2022-01"
-ROLL_24M_START = str(
-    pd.Period(RQ3_MAIN_START, freq="M") - 23
-)  # "2016-02" (23-month warm-up)
+PRE_FREEZE_END = str(pd.Period(FREEZE_DATE, freq="M") - 1)
+ROLL_24M_START = str(pd.Period(RQ3_MAIN_START, freq="M") - 23)
 FREEZE_TS = pd.Period(FREEZE_DATE, freq="M").to_timestamp(how="end").normalize()
 
 # ---------------------------------------------------------------------------
@@ -52,14 +50,14 @@ INK, INK2, MUTED = "#0b0b0b", "#52514e", "#898781"
 GRID, AXIS = "#e1e0d9", "#c3c2b7"
 
 PALETTE = {
-    "P1: Pure USD 60/40 (60% SPY / 40% AGG)": "#eb6834",  # Orange
-    "P1b: Treasury 60/40 (60% SPY / 40% IEF)": "#d95f02",  # Dark Orange
+    "P1: Pure USD 60/40 (60% SPY / 40% AGG)": "#fd883a",  # Orange
+    "P1b: Treasury 60/40 (60% SPY / 40% IEF)": "#d43b3b",  # Red
     "P2: Moderate Gold (60% SPY / 30% AGG / 10% GLD)": "#1baf7a",  # Green
-    "P3: Aggressive Gold (60% SPY / 20% AGG / 20% GLD)": "#2a78d6",  # Blue
+    "P3: Aggressive Gold (60% SPY / 20% AGG / 20% GLD)": "#2a91d6",  # Blue
     "P4: Currency Safe-Haven (60% SPY / 20% AGG / 10% FXF / 10% FXY)": "#898781",  # Grey
-    "P5: Non-USD Bond Shift (60% SPY / 20% AGG / 20% BWX)": "#e34948",  # Red
+    "P5: Non-USD Bond Shift (60% SPY / 20% AGG / 20% BWX)": "#f13cc4",  # Pink
     "P6: Global De-dollarized (40% SPY / 10% EFA / 10% EEM / 15% AGG / 10% BWX / 15% GLD)": "#6250d6",  # Purple
-    "P7: Equal-Weight Safe-Haven (33.3% SPY / 33.3% AGG / 33.3% GLD)": "#eda100",  # Gold
+    "P7: Equal-Weight Safe-Haven (33.3% SPY / 33.3% AGG / 33.3% GLD)": "#edc900e6",  # Gold
 }
 
 SHORT_LABELS = {
@@ -102,7 +100,6 @@ plt.rcParams.update(
 
 
 def finish(fig, name, title, subtitle, source, note=None, bottom_offset=-18):
-    """Consistent header/footer layout with generous vertical spacing to prevent overlap."""
     above = lambda pts: offset_copy(fig.transFigure, fig=fig, y=pts, units="points")
     fig.text(
         0.01,
@@ -178,30 +175,23 @@ def simulate_portfolio(sub_df, w_dict, rule="annual"):
     cols = list(w_dict.keys())
     target_w = np.array([w_dict[c] for c in cols], dtype=float)
     target_w /= target_w.sum()
-
     curr_w = target_w.copy()
-    p_rets = []
-    w_hist = []
+    p_rets, w_hist = [], []
 
     for i, (dt_idx, row) in enumerate(sub_df.iterrows()):
-        if i == 0:
-            curr_w = target_w.copy()
-        elif rule == "monthly":
-            curr_w = target_w.copy()
-        elif rule == "annual" and dt_idx.month == 1:
+        if i == 0 or rule == "monthly" or (rule == "annual" and dt_idx.month == 1):
             curr_w = target_w.copy()
 
         r_vec = np.array([row[c] for c in cols], dtype=float)
-        p_r = np.dot(curr_w, r_vec)
-        p_rets.append(p_r)
+        p_rets.append(np.dot(curr_w, r_vec))
 
         grown = curr_w * (1.0 + r_vec)
         curr_w = grown / grown.sum()
         w_hist.append(curr_w.copy())
 
-    ret_series = pd.Series(p_rets, index=sub_df.index)
-    drift_df = pd.DataFrame(w_hist, index=sub_df.index, columns=cols)
-    return ret_series, drift_df
+    return pd.Series(p_rets, index=sub_df.index), pd.DataFrame(
+        w_hist, index=sub_df.index, columns=cols
+    )
 
 
 def compute_metrics(s, rf):
@@ -257,8 +247,9 @@ def generate_tables(df):
         m_main["CAGR_Extended(%)"] = m_multi["CAGR(%)"]
         m_main["Sharpe_Extended"] = m_multi["Sharpe"]
         sa_rows[a] = m_main
-    t1 = pd.DataFrame(sa_rows).T.round(2)
-    t1.to_csv(TABLES_RQ3 / "table_3_3_1_standalone_assets.csv")
+    pd.DataFrame(sa_rows).T.round(2).to_csv(
+        TABLES_RQ3 / "table_3_3_1_standalone_assets.csv"
+    )
 
     # Table 2: Portfolios Main Window (Annual Main vs Monthly & Buy-and-Hold Robustness)
     p_main_rows = {}
@@ -270,17 +261,16 @@ def generate_tables(df):
         s_post, _ = simulate_portfolio(df_post, wdict, rule="annual")
 
         m = compute_metrics(s_ann, df_main["RF"])
-        m_mon = compute_metrics(s_mon, df_main["RF"])
-        m_bh = compute_metrics(s_bh, df_main["RF"])
         m["PreFreeze_Sharpe"] = compute_metrics(s_pre, df_pre["RF"])["Sharpe"]
         m["PostFreeze_Sharpe"] = compute_metrics(s_post, df_post["RF"])["Sharpe"]
-        m["Monthly_CAGR(%)"] = m_mon["CAGR(%)"]
-        m["Monthly_Sharpe"] = m_mon["Sharpe"]
-        m["BuyHold_CAGR(%)"] = m_bh["CAGR(%)"]
-        m["BuyHold_Sharpe"] = m_bh["Sharpe"]
+        m["Monthly_CAGR(%)"] = compute_metrics(s_mon, df_main["RF"])["CAGR(%)"]
+        m["Monthly_Sharpe"] = compute_metrics(s_mon, df_main["RF"])["Sharpe"]
+        m["BuyHold_CAGR(%)"] = compute_metrics(s_bh, df_main["RF"])["CAGR(%)"]
+        m["BuyHold_Sharpe"] = compute_metrics(s_bh, df_main["RF"])["Sharpe"]
         p_main_rows[pname] = m
-    t2 = pd.DataFrame(p_main_rows).T.round(2)
-    t2.to_csv(TABLES_RQ3 / "table_3_3_2_portfolios_2018_2025.csv")
+    pd.DataFrame(p_main_rows).T.round(2).to_csv(
+        TABLES_RQ3 / "table_3_3_2_portfolios_2018_2025.csv"
+    )
 
     # Table 3: Multi-Crisis Robustness (GFC 2008, COVID 2020, Freeze 2022)
     p_multi_rows = {}
@@ -297,19 +287,18 @@ def generate_tables(df):
             (1 + s_multi.loc["2022-01":"2022-12"]).prod() - 1
         ) * 100
         p_multi_rows[pname] = m_multi
-    t3 = pd.DataFrame(p_multi_rows).T.round(2)
-    t3.to_csv(TABLES_RQ3 / "table_3_3_3_multicrisis_2008_2025.csv")
+    pd.DataFrame(p_multi_rows).T.round(2).to_csv(
+        TABLES_RQ3 / "table_3_3_3_multicrisis_2008_2025.csv"
+    )
 
     # Table 4: Real (CPI-Adjusted) & Malaysian Ringgit (MYR) Perspectives
     real_myr_rows = {}
     for pname, wdict in RQ3_PORTFOLIOS.items():
         s_ann, _ = simulate_portfolio(df_main, wdict, rule="annual")
         m_nom = compute_metrics(s_ann, df_main["RF"])
-
         s_real = (1 + s_ann) / (1 + df_main["cpi_inf"]) - 1
         rf_real = (1 + df_main["RF"]) / (1 + df_main["cpi_inf"]) - 1
         m_real = compute_metrics(s_real, rf_real)
-
         s_myr = (1 + s_ann) * (1 + df_main["myr_ret"]) - 1
         m_myr = compute_metrics(s_myr, df_main["RF"])
 
@@ -324,26 +313,21 @@ def generate_tables(df):
                 "MYR_MaxDD(%)": m_myr["MaxDD(%)"],
             }
         )
-    t4 = pd.DataFrame(real_myr_rows).T.round(2)
-    t4.to_csv(TABLES_RQ3 / "table_3_3_4_real_and_myr_returns.csv")
+    pd.DataFrame(real_myr_rows).T.round(2).to_csv(
+        TABLES_RQ3 / "table_3_3_4_real_and_myr_returns.csv"
+    )
     print(f"  saved 4 summary CSV tables to {TABLES_RQ3}")
 
 
 # ---------------------------------------------------------------------------
-# 6) Figures (Saved to fig_rq3/)
+# 6) Figures
 # ---------------------------------------------------------------------------
 def fig_01_wealth_drawdown(df):
     df_main = df.loc[RQ3_MAIN_START:END]
-    selected = [
-        "P1: Pure USD 60/40 (60% SPY / 40% AGG)",
-        "P3: Aggressive Gold (60% SPY / 20% AGG / 20% GLD)",
-        "P4: Currency Safe-Haven (60% SPY / 20% AGG / 10% FXF / 10% FXY)",
-        "P5: Non-USD Bond Shift (60% SPY / 20% AGG / 20% BWX)",
-        "P7: Equal-Weight Safe-Haven (33.3% SPY / 33.3% AGG / 33.3% GLD)",
-    ]
+    selected = list(RQ3_PORTFOLIOS.keys())
 
     fig, (ax1, ax2) = plt.subplots(
-        2, 1, figsize=(8.5, 5.8), gridspec_kw={"height_ratios": [1.8, 1]}, sharex=True
+        2, 1, figsize=(9.5, 7.8), gridspec_kw={"height_ratios": [1.8, 1]}, sharex=True
     )
 
     for pname in selected:
@@ -351,7 +335,7 @@ def fig_01_wealth_drawdown(df):
         wealth = 100 * (1 + s_ann).cumprod()
         dd = ((wealth - wealth.cummax()) / wealth.cummax()) * 100
         ax1.plot(df_main.index, wealth, color=PALETTE[pname], label=SHORT_LABELS[pname])
-        ax2.plot(df_main.index, dd, color=PALETTE[pname], lw=1.6)
+        ax2.plot(df_main.index, dd, color=PALETTE[pname], lw=1.5)
 
     for ax in (ax1, ax2):
         ax.axvline(FREEZE_TS, color=MUTED, lw=0.9, ls=(0, (3, 3)), zorder=1)
@@ -360,13 +344,14 @@ def fig_01_wealth_drawdown(df):
         "Russian reserves\nfrozen (Feb 2022)",
         xy=(mdates.date2num(FREEZE_TS), 0.94),
         xycoords=ax1.get_xaxis_transform(),
-        xytext=(5, 0),
+        xytext=(-5, 0),
         textcoords="offset points",
-        ha="left",
+        ha="right",
         va="top",
         fontsize=7.5,
         color=MUTED,
     )
+
     ax1.set_ylabel("Portfolio Value ($100 base)")
     ax1.yaxis.set_major_formatter(mtick.StrMethodFormatter("${x:,.0f}"))
     ax2.set_ylabel("Drawdown (%)")
@@ -377,8 +362,18 @@ def fig_01_wealth_drawdown(df):
     ax2.set_xticks([pd.Timestamp(f"{y}-01-01") for y in range(start_yr, end_yr + 1)])
     ax2.xaxis.set_major_formatter(mdates.DateFormatter("%Y"))
 
-    ax1.legend(loc="upper left", ncol=1, fontsize=8)
-    fig.tight_layout()
+    handles, labels = ax1.get_legend_handles_labels()
+    fig.legend(
+        handles,
+        labels,
+        loc="lower center",
+        ncol=3,
+        bbox_to_anchor=(0.5, 0.02),
+        frameon=False,
+        fontsize=7.8,
+    )
+    fig.subplots_adjust(bottom=0.28)
+
     finish(
         fig,
         "01_wealth_drawdown",
@@ -386,7 +381,7 @@ def fig_01_wealth_drawdown(df):
         f"Cumulative growth of $100 (top) and drawdown from peak (bottom), annually rebalanced, {RQ3_MAIN_START} to {END}",
         "Author calculations from Yahoo Finance (SPY, AGG, GLD, FXF, FXY, BWX) via returns_monthly.csv.",
         "Portfolios are rebalanced annually every January; transaction costs and taxes are excluded.",
-        bottom_offset=-14,
+        bottom_offset=-10,
     )
 
 
@@ -396,7 +391,7 @@ def fig_02_rolling_correlations(df):
     roll_ief = sub["SPY"].rolling(24).corr(sub["IEF"]).loc[RQ3_MAIN_START:]
     roll_gld = sub["SPY"].rolling(24).corr(sub["GLD"]).loc[RQ3_MAIN_START:]
 
-    fig, ax = plt.subplots(figsize=(8.0, 3.8))
+    fig, ax = plt.subplots(figsize=(8.5, 4.2))
     ax.plot(
         roll_ief.index,
         roll_ief,
@@ -417,17 +412,19 @@ def fig_02_rolling_correlations(df):
 
     ax.axhline(0, color=INK2, lw=0.8)
     ax.axvline(FREEZE_TS, color=MUTED, lw=0.9, ls=(0, (3, 3)))
+
     ax.annotate(
         "Feb 2022 reserve freeze &\nFed rate-hiking cycle",
         xy=(mdates.date2num(FREEZE_TS), 0.94),
         xycoords=ax.get_xaxis_transform(),
-        xytext=(5, 0),
+        xytext=(-5, 0),
         textcoords="offset points",
-        ha="left",
+        ha="right",
         va="top",
         fontsize=7.5,
         color=MUTED,
     )
+
     ax.set_ylim(-0.75, 0.90)
     ax.set_ylabel("24-Month Rolling Correlation (r)")
 
@@ -436,8 +433,15 @@ def fig_02_rolling_correlations(df):
     ax.set_xticks([pd.Timestamp(f"{y}-01-01") for y in range(start_yr, end_yr + 1)])
     ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y"))
 
-    ax.legend(loc="upper center", ncol=3, bbox_to_anchor=(0.5, -0.12))
-    fig.tight_layout()
+    ax.legend(
+        loc="lower center",
+        ncol=3,
+        bbox_to_anchor=(0.5, -0.28),
+        frameon=False,
+        fontsize=8.2,
+    )
+    fig.subplots_adjust(bottom=0.28)
+
     finish(
         fig,
         "02_rolling_correlations",
@@ -445,7 +449,7 @@ def fig_02_rolling_correlations(df):
         f"Rolling 24-month Pearson correlation with U.S. equities (SPY), {RQ3_MAIN_START} to {END}",
         "Author calculations from returns_monthly.csv (SPY, AGG, IEF, GLD).",
         "Values above zero indicate assets move in the same direction as U.S. stocks, reducing diversification.",
-        bottom_offset=-28,
+        bottom_offset=-10,
     )
 
 
@@ -460,7 +464,7 @@ def fig_03_dollar_sensitivity(df):
 
     x = np.arange(len(assets))
     w = 0.36
-    fig, ax = plt.subplots(figsize=(8.2, 3.8))
+    fig, ax = plt.subplots(figsize=(8.5, 4.2))
     b1 = ax.bar(
         x - w / 2,
         weak_means,
@@ -506,8 +510,15 @@ def fig_03_dollar_sensitivity(df):
             color=INK,
         )
 
-    ax.legend(loc="upper center", ncol=2, bbox_to_anchor=(0.5, -0.12))
-    fig.tight_layout()
+    ax.legend(
+        loc="lower center",
+        ncol=2,
+        bbox_to_anchor=(0.5, -0.22),
+        frameon=False,
+        fontsize=8,
+    )
+    fig.subplots_adjust(bottom=0.25)
+
     finish(
         fig,
         "03_dollar_sensitivity",
@@ -515,14 +526,14 @@ def fig_03_dollar_sensitivity(df):
         f"Average monthly total return (%) during weakening vs. strengthening Broad U.S. Dollar Index (DTWEXBGS) months, {RQ3_MAIN_START} to {END}",
         "Author calculations from returns_monthly.csv and FRED DTWEXBGS (macro_monthly.csv).",
         "Non-USD fiat assets (EEM, EFA, BWX, FXY, FXF) gained when the dollar fell but suffered heavy losses when the dollar rose.",
-        bottom_offset=-28,
+        bottom_offset=-10,
     )
 
 
 def fig_04_efficient_frontier(df):
     df_main = df.loc[RQ3_MAIN_START:END]
 
-    def trace_frontier(asset_list, n_pts=45):
+    def trace_frontier(asset_list, n_pts=50):
         mu = df_main[asset_list].mean() * 12
         cov = df_main[asset_list].cov() * 12
         n = len(asset_list)
@@ -550,8 +561,8 @@ def fig_04_efficient_frontier(df):
         ["SPY", "AGG", "IEF", "GLD", "EFA", "EEM", "BWX", "FXF"]
     )
 
-    fig, ax = plt.subplots(figsize=(8.0, 4.2))
-    ax.plot(
+    fig, ax = plt.subplots(figsize=(9.2, 5.6))
+    (l1,) = ax.plot(
         v_usd,
         r_usd,
         color="#eb6834",
@@ -559,7 +570,7 @@ def fig_04_efficient_frontier(df):
         lw=2.0,
         label="USD-Only Frontier (SPY + AGG + IEF)",
     )
-    ax.plot(
+    (l2,) = ax.plot(
         v_all,
         r_all,
         color="#2a78d6",
@@ -568,32 +579,75 @@ def fig_04_efficient_frontier(df):
     )
 
     pts = [
-        ("P1: Pure USD 60/40 (60% SPY / 40% AGG)", (6, -8)),
-        ("P2: Moderate Gold (60% SPY / 30% AGG / 10% GLD)", (6, -2)),
-        ("P3: Aggressive Gold (60% SPY / 20% AGG / 20% GLD)", (6, 4)),
-        ("P5: Non-USD Bond Shift (60% SPY / 20% AGG / 20% BWX)", (6, -6)),
-        ("P7: Equal-Weight Safe-Haven (33.3% SPY / 33.3% AGG / 33.3% GLD)", (-8, 8)),
+        (
+            "P7: Equal-Weight Safe-Haven (33.3% SPY / 33.3% AGG / 33.3% GLD)",
+            (-8, 10),
+            "right",
+        ),
+        ("P3: Aggressive Gold (60% SPY / 20% AGG / 20% GLD)", (8, 6), "left"),
+        ("P2: Moderate Gold (60% SPY / 30% AGG / 10% GLD)", (-10, 2), "right"),
+        (
+            "P6: Global De-dollarized (40% SPY / 10% EFA / 10% EEM / 15% AGG / 10% BWX / 15% GLD)",
+            (-16, 12),
+            "right",
+        ),
+        ("P1: Pure USD 60/40 (60% SPY / 40% AGG)", (16, -2), "left"),
+        ("P1b: Treasury 60/40 (60% SPY / 40% IEF)", (-18, -8), "right"),
+        (
+            "P4: Currency Safe-Haven (60% SPY / 20% AGG / 10% FXF / 10% FXY)",
+            (-16, -24),
+            "right",
+        ),
+        ("P5: Non-USD Bond Shift (60% SPY / 20% AGG / 20% BWX)", (16, -18), "left"),
     ]
-    for pname, offset in pts:
+
+    handles = [l1, l2]
+    labels = [l1.get_label(), l2.get_label()]
+
+    for pname, offset, align in pts:
         s_ann, _ = simulate_portfolio(df_main, RQ3_PORTFOLIOS[pname], rule="annual")
         m = compute_metrics(s_ann, df_main["RF"])
-        ax.scatter(m["AnnVol(%)"], m["CAGR(%)"], color=PALETTE[pname], s=55, zorder=5)
+        short_name = SHORT_LABELS[pname].split("(")[0].strip()
+
+        h = ax.scatter(
+            m["AnnVol(%)"],
+            m["CAGR(%)"],
+            color=PALETTE[pname],
+            s=50,
+            zorder=5,
+            label=short_name,
+        )
         ax.annotate(
-            SHORT_LABELS[pname].split("(")[0].strip(),
+            short_name,
             xy=(m["AnnVol(%)"], m["CAGR(%)"]),
             xytext=offset,
             textcoords="offset points",
-            fontsize=7.8,
+            ha=align,
+            va="center",
+            fontsize=6.8,
             fontweight="bold",
             color=INK,
+            arrowprops=dict(arrowstyle="-", color=MUTED, lw=0.6, shrinkA=0, shrinkB=3),
         )
+        handles.append(h)
+        labels.append(short_name)
 
     ax.set_xlabel("Annualized Volatility (Standard Deviation, %)")
     ax.set_ylabel("Annualized Return (CAGR / Mean, %)")
     ax.set_xlim(5.0, 16.5)
     ax.set_ylim(1.0, 16.5)
-    ax.legend(loc="lower right", fontsize=8)
-    fig.tight_layout()
+
+    fig.legend(
+        handles,
+        labels,
+        loc="lower center",
+        ncol=3,
+        bbox_to_anchor=(0.5, 0.02),
+        frameon=False,
+        fontsize=7.5,
+    )
+    fig.subplots_adjust(bottom=0.33)
+
     finish(
         fig,
         "04_efficient_frontier",
@@ -601,19 +655,13 @@ def fig_04_efficient_frontier(df):
         f"Mean-variance efficient frontiers and annually rebalanced model portfolios, {RQ3_MAIN_START} to {END}",
         "Author Markowitz quadratic optimization from returns_monthly.csv.",
         "Short-selling is constrained (weights >= 0, sum of weights = 1).",
-        bottom_offset=-14,
+        bottom_offset=-10,
     )
 
 
 def fig_05_multi_crisis_2008_2025(df):
     df_multi = df.loc[RQ3_MULTI_START:END]
-    selected = [
-        "P1: Pure USD 60/40 (60% SPY / 40% AGG)",
-        "P1b: Treasury 60/40 (60% SPY / 40% IEF)",
-        "P3: Aggressive Gold (60% SPY / 20% AGG / 20% GLD)",
-        "P5: Non-USD Bond Shift (60% SPY / 20% AGG / 20% BWX)",
-        "P7: Equal-Weight Safe-Haven (33.3% SPY / 33.3% AGG / 33.3% GLD)",
-    ]
+    selected = list(RQ3_PORTFOLIOS.keys())
 
     crisis_data = []
     for pname in selected:
@@ -634,7 +682,7 @@ def fig_05_multi_crisis_2008_2025(df):
     x = np.arange(len(cdf))
     w = 0.25
 
-    fig, ax = plt.subplots(figsize=(8.5, 3.9))
+    fig, ax = plt.subplots(figsize=(9.5, 4.8))
     b1 = ax.bar(
         x - w,
         cdf["2008 GFC"],
@@ -659,10 +707,10 @@ def fig_05_multi_crisis_2008_2025(df):
 
     ax.axhline(0, color=INK2, lw=0.8)
     ax.set_xticks(x)
-    ax.set_xticklabels(cdf.index, fontsize=7.8)
+    ax.set_xticklabels(cdf.index, fontsize=7.2, rotation=25, ha="right")
     ax.set_ylabel("Calendar-Year Return (%)")
     ax.yaxis.set_major_formatter(mtick.PercentFormatter(decimals=0))
-    ax.set_ylim(-25, 23)
+    ax.set_ylim(-28, 24)
 
     for bars in (b1, b2, b3):
         for bar in bars:
@@ -675,12 +723,21 @@ def fig_05_multi_crisis_2008_2025(df):
                 f"{v:+.1f}%",
                 ha="center",
                 va=va,
-                fontsize=6.8,
+                fontsize=6.2,
                 color=INK,
             )
 
-    ax.legend(loc="upper center", ncol=3, bbox_to_anchor=(0.5, -0.14))
-    fig.tight_layout()
+    fig.legend(
+        handles=[b1, b2, b3],
+        labels=[b1.get_label(), b2.get_label(), b3.get_label()],
+        loc="lower center",
+        ncol=3,
+        bbox_to_anchor=(0.5, 0.02),
+        frameon=False,
+        fontsize=8,
+    )
+    fig.subplots_adjust(bottom=0.38)
+
     finish(
         fig,
         "05_multi_crisis_2008_2025",
@@ -688,21 +745,13 @@ def fig_05_multi_crisis_2008_2025(df):
         f"Calendar-year portfolio total returns (%) across three distinct macroeconomic crises ({RQ3_MULTI_START} to {END} sample)",
         f"Author calculations from returns_monthly.csv ({RQ3_MULTI_START} to {END}, annually rebalanced).",
         "In 2008 (deflationary crash), U.S. Treasuries (IEF) rallied; in 2022 (inflation/sanction shock), both stocks and bonds fell together.",
-        bottom_offset=-30,
+        bottom_offset=-10,
     )
 
 
 def fig_06_real_vs_myr_returns(df):
     df_main = df.loc[RQ3_MAIN_START:END]
-    selected = [
-        "P1: Pure USD 60/40 (60% SPY / 40% AGG)",
-        "P2: Moderate Gold (60% SPY / 30% AGG / 10% GLD)",
-        "P3: Aggressive Gold (60% SPY / 20% AGG / 20% GLD)",
-        "P4: Currency Safe-Haven (60% SPY / 20% AGG / 10% FXF / 10% FXY)",
-        "P5: Non-USD Bond Shift (60% SPY / 20% AGG / 20% BWX)",
-        "P6: Global De-dollarized (40% SPY / 10% EFA / 10% EEM / 15% AGG / 10% BWX / 15% GLD)",
-        "P7: Equal-Weight Safe-Haven (33.3% SPY / 33.3% AGG / 33.3% GLD)",
-    ]
+    selected = list(RQ3_PORTFOLIOS.keys())
 
     rows = []
     for pname in selected:
@@ -722,19 +771,18 @@ def fig_06_real_vs_myr_returns(df):
         )
     res = pd.DataFrame(rows).set_index("Portfolio")
 
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(9.2, 3.8), sharey=True)
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(9.5, 5.2), sharey=True)
     y = np.arange(len(res))
-    h = 0.36
+    h = 0.30
 
-    # Left panel: Nominal vs Real (CPI-Adjusted) CAGR
-    ax1.barh(
+    b1 = ax1.barh(
         y - h / 2,
         res["Nominal USD"],
         height=h,
         color="#2a78d6",
         label="Nominal USD CAGR",
     )
-    ax1.barh(
+    b2 = ax1.barh(
         y + h / 2,
         res["Real USD (CPI-Adjusted)"],
         height=h,
@@ -742,7 +790,7 @@ def fig_06_real_vs_myr_returns(df):
         label="Real (After-Inflation) CAGR",
     )
     ax1.set_yticks(y)
-    ax1.set_yticklabels(res.index, fontweight="bold")
+    ax1.set_yticklabels(res.index, fontsize=8, fontweight="bold")
     ax1.invert_yaxis()
     ax1.set_xlabel("Annualized Return (CAGR, %)")
     ax1.set_xlim(0, 15.0)
@@ -755,17 +803,15 @@ def fig_06_real_vs_myr_returns(df):
         fontsize=9.5,
         fontweight="bold",
     )
-    ax1.legend(loc="lower right", fontsize=7.5)
 
-    # Right panel: USD vs MYR Maximum Drawdown magnitude
-    ax2.barh(
+    b3 = ax2.barh(
         y - h / 2,
         res["USD MaxDD"],
         height=h,
         color="#e34948",
         label="Max Drawdown in USD (%)",
     )
-    ax2.barh(
+    b4 = ax2.barh(
         y + h / 2,
         res["MYR MaxDD"],
         height=h,
@@ -783,9 +829,17 @@ def fig_06_real_vs_myr_returns(df):
         fontsize=9.5,
         fontweight="bold",
     )
-    ax2.legend(loc="lower right", fontsize=7.5)
 
-    fig.tight_layout()
+    fig.legend(
+        handles=[b1, b2, b3, b4],
+        loc="lower center",
+        ncol=4,
+        bbox_to_anchor=(0.5, 0.02),
+        frameon=False,
+        fontsize=7.8,
+    )
+    fig.subplots_adjust(bottom=0.28)
+
     finish(
         fig,
         "06_real_vs_myr_returns",
@@ -793,7 +847,7 @@ def fig_06_real_vs_myr_returns(df):
         f"Nominal vs. U.S. CPI-adjusted real CAGR (left) and USD vs. MYR maximum drawdown magnitude (right), {RQ3_MAIN_START} to {END}",
         "Author calculations from returns_monthly.csv and FRED CPIAUCSL / DEXMAUS (macro_monthly.csv).",
         "U.S. CPI inflation averaged 3.49% p.a. (2018–2025). USD appreciation during global sell-offs cushioned drawdowns in MYR terms.",
-        bottom_offset=-16,
+        bottom_offset=-10,
     )
 
 
