@@ -372,7 +372,7 @@ def fig_01_wealth_drawdown(df):
         frameon=False,
         fontsize=7.8,
     )
-    fig.subplots_adjust(bottom=0.28)
+    fig.subplots_adjust(bottom=0.17)
 
     finish(
         fig,
@@ -646,7 +646,7 @@ def fig_04_efficient_frontier(df):
         frameon=False,
         fontsize=7.5,
     )
-    fig.subplots_adjust(bottom=0.33)
+    fig.subplots_adjust(bottom=0.26)
 
     finish(
         fig,
@@ -736,7 +736,7 @@ def fig_05_multi_crisis_2008_2025(df):
         frameon=False,
         fontsize=8,
     )
-    fig.subplots_adjust(bottom=0.38)
+    fig.subplots_adjust(bottom=0.29)
 
     finish(
         fig,
@@ -838,7 +838,7 @@ def fig_06_real_vs_myr_returns(df):
         frameon=False,
         fontsize=7.8,
     )
-    fig.subplots_adjust(bottom=0.28)
+    fig.subplots_adjust(bottom=0.20)
 
     finish(
         fig,
